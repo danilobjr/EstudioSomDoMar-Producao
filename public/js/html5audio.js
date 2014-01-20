@@ -152,7 +152,7 @@
         };
 
         var showAlbumCover = function (songSource) {
-            var imgSrc = songSource.attr('data-h5a-cover-url');
+            var imgSrc = (songSource.data().h5aCoverUrl) ? songSource.data().h5aCoverUrl : $.html5Audio.defaultSettings.defaultAlbumCover;
             $.html5Audio.element.albumCoverImg.attr('src', imgSrc);
         };
 

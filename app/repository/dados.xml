@@ -1,0 +1,199 @@
+<contexto>
+  <paginas>
+    <pagina>
+      <id>1</id>
+      <descricao>Home</descricao>
+      <titulo>Bem-vindo!</titulo>
+      <subtitulo>Responsabilidade, compromisso e qualidade são o nosso lema</subtitulo>
+      <banners>
+        <banner>
+          <id>1</id>
+          <grande>/img/site/foto/tecnica-1_b.jpg</grande>
+          <pequeno>/img/site/foto/tecnica-1_s.jpg</pequeno>
+          <legenda>Técnica</legenda>
+        </banner>
+        <banner>
+          <id>2</id>
+          <grande>/img/site/foto/aquario-1_b.jpg</grande>
+          <pequeno>/img/site/foto/aquario-1_s.jpg</pequeno>
+          <legenda>Aquário</legenda>
+        </banner>
+        <banner>
+          <id>3</id>
+          <grande>/img/site/foto/bateria-4_b.jpg</grande>
+          <pequeno>/img/site/foto/bateria-4_s.jpg</pequeno>
+          <legenda>Bateria</legenda>
+        </banner>
+        <banner>
+          <id>4</id>
+          <grande>/img/site/foto/mesa-4_b.jpg</grande>
+          <pequeno>/img/site/foto/mesa-4_s.jpg</pequeno>
+          <legenda>Mesa</legenda>
+        </banner>
+        <banner>
+          <id>5</id>
+          <grande>/img/site/foto/perifericos-3_b.jpg</grande>
+          <pequeno>/img/site/foto/perifericos-3_s.jpg</pequeno>
+          <legenda>Periféricos</legenda>
+        </banner>
+      </banners>
+    </pagina>
+    <pagina>
+      <id>2</id>
+      <descricao>Admin</descricao>
+      <titulo>Dashboard</titulo>
+      <subtitulo></subtitulo>
+      <dica>
+        <titulo>Bem-vindo ao modo Administrador!</titulo>
+        <descricao>Aqui você poderá modificar seu site com facilidade. Esteja sempre atento às instruções. Qualquer dúvida entre em contato conosco.</descricao>
+      </dica>
+    </pagina>
+  </paginas>
+  <artistas>
+    <artista>
+      <id>1</id>
+      <nome>Priscila Ribeiro</nome>
+      <site>www.priscilaribeiro.com.br</site>
+      <email>priscilabribeiro@hotmail.com</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 8883.6480</numero>
+          <tipo>oi</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>www.facebook.com/profile.php?id=1012718819&amp;ref=ts</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+      </redesSociais>
+      <imagens>
+        <perfil>artistas_priscila_ribeiro.jpg</perfil>
+        <background>
+          <cor>#c0c0c0</cor>
+          <imagem>priscila_ribeiro_background.jpg</imagem>
+        </background>
+      </imagens>
+      <musicas>
+        <musica>
+          <nome>Saudade</nome>
+          <arquivoMusica>cd_priscila_ribeiro_saudade.mp3</arquivoMusica>
+          <arquivoCapaAlbum>o_amor_e_suas_cancoes_250x250.jpg</arquivoCapaAlbum>
+        </musica>
+        <musica>
+          <nome>Ah, o amor</nome>
+          <arquivoMusica>cd_priscila_ribeiro_ah_o_amor.mp3</arquivoMusica>
+          <arquivoCapaAlbum>ensaio_sobre_a_dor_250x250.jpg</arquivoCapaAlbum>
+        </musica>
+      </musicas>
+    </artista>
+    <artista>
+      <id>2</id>
+      <nome>Flavinho Souza</nome>
+      <email>flavioiconio@hotmail.com</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 8883.6480</numero>
+          <tipo>oi</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>www.facebook.com/profile.php?id=1012718819&amp;ref=ts</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+      </redesSociais>
+      <imagens>
+        <perfil>artistas_flavinho.jpg</perfil>
+        <background>
+          <cor>#ffffff</cor>
+          <imagem>imagem.jpg</imagem>
+        </background>
+      </imagens>
+      <musicas>
+        <musica>
+          <nome>Caminho Estreito</nome>
+          <arquivoMusica>cd_flavinho_sousa-caminho_estreito.mp3</arquivoMusica>
+          <arquivoCapaAlbum>capa_flavinho_250x250.jpg</arquivoCapaAlbum>
+        </musica>
+      </musicas>
+    </artista>
+    <artista>
+      <nome>Rodrigo Cardozo</nome>
+      <site></site>
+      <email>digoblues@hotmail.com</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 9101-9105</numero>
+          <tipo>tim</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>http://www.facebook.com/profile.php?id=1817432635</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+        <redeSocial>
+          <link>http://www.myspace.com/rodrigocardozo</link>
+          <tipo>myspace</tipo>
+        </redeSocial>
+      </redesSociais>
+      <imagens>
+        <background>
+          <cor>#ffffff</cor>
+        </background>
+        <perfil>artistas_rodrigo_cardozo.jpg</perfil>
+      </imagens>
+      <id>3</id>
+      <musicas>
+        <musica>
+          <nome>Novos Horizontes</nome>
+          <arquivoMusica>rodrigo_cardozo_novoshori.mp3</arquivoMusica>
+          <arquivoCapaAlbum>cd_rodrigo_cardozo_novoshori.jpg</arquivoCapaAlbum>
+        </musica>
+        <musica>
+          <nome>Pegada Eletrônica</nome>
+          <arquivoMusica>cd_rodrigo_cardozo-pegada_eletronica.mp3</arquivoMusica>
+          <arquivoCapaAlbum>cd_rodrigo_cardozo_pegada_eletronica_250x250.jpg</arquivoCapaAlbum>
+        </musica>
+        <musica>
+          <nome>No Meu Lugar</nome>
+          <arquivoMusica>rodrigo_cardozo_no_meu_lugar.mp3</arquivoMusica>
+          <arquivoCapaAlbum>cd_rodrigo_cardozo_no_meu_lugar.jpg</arquivoCapaAlbum>
+        </musica>
+      </musicas>
+    </artista>
+  </artistas>
+  <videos>
+    <video>
+      <id>1</id>
+      <titulo>Flavinho Souza | Pseudo Amor</titulo>
+      <url>//www.youtube.com/embed/sX1EmPOwBsU</url>
+    </video>
+    <video>
+      <id>2</id>
+      <titulo>Som do Mar | Anfrísio Rocha</titulo>
+      <url>//www.youtube.com/embed/u6wWBzDvZcE</url>
+    </video>
+    <video>
+      <id>3</id>
+      <titulo>Banda Frequencia 33 || Making Of Gravação</titulo>
+      <url>//www.youtube.com/embed/J3ODdCOAY5E</url>
+    </video>
+    <video>
+      <id>4</id>
+      <titulo>Espera | Anfrísio Rocha</titulo>
+      <url>//www.youtube.com/embed/6gUCAy6rWKU</url>
+    </video>
+    <video>
+      <id>5</id>
+      <titulo>Sarquis Fermanian - Fast Track</titulo>
+      <url>//www.youtube.com/embed/2vPa1TT-3xY</url>
+    </video>
+    <video>
+      <id>6</id>
+      <titulo>Estúdio Som do Mar | Institucional</titulo>
+      <url>//www.youtube.com/embed/RWOLnEuKGWA</url>
+    </video>
+  </videos>
+</contexto>

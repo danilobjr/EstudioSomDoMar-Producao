@@ -10,9 +10,9 @@
 
         <div class="content">
             <ul id="tabAlterarArtista" class="nav nav-tabs">
-                <li class="active"><a href="#dados" data-toggle="tab">Dados Pessoais</a></li>
+                <li class="active"><a href="#dados" data-toggle="tab" class="mostrar-instrucao" data-modal="#instrucoesDadosPessoais">Dados Pessoais</a></li>
                 <li>
-                    <a href="#musicas" data-toggle="tab">
+                    <a href="#musicas" data-toggle="tab" class="mostrar-instrucao" data-modal="#instrucoesMusicas">
                         <% if (!(typeof viewModel.musicas != 'undefined')) { %> 
                             <i class="icon-exclamation-sign"></i>
                         <% } %>
@@ -27,8 +27,8 @@
                         Imagens<b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#imagemPerfil" data-toggle="tab">Perfil</a></li>
-                        <li><a href="#background" data-toggle="tab">Background</a></li>
+                        <li><a href="#imagemPerfil" data-toggle="tab" class="mostrar-instrucao" data-modal="#instrucoesPerfil">Perfil</a></li>
+                        <li><a href="#background" data-toggle="tab" class="mostrar-instrucao" data-modal="#instrucoesBackground">Background</a></li>
                     </ul>
                 </li>
             </ul>
@@ -425,7 +425,7 @@
             </div>
         </div>
         <!-- End .content --> 
-        <a href="#instrucoesModal" class="btn new_item" data-toggle="modal"><i class="icon-info-sign"></i></a>
+        <a id="abrir-modal" href="#instrucoesDadosPessoais" class="btn new_item" data-toggle="modal"><i class="icon-info-sign"></i></a>
     </div>
     <!-- End  .box --> 
     <!--</div>-->
@@ -434,16 +434,79 @@
 
 <!-- Modal Instruções -->
 
-<div id="instrucoesModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<div id="instrucoesDadosPessoais" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">Instruções</h3>
     </div>
     <div class="modal-body">
-        <h4>Para incluir um novo artista, siga as instruções abaixo</h4>
+        <h4>Dados Pessoais</h4>
 
         <p>1. Os campos que contém um <b>*</b> são de preenchimento obrigatório, os demais são opcionais</p>
-        <!--<p>2. Acesse o vídeo do YouTube que você deseja incluir</p>
+        <!--<p>2. Dados pessoais</p>
+        <p>3. Logo abaixo do título do vídeo, clique em <b>Compartilhar</b></p>
+        <p>3. Em seguida, clique em <b>Incorporar</b></p>
+        <p>4. Copie o código gerado e cole no campo <b>Código de Compartilhamento</b></p>
+        <p>5. Clique em <b>Salvar</b></p>
+        <p>6. Pronto! Seu deve ser incluído com sucesso</p>-->
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal">Fechar</button>
+    </div>
+</div>
+
+<div id="instrucoesMusicas" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Instruções</h3>
+    </div>
+    <div class="modal-body">
+        <h4>Músicas</h4>
+
+        <p>1. Os campos que contém um <b>*</b> são de preenchimento obrigatório, os demais são opcionais</p>
+        <!--<p>2. Dados pessoais</p>
+        <p>3. Logo abaixo do título do vídeo, clique em <b>Compartilhar</b></p>
+        <p>3. Em seguida, clique em <b>Incorporar</b></p>
+        <p>4. Copie o código gerado e cole no campo <b>Código de Compartilhamento</b></p>
+        <p>5. Clique em <b>Salvar</b></p>
+        <p>6. Pronto! Seu deve ser incluído com sucesso</p>-->
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal">Fechar</button>
+    </div>
+</div>
+
+<div id="instrucoesPerfil" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Instruções</h3>
+    </div>
+    <div class="modal-body">
+        <h4>Perfil</h4>
+
+        <p>1. Os campos que contém um <b>*</b> são de preenchimento obrigatório, os demais são opcionais</p>
+        <!--<p>2. Dados pessoais</p>
+        <p>3. Logo abaixo do título do vídeo, clique em <b>Compartilhar</b></p>
+        <p>3. Em seguida, clique em <b>Incorporar</b></p>
+        <p>4. Copie o código gerado e cole no campo <b>Código de Compartilhamento</b></p>
+        <p>5. Clique em <b>Salvar</b></p>
+        <p>6. Pronto! Seu deve ser incluído com sucesso</p>-->
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal">Fechar</button>
+    </div>
+</div>
+
+<div id="instrucoesBackground" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Instruções</h3>
+    </div>
+    <div class="modal-body">
+        <h4>Background</h4>
+
+        <p>1. Os campos que contém um <b>*</b> são de preenchimento obrigatório, os demais são opcionais</p>
+        <!--<p>2. Dados pessoais</p>
         <p>3. Logo abaixo do título do vídeo, clique em <b>Compartilhar</b></p>
         <p>3. Em seguida, clique em <b>Incorporar</b></p>
         <p>4. Copie o código gerado e cole no campo <b>Código de Compartilhamento</b></p>
@@ -465,3 +528,13 @@
 <script src="/js/app/formImagemPerfil.js"></script>
 <script src="/js/app/formBackground.js"></script>
 <script src="/js/app/formMusicas.js"></script>
+
+<script>
+    $(function () {
+        $('.mostrar-instrucao').on('click', function (e) {
+            var _this = $(e.currentTarget);
+            var btnAbrirModal = $('#abrir-modal');
+            btnAbrirModal.attr('href', _this.data().modal);
+        });
+    });
+</script>

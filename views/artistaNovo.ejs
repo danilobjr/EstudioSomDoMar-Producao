@@ -11,7 +11,7 @@
                         <label class="control-label span3" for="nome">Nome *</label>
                         <div class="controls span8">
                             <input id="nome" name="nome" type="text" class="span12" />
-                            <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
+                            <label class="error errorRequired" style="display: none;">Por favor, informe o nome do artista</label>
                             <label class="error errorMinlength" style="display: none;">O nome precisa ter pelo menos 2 caracteres</label>
                         </div>
                     </div>
@@ -111,13 +111,15 @@
     <div class="modal-body">
         <h4>Para incluir um novo artista, siga as instruções abaixo</h4>
 
-        <p>1. Os campos que contém um <b>*</b> são de preenchimento obrigatório, os demais são opcionais</p>
-        <!--<p>2. Acesse o vídeo do YouTube que você deseja incluir</p>
-        <p>3. Logo abaixo do título do vídeo, clique em <b>Compartilhar</b></p>
-        <p>3. Em seguida, clique em <b>Incorporar</b></p>
-        <p>4. Copie o código gerado e cole no campo <b>Código de Compartilhamento</b></p>
-        <p>5. Clique em <b>Salvar</b></p>
-        <p>6. Pronto! Seu deve ser incluído com sucesso</p>-->
+        <ul>
+            <li>Os campos que contém um <b>*</b> são de preenchimento obrigatório, os demais são opcionais</li>
+            <li>Nos campos de <b>Telefone</b> e <b>Rede Social</b> você pode escolher o tipo de operadora e qual o tipo de rede social, respectivamente</li>
+            <li>Os botões 
+                <a class="btn">
+                    <span class="icon-plus"></span>
+                </a> adicionam um novo campo para <b>Telefone</b> ou <b>Rede Social</b>
+            </li>
+        </ul>
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" data-dismiss="modal">Fechar</button>

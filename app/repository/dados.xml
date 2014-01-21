@@ -93,7 +93,7 @@
       <email>flavioiconio@hotmail.com</email>
       <telefones>
         <telefone>
-          <numero>(85) 8883.6480</numero>
+          <numero>(85) 8883-6480</numero>
           <tipo>oi</tipo>
         </telefone>
       </telefones>
@@ -117,6 +117,7 @@
           <arquivoCapaAlbum>capa_flavinho_250x250.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
+      <site></site>
     </artista>
     <artista>
       <nome>Rodrigo Cardozo</nome>

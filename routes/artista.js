@@ -19,7 +19,7 @@ exports.novo = function (req, res) {
 
 exports.incluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
-
+    
     try {
         var novoArtista = {
             nome: req.body.nome,
@@ -62,6 +62,7 @@ exports.incluir = function (req, res) {
         }
 
         var artistaCriado = artistaGerente.incluir(novoArtista);
+        
         resultado.sucesso = true;
         resultado.mensagem = 'Artista incluído com sucesso';
     } catch (error) {
@@ -84,7 +85,7 @@ exports.alterarDadosPessoais = function (req, res) {
     var idArtista = req.body.idArtista;
     var artistaAlterado = {};
     var resultado = { sucesso: false, mensagem: '' };
-
+    
     try {
         artistaAlterado = {
             id: idArtista,
@@ -94,7 +95,7 @@ exports.alterarDadosPessoais = function (req, res) {
             telefones: [],
             redesSociais: []
         };
-
+        
         if (util.isArray(req.body.telefone)) {
             var telefones = req.body.telefone;
             var tiposTelefone = req.body.tipoTelefone;
@@ -123,15 +124,14 @@ exports.alterarDadosPessoais = function (req, res) {
                 }
             }
         } else {
-            if (redesSociais[i]) {
-                artistaAlterado.redesSociais.push({
-                    link: req.body.redeSocial,
-                    tipo: req.body.tipoRedeSocial
-                });
-            }
+            artistaAlterado.redesSociais.push({
+                link: req.body.redeSocial,
+                tipo: req.body.tipoRedeSocial
+            });
         }
-
+        
         artistaAlterado = artistaGerente.alterarDadosPessoais(artistaAlterado);
+
         resultado.sucesso = true;
         resultado.mensagem = 'Artista incluído com sucesso';
     } catch (error) {

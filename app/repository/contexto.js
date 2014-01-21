@@ -275,7 +275,7 @@ var contexto = (function () {
         var obterArtistaPorNome = function (nome) {
             var contexto = xml.obterContexto();
             var artistaEncontrado = undefined;
-
+            
             for (var cont in contexto.artistas) {
                 if (contexto.artistas[cont].nome === nome) {
                     artistaEncontrado = contexto.artistas[cont];

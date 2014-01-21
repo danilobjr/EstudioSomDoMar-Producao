@@ -15,7 +15,7 @@ module.exports = function () {
 
     var incluir = function (novoArtista) {
         var artistaJahExiste = obterPorNome(novoArtista.nome);
-
+        
         if (artistaJahExiste) {
             throw new Error('Artista já existe');
         } else {
@@ -26,7 +26,7 @@ module.exports = function () {
                     cor: '#ffffff'
                 }
             };
-
+            
             return contexto.artistas.incluir(novoArtista);
         }
     };

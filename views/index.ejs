@@ -795,15 +795,19 @@
 
                                     <% for (var i = 0; i < viewModel.artistas.length; i++) { %>
 
-                                        <a href="/artista/<%= viewModel.artistas[i].id %>" target="_blank">
-                                            <figure>
-                                                <img src="img/foto/perfil/<%= viewModel.artistas[i].imagens.perfil %>" alt="" />
-                                                <figcaption>
-                                                    <span><%= viewModel.artistas[i].nome %></span>                                            
-                                                </figcaption>
-                                            </figure>
-                                        </a>
+                                        <% if (typeof viewModel.artistas[i].imagens.perfil != 'undefined' && typeof viewModel.artistas[i].musicas != 'undefined') { %> 
 
+                                            <a href="/artista/<%= viewModel.artistas[i].id %>" target="_blank">
+                                                <figure>
+                                                    <img src="img/foto/perfil/<%= viewModel.artistas[i].imagens.perfil %>" alt="" />
+                                                    <figcaption>
+                                                        <span><%= viewModel.artistas[i].nome %></span>                                            
+                                                    </figcaption>
+                                                </figure>
+                                            </a>
+
+                                        <% } %>
+                                    
                                     <% } %>
 
                                     <!--

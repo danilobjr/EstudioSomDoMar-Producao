@@ -12243,6 +12243,10 @@ a#clear-completed:hover {
     box-shadow: inset 2px 2px 8px -4px rgba(0,0,0,.8);
 }
 
+.modal-body > ul > li {
+    margin-bottom: 15px;
+}
+
 /* ICONS INSIDE TAB BUTTONS */
 
 .nav-tabs i, .nav-tabs > .active > a > [class^="icon-"]{

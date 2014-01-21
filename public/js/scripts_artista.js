@@ -45,11 +45,17 @@
             };
 
             var checkExistHttpInHref = function (sentenca) {
-                if (sentenca.indexOf('http://') <= 0) {
-                    return false;
+                var exist = false;
+
+                if (sentenca.indexOf('http://') > 0) {
+                    exist = true;
                 }
 
-                return true;
+                if ((sentenca.indexOf('https://') > 0) && !exist) {
+                    exist = true;
+                }
+
+                return exist;
             };
 
             var putHttpInHref = function (element) {

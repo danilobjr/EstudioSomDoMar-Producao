@@ -12259,3 +12259,10 @@ a#clear-completed:hover {
 .control-with-many-inputs > .btn-controls {
     margin-top: 0;
 }
+
+/* POSIÇÃO DA CAIXA DE BUSCA DA TABELA DA TELA DE  */
+
+.boxIndexListagem .table_top_bar {
+    top: -46px;
+    right: 33px;
+}

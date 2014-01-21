@@ -1,5 +1,5 @@
 <div class="row-fluid">
-    <div class="box ">
+    <div class="box boxIndexListagem">
         <div class="title">
             <h4>Artistas</h4>
         </div>
@@ -39,9 +39,9 @@
                         <td class="ms ">
                             <div class="btn-group"> 
                                 <% if (typeof viewModel[index].imagens.perfil != 'undefined' && typeof viewModel[index].musicas != 'undefined') { %>
-                                    <a href="/artista/<%= viewModel[index].id %>" target="_blank" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Visualizar"><i class="gicon-eye-open"></i></a> 
+                                    <a href="/artista/<%= viewModel[index].id %>" target="_blank" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Visualizar"><i class="gicon-eye-open"></i></a>
                                 <% } %>
-                                <a href="/admin/artista/alterar/<%= viewModel[index].id %>" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> 
+                                <a href="/admin/artista/alterar/<%= viewModel[index].id %>" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a>
                                 <a href="#exclusaoModal" class="btn btn-small" data-url-exclusao="/admin/artista/excluir/<%= viewModel[index].id %>" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove "></i></a> 
                             </div>
                         </td>
@@ -52,16 +52,18 @@
                 </tbody>
             </table>
         </div>
-        <!-- End .content --> 
+        <!-- End .content -->
+
+        <a href="#instrucoes" class="btn new_item" data-toggle="modal"><i class="icon-info-sign"></i></a>
     </div>
     <!-- End box --> 
 </div>
 
 <!-- Modal -->
-<div class="modal hide fade" id="exclusaoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal hide fade" id="exclusaoModal" tabindex="-1" role="dialog" aria-labelledby="Confirmação" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
-        <h3 id="myModalLabel">Confirmação</h3>
+        <h3>Confirmação</h3>
     </div>
     <div class="modal-body">
         <p>Deseja realmente excluir este item?</p>
@@ -69,6 +71,26 @@
     <div class="modal-footer">
         <a class="btn btn-primary confirmarExclusao" href="#">Sim</a>
         <button class="btn" data-dismiss="modal" aria-hidden="true">Não</button>
+    </div>
+</div>
+
+<div class="modal hide fade" id="instrucoes" tabindex="-1" role="dialog" aria-labelledby="Instruções" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+        <h3>Instruções</h3>
+    </div>
+    <div class="modal-body">
+        <h4>Funcionamento da tabela</h4>
+
+        <ul>
+            <li>Ao adicionar um novo artista, este aparecerá nesta listagem com perfil incompleto, ou seja, na coluna <b>Perfil Completo</b> aparecerá a palavra <b>Não</b></li>
+            <li>Para completar o perfil, na linha correspondente ao artista, clique no botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> (<b>Editar</b>) que está na coluna <b>Ações</b></li>
+            <li>Quando o perfil estiver completo, aparecerá um novo botão: <br/><a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Visualizar"><i class="gicon-eye-open"></i></a> (<b>Visualizar</b>). Você poderá ver um <em>preview</em> de como ficará a página de artistas no site</li>
+            <li>Com o perfil completo, o artista já estará <em>automaticamente</em> na página de artistas do site</li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal">Fechar</button>
     </div>
 </div>
 

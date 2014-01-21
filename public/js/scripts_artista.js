@@ -47,21 +47,24 @@
             var checkExistHttpInHref = function (sentenca) {
                 var exist = false;
 
-                if (sentenca.indexOf('http://') > 0) {
+                if (sentenca.indexOf('http://') >= 0) {
                     exist = true;
                 }
 
-                if ((sentenca.indexOf('https://') > 0) && !exist) {
+                if ((sentenca.indexOf('https://') >= 0) && !exist) {
                     exist = true;
                 }
 
                 return exist;
             };
 
-            var putHttpInHref = function (element) {
-                if (!checkExistHttpInHref(element.attr('href'))) {
-                    element.attr('href', 'http://' + element.attr('href'));
-                }
+            var putHttpInHref = function (elements) {
+                elements.each(function (i, obj) {
+                    var _this = $(obj);
+                    if (!checkExistHttpInHref(_this.attr('href'))) {
+                        _this.attr('href', 'http://' + _this.attr('href'));
+                    }
+                });
             };
 
             return {

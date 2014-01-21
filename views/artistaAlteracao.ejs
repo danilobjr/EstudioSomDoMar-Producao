@@ -14,7 +14,7 @@
                 <li>
                     <a href="#musicas" data-toggle="tab" class="mostrar-instrucao" data-modal="#instrucoesMusicas">
                         <% if (!(typeof viewModel.musicas != 'undefined')) { %> 
-                            <i class="icon-exclamation-sign"></i>
+                            <i rel="tooltip" data-placement="top" data-original-title="Dados incompletos" class="icon-exclamation-sign"></i>
                         <% } %>
                         Músicas
                     </a>
@@ -22,7 +22,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <% if (!(typeof viewModel.imagens.perfil != 'undefined')) { %> 
-                            <i class="icon-exclamation-sign"></i>
+                            <i rel="tooltip" data-placement="top" data-original-title="Dados incompletos" class="icon-exclamation-sign"></i>
                         <% } %>
                         Imagens<b class="caret"></b>
                     </a>
@@ -40,7 +40,7 @@
                             <label class="control-label span3" for="nome">Nome *</label>
                             <div class="controls span8">
                                 <input id="nome" name="nome" type="text" class="span12" value="<%= viewModel.nome %>"/>
-                                <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
+                                <label class="error errorRequired" style="display: none;">Por favor, informe o nome do artista</label>
                                 <label class="error errorMinlength" style="display: none;">O nome precisa ter pelo menos 2 caracteres</label>
                             </div>
                         </div>
@@ -250,7 +250,8 @@
                 <div class="tab-pane fade" id="musicas">
                     <% if (typeof viewModel.musicas == 'undefined') { %>
                         
-                        <h4>Ainda não há músicas vinculadas a este artista. Vincular pelo menos uma música é uma das etapas necessárias para ativar a visualização deste artista no site.</h4>
+                        <!--<h4>Ainda não há músicas vinculadas a este artista. Vincular pelo menos uma música é uma das etapas necessárias para ativar a visualização deste artista no site.</h4>-->
+                        <button class="btn btn-block btn-warning" rel="tooltip" data-placement="top" data-original-title="Alerta"><b>Ainda não há músicas vinculadas a este artista.</b><br/><small>Vincular pelo menos uma música é uma das etapas necessárias para ativar a visualização deste artista no site.</small></button>
 
                     <% } %>
                     
@@ -371,7 +372,8 @@
                 <div class="tab-pane fade" id="imagemPerfil">
                     <% if (typeof viewModel.imagens.perfil == 'undefined') { %>
                         
-                        <h4>Ainda não há imagem de perfil vinculada a este artista. Vincular pelo a imagem de perfil é uma das etapas necessárias para ativar a visualização deste artista no site.</h4>
+                        <!--<h4>Ainda não há imagem de perfil vinculada a este artista. Vincular pelo a imagem de perfil é uma das etapas necessárias para ativar a visualização deste artista no site.</h4>-->
+                        <button class="btn btn-block btn-warning" rel="tooltip" data-placement="top" data-original-title="Alerta"><b>Ainda não há imagem de perfil vinculada a este artista.</b><br/><small>Vincular pelo a imagem de perfil é uma das etapas necessárias para ativar a visualização deste artista no site.</small></button>
 
                     <% } %>
 
@@ -444,7 +446,7 @@
 
         <ul>
             <li>Os campos que contém um <b>*</b> são de preenchimento obrigatório, os demais são opcionais</li>
-            <li>Nos campos de <b>Telefone</b> ou <b>Rede Social</b> você pode escolher o tipo de operadora e qual tipo de rede social, respectivamente</li>
+            <li>Nos campos de <b>Telefone</b> e <b>Rede Social</b> você pode escolher o tipo de operadora e qual o tipo de rede social, respectivamente</li>
             <li>Os botões 
                 <a class="btn">
                     <span class="icon-plus"></span>

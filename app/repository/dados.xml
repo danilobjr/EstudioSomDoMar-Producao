@@ -49,6 +49,13 @@
       </dica>
     </pagina>
   </paginas>
+  <usuario>
+      <id>1</id>
+      <email>anfrisiorocha@hotmail.com</email>
+      <nome>Anfrísio Rocha</nome>
+      <senha>anfrisio911</senha>
+      <hash></hash>
+  </usuario>
   <artistas>
     <artista>
       <id>1</id>

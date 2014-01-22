@@ -8,70 +8,78 @@ var contexto = (function () {
     function init() {
 
         var dados = {
-            paginas: [
-                {
-                    pagina: {
-                        id: 1,
-                        descricao: "Home",
-                        titulo: "Bem-vindo!",
-                        subtitulo: "Responsabilidade, compromisso e qualidade são o nosso lema",
-                        banners: [
-                            {
-                                banner: {
-                                    id: 1,
-                                    grande: "/img/site/foto/tecnica-1_b.jpg",
-                                    pequeno: "/img/site/foto/tecnica-1_s.jpg",
-                                    legenda: "Técnica"
-                                }
-                            },
-                            {
-                                banner: {
-                                    id: 2,
-                                    grande: "/img/site/foto/aquario-1_b.jpg",
-                                    pequeno: "/img/site/foto/aquario-1_s.jpg",
-                                    legenda: "Aquário"
-                                }
-                            },
-                            {
-                                banner: {
-                                    id: 3,
-                                    grande: "/img/site/foto/bateria-4_b.jpg",
-                                    pequeno: "/img/site/foto/bateria-4_s.jpg",
-                                    legenda: "Bateria"
-                                }
-                            },
-                            {
-                                banner: {
-                                    id: 4,
-                                    grande: "/img/site/foto/mesa-4_b.jpg",
-                                    pequeno: "/img/site/foto/mesa-4_s.jpg",
-                                    legenda: "Mesa"
-                                }
-                            },
-                            {
-                                banner: {
-                                    id: 5,
-                                    grande: "/img/site/foto/perifericos-3_b.jpg",
-                                    pequeno: "/img/site/foto/perifericos-3_s.jpg",
-                                    legenda: "Periféricos"
-                                }
-                            }
-                        ]
-                    }
-                },
-                {
-                    pagina: {
-                        id: 2,
-                        descricao: "Admin",
-                        titulo: "Dashboard",
-                        subtitulo: '',
-                        dica: {
-                            titulo: 'Bem-vindo ao modo Administrador!',
-                            descricao: 'Aqui você poderá modificar seu site com facilidade. Esteja sempre atento às instruções. Qualquer dúvida entre em contato conosco.'
-                        }
-                    }
-                }
-            ],
+            //paginas: [
+            //    {
+            //        pagina: {
+            //            id: 1,
+            //            descricao: "Home",
+            //            titulo: "Bem-vindo!",
+            //            subtitulo: "Responsabilidade, compromisso e qualidade são o nosso lema",
+            //            banners: [
+            //                {
+            //                    banner: {
+            //                        id: 1,
+            //                        grande: "/img/site/foto/tecnica-1_b.jpg",
+            //                        pequeno: "/img/site/foto/tecnica-1_s.jpg",
+            //                        legenda: "Técnica"
+            //                    }
+            //                },
+            //                {
+            //                    banner: {
+            //                        id: 2,
+            //                        grande: "/img/site/foto/aquario-1_b.jpg",
+            //                        pequeno: "/img/site/foto/aquario-1_s.jpg",
+            //                        legenda: "Aquário"
+            //                    }
+            //                },
+            //                {
+            //                    banner: {
+            //                        id: 3,
+            //                        grande: "/img/site/foto/bateria-4_b.jpg",
+            //                        pequeno: "/img/site/foto/bateria-4_s.jpg",
+            //                        legenda: "Bateria"
+            //                    }
+            //                },
+            //                {
+            //                    banner: {
+            //                        id: 4,
+            //                        grande: "/img/site/foto/mesa-4_b.jpg",
+            //                        pequeno: "/img/site/foto/mesa-4_s.jpg",
+            //                        legenda: "Mesa"
+            //                    }
+            //                },
+            //                {
+            //                    banner: {
+            //                        id: 5,
+            //                        grande: "/img/site/foto/perifericos-3_b.jpg",
+            //                        pequeno: "/img/site/foto/perifericos-3_s.jpg",
+            //                        legenda: "Periféricos"
+            //                    }
+            //                }
+            //            ]
+            //        }
+            //    },
+            //    {
+            //        pagina: {
+            //            id: 2,
+            //            descricao: "Admin",
+            //            titulo: "Dashboard",
+            //            subtitulo: '',
+            //            dica: {
+            //                titulo: 'Bem-vindo ao modo Administrador!',
+            //                descricao: 'Aqui você poderá modificar seu site com facilidade. Esteja sempre atento às instruções. Qualquer dúvida entre em contato conosco.'
+            //            }
+            //        }
+            //    }
+            //],
+            usuario: {
+                id: 1,
+                email: 'anfrisiorocha@hotmail.com',
+                nome: 'Anfrísio Rocha',
+                senha: 'anfrisio911',
+                hash: ''
+                //salt: ''
+            },
             artistas: [
                 {
                     artista: {
@@ -253,6 +261,28 @@ var contexto = (function () {
             }
         };
 
+        // Usuário
+
+        var obterUsuario = function (idUsuario, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
+            return contexto.usuario;
+        };
+
+        var obterUsuarioPorEmail = function (emailUsuario, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
+            if (contexto.usuario.email === emailUsuario) {
+                return contexto.usuario;
+            } else {
+                return undefined;
+            }
+        };
+
         // Artistas
 
         var obterTodosOsArtistas = function () {
@@ -275,7 +305,7 @@ var contexto = (function () {
         var obterArtistaPorNome = function (nome) {
             var contexto = xml.obterContexto();
             var artistaEncontrado = undefined;
-            
+
             for (var cont in contexto.artistas) {
                 if (contexto.artistas[cont].nome === nome) {
                     artistaEncontrado = contexto.artistas[cont];
@@ -443,6 +473,10 @@ var contexto = (function () {
             paginas: {
                 obterPorId: obterPaginaPorId,
                 obterPorDescricao: obterPaginaPorDescricao
+            },
+            usuario: {
+                obterUsuario: obterUsuario,
+                obterPorEmail: obterUsuarioPorEmail
             },
             artistas: {
                 obterTodos: obterTodosOsArtistas,

@@ -129,15 +129,16 @@
     });
 </script> 
 <script type='text/javascript'>
- 
-    $(window).load(function() {
+
+    $(window).load(function () {
         $('#loading1').fadeOut();
     });
-      
-    $(document).ready(function() {
+
+    $(document).ready(function () {
+        $('input').focus();
         //$("input:checkbox, input:radio, input:file").uniform();
-        $('body').css('display', 'none');
-        $('body').fadeIn(500);
+        //$('body').css('display', 'none');
+        //$('body').fadeIn(500);
         //$("#logo a, #sidebar_menu a:not(.accordion-toggle), a.ajx").click(function() {
         //    event.preventDefault();
         //    newLocation = this.href;

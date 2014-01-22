@@ -76,8 +76,7 @@ var contexto = (function () {
                 id: 1,
                 email: 'anfrisiorocha@hotmail.com',
                 nome: 'Anfrísio Rocha',
-                senha: 'anfrisio911',
-                hash: ''
+                senha: 'b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1'
                 //salt: ''
             },
             artistas: [

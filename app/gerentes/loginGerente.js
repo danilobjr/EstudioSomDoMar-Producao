@@ -1,27 +1,25 @@
 var contexto = require('./../repository/contexto'),
-    hash = require('./../infra/pass');
+    hash = require('./../infra/pass').hash;
 
 module.exports = function () {
     var autenticar = function (nomeDeUsuario, senha, callback) {
-        if (!module.parent) console.log('Autenticando %s:%s', nomeDeUsuario, senha);
+        //if (!module.parent) console.log('Autenticando %s:%s', nomeDeUsuario, senha);
 
         var usuario = contexto.usuario.obterPorEmail(nomeDeUsuario);
-        var salt = undefined;
-
-        console.log(usuario);
 
         if (usuario) {
-            hash(senha, salt, function (erro, hash) {
-                if (erro) {
-                    return callback(erro);
-                }
+            var senhaCriptografada = hash(senha);
 
-                if (hash == usuario.hash) {
-                    return callback(null, usuario);
-                }
+            console.log('usuario.senha');
+            console.log(usuario.senha);
+            console.log('senhaCriptografada');
+            console.log(senhaCriptografada);
 
-                callback(new Error('Usuário e/ou senha inválido'));
-            });
+            if (senhaCriptografada == usuario.senha) {
+                return callback(null, usuario);
+            }
+
+            callback(new Error('Usuário e/ou senha inválido'));
         } else {
             return callback(new Error('Usuário e/ou senha inválido'));
         }

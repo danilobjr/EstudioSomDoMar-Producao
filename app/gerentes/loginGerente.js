@@ -10,11 +10,6 @@ module.exports = function () {
         if (usuario) {
             var senhaCriptografada = hash(senha);
 
-            console.log('usuario.senha');
-            console.log(usuario.senha);
-            console.log('senhaCriptografada');
-            console.log(senhaCriptografada);
-
             if (senhaCriptografada == usuario.senha) {
                 return callback(null, usuario);
             }

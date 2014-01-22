@@ -1,4 +1,4 @@
-var hash = require('./pass');
+//var hash = require('./pass');
 
 //exports.autenticar = function (name, pass, callback) {
 //    if (!module.parent) console.log('authenticating %s:%s', name, pass);
@@ -24,7 +24,8 @@ exports.autenticacaoRequerida = function (req, res, next) {
     if (req.session.user) {
         next();
     } else {
-        req.session.error = 'Access denied!';
+        req.session.error = 'Autenticação Requerida.';
+        console.log(req.session.error);
         res.redirect('/login');
     }
 };

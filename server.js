@@ -2,6 +2,7 @@ var express = require('express'),
     engine = require('ejs-locals'),
     http = require('http'),
     path = require('path'),
+    autenticacaoRequerida = require('./app/infra/autenticacao').autenticacaoRequerida,
     hash = require('./app/infra/pass').hash,
     login = require('./routes/login'),
     home = require('./routes/home'),
@@ -49,25 +50,26 @@ app.configure('development', function(){
 
 app.get('/', home.index);
 app.get('/login', login.index);
-app.get('/admin', admin.index);
-app.get('/admin/videos', video.index);
-app.get('/admin/video/novo', video.novo);
-app.get('/admin/artistas', artista.index);
-app.get('/admin/artista/novo', artista.novo);
-app.get('/admin/artista/alterar/:id', artista.editar);
-app.get('/artista/:id', artista.exibir);
+app.get('/logout', login.logoff);
+app.get('/admin', autenticacaoRequerida, admin.index);
+app.get('/admin/videos', autenticacaoRequerida, video.index);
+app.get('/admin/video/novo', autenticacaoRequerida, video.novo);
+app.get('/admin/artistas', autenticacaoRequerida, artista.index);
+app.get('/admin/artista/novo', autenticacaoRequerida, artista.novo);
+app.get('/admin/artista/alterar/:id', autenticacaoRequerida, artista.editar);
+app.get('/artista/:id', autenticacaoRequerida, artista.exibir);
 
 // actions
 
-app.post('/login', login.logar);
-app.post('/admin/video/novo', video.incluir);
-app.get('/admin/video/excluir/:id', video.excluir);
-app.post('/admin/artista/novo', artista.incluir);
-app.post('/admin/artista/alterar/dados-pessoais', artista.alterarDadosPessoais);
-app.post('/admin/artista/alterar/musicas', artista.alterarMusicas);
-app.post('/admin/artista/alterar/imagem-perfil', artista.alterarImagemPerfil);
-app.post('/admin/artista/alterar/background', artista.alterarBackground);
-app.get('/admin/artista/excluir/:id', artista.excluir);
+app.post('/login', login.logon);
+app.post('/admin/video/novo', autenticacaoRequerida, video.incluir);
+app.get('/admin/video/excluir/:id', autenticacaoRequerida, video.excluir);
+app.post('/admin/artista/novo', autenticacaoRequerida, artista.incluir);
+app.post('/admin/artista/alterar/dados-pessoais', autenticacaoRequerida, artista.alterarDadosPessoais);
+app.post('/admin/artista/alterar/musicas', autenticacaoRequerida, artista.alterarMusicas);
+app.post('/admin/artista/alterar/imagem-perfil', autenticacaoRequerida, artista.alterarImagemPerfil);
+app.post('/admin/artista/alterar/background', autenticacaoRequerida, artista.alterarBackground);
+app.get('/admin/artista/excluir/:id', autenticacaoRequerida, artista.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

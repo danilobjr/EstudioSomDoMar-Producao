@@ -1,7 +1,6 @@
 var loginGerente = require('./../app/gerentes/loginGerente');
 
 exports.index = function (req, res) {
-    //var videos = videoGerente.obterTodos();
     res.render('loginIndex', { _layoutFile: false });
 };
 
@@ -16,8 +15,7 @@ exports.logon = function (req, res) {
             });
         } else {
             req.session.error = 'Autenticação falhou, por favor cheque seu nome de usuário e senha.';
-            console.log(req.session.error);
-            res.redirect('/login');
+            res.redirect('/login?error=1');
         }
     });
 };

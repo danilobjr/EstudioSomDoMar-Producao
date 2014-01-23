@@ -77,7 +77,6 @@ var contexto = (function () {
                 email: 'anfrisiorocha@hotmail.com',
                 nome: 'Anfrísio Rocha',
                 senha: 'b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1'
-                //salt: ''
             },
             artistas: [
                 {

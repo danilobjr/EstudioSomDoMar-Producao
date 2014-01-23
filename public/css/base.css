@@ -12270,3 +12270,9 @@ a#clear-completed:hover {
     top: -46px;
     right: 33px;
 }
+
+/* ESTILO DA MENSAGEM DE 'SENHA INCORRETA' NA PÁGINA DE LOGIN */
+
+#login .error {
+    padding: 8px;
+}

@@ -3,8 +3,6 @@ var contexto = require('./../repository/contexto'),
 
 module.exports = function () {
     var autenticar = function (nomeDeUsuario, senha, callback) {
-        //if (!module.parent) console.log('Autenticando %s:%s', nomeDeUsuario, senha);
-
         var usuario = contexto.usuario.obterPorEmail(nomeDeUsuario);
 
         if (usuario) {

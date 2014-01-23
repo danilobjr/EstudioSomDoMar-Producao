@@ -31,17 +31,6 @@ app.configure(function () {
     app.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.use(function (req, res, next) {
-    var err = req.session.error,
-        msg = req.session.success;
-    delete req.session.error;
-    delete req.session.success;
-    res.locals.message = '';
-    if (err) res.locals.message = err;
-    if (msg) res.locals.message = msg;
-    next();
-});
-
 app.configure('development', function(){
   app.use(express.errorHandler());
 });

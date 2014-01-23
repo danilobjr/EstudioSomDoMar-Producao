@@ -171,6 +171,43 @@
       </musicas>
     </artista>
   </artistas>
+    <fotos>
+        <foto>
+            <id>1</id>
+            <titulo>Aristides Cavalcante</titulo>
+            <tipo>musico</tipo>
+            <imagemPequena>musico-aristides_cavalcante_xs.jpg</imagemPequena>
+            <imagemAmpliada>musico-aristides_cavalcante_b.jpg</imagemAmpliada>
+        </foto>
+        <foto>
+            <id>2</id>
+            <titulo>Ronald Melo</titulo>
+            <tipo>musico</tipo>
+            <imagemPequena>musico-ronald_melo_xs.jpg</imagemPequena>
+            <imagemAmpliada>musico-ronald_melo_b.jpg</imagemAmpliada>
+        </foto>
+        <foto>
+            <id>3</id>
+            <titulo>Júnior Finnis</titulo>
+            <tipo>musico</tipo>
+            <imagemPequena>musico-jr_finnis_xs.jpg</imagemPequena>
+            <imagemAmpliada>musico-jr_finnis_b.jpg</imagemAmpliada>
+        </foto>
+        <foto>
+            <id>4</id>
+            <titulo>Rodrigo Cardozo</titulo>
+            <tipo>musico</tipo>
+            <imagemPequena>musico-rodrigo_cardozo_xs.jpg</imagemPequena>
+            <imagemAmpliada>musico-rodrigo_cardozo_b.jpg</imagemAmpliada>
+        </foto>
+        <foto>
+            <id>5</id>
+            <titulo>Backing Vocal - Thiago, Suelen e Daniel</titulo>
+            <tipo>musico</tipo>
+            <imagemPequena>musico-thisudan_xs.jpg</imagemPequena>
+            <imagemAmpliada>musico-thisudan_b.jpg</imagemAmpliada>
+        </foto>
+    </fotos>
   <videos>
     <video>
       <id>1</id>

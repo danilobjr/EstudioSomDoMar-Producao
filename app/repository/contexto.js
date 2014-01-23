@@ -166,6 +166,53 @@ var contexto = (function () {
                     }
                 }
             ],
+            fotos: [
+                {
+                    foto: {
+                        id: 1,
+                        titulo: 'Aristides Cavalcante',
+                        tipo: 'estudio',
+                        imagemPequena: 'musico-aristides_cavalcante_xs.jpg',
+                        imagemAmpliada: 'musico-aristides_cavalcante_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 2,
+                        titulo: 'Júnior Finnis',
+                        tipo: 'estudio',
+                        imagemPequena: 'musico-jr_finnis_xs.jpg',
+                        imagemAmpliada: 'musico-jr_finnis_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 3,
+                        titulo: 'Ronald Melo',
+                        tipo: 'estudio',
+                        imagemPequena: 'musico-ronald_melo_xs.jpg',
+                        imagemAmpliada: 'musico-ronald_melo_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 4,
+                        titulo: 'Rodrigo Cardozo',
+                        tipo: 'estudio',
+                        imagemPequena: 'musico-rodrigo_cardozo_xs.jpg',
+                        imagemAmpliada: 'musico-rodrigo_cardozo_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 5,
+                        titulo: 'Backing Vocal - Thiago, Suelen e Daniel',
+                        tipo: 'estudio',
+                        imagemPequena: 'musico-thisudan_xs.jpg',
+                        imagemAmpliada: 'musico-thisudan_b.jpg'
+                    }
+                }
+            ],
             videos: [
                 {
                     video: {
@@ -399,6 +446,30 @@ var contexto = (function () {
             return artistaProcurado;
         };
 
+        // Fotos
+
+        var obterTodasAsFotos = function () {
+            var contexto = xml.obterContexto();
+            return contexto.fotos;
+        };
+
+        var obterFotosPorTipo = function (tipo) {
+            var contexto = xml.obterContexto();
+            var fotosEncontradas = undefined;
+
+            for (var cont in contexto.fotos) {
+                if (contexto.fotos[cont].tipo === tipo) {
+                    if (!fotosEncontradas) {
+                        fotosEncontradas = [];
+                    }
+                    
+                    fotosEncontradas.push(contexto.fotos[cont]);
+                }
+            }
+
+            return fotosEncontradas;
+        };
+
         // Vídeos
 
         var obterTodosOsVideos = function () {
@@ -486,6 +557,10 @@ var contexto = (function () {
                 alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
                 alterarBackground: alterarBackground,
                 excluirPorId: excluirArtistaPorId
+            },
+            fotos: {
+                obterTodas: obterTodasAsFotos,
+                obterPorTipo: obterFotosPorTipo
             },
             videos: {
                 obterTodos: obterTodosOsVideos,

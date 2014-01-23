@@ -47,6 +47,12 @@ var corrigirJSONContexto = function (contexto) {
     //console.log(contexto.artistas[0]);
     //console.log(contexto.artistas[1]);
 
+    contexto.fotos = contexto.fotos.foto;
+
+    if (!util.isArray(contexto.fotos)) {
+        contexto.fotos = [contexto.fotos];
+    }
+
     contexto.videos = contexto.videos.video;
 
     if (!util.isArray(contexto.videos)) {
@@ -93,6 +99,10 @@ var tornarDadosBrutos = function (dados) {
 
     //console.log('# DEPOIS: dados.artistas');
     //console.log(dados.artistas[0].artista.musicas);
+
+    for (var i = 0; i < dados.fotos.length; i++) {
+        dados.fotos[i] = { video: dados.fotos[i] };
+    }
 
     for (var i = 0; i < dados.videos.length; i++) {
         dados.videos[i] = { video: dados.videos[i] };

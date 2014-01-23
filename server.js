@@ -7,6 +7,7 @@ var express = require('express'),
     login = require('./routes/login'),
     home = require('./routes/home'),
     admin = require('./routes/admin'),
+    foto = require('./routes/foto'),
     video = require('./routes/video'),
     artista = require('./routes/artista');
 
@@ -41,6 +42,8 @@ app.get('/', home.index);
 app.get('/login', login.index);
 app.get('/logout', login.logoff);
 app.get('/admin', autenticacaoRequerida, admin.index);
+app.get('/admin/fotos', autenticacaoRequerida, foto.index);
+app.get('/admin/foto/nova', autenticacaoRequerida, foto.nova);
 app.get('/admin/videos', autenticacaoRequerida, video.index);
 app.get('/admin/video/novo', autenticacaoRequerida, video.novo);
 app.get('/admin/artistas', autenticacaoRequerida, artista.index);

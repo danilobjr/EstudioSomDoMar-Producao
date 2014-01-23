@@ -1,0 +1,89 @@
+<div class="row-fluid">
+    <div class="box gradient">
+        <div class="title">
+            <h3> 
+                <i class=" icon-bar-chart"></i><span>Fotos</span> 
+            </h3>
+        </div>
+        <!-- End .title -->
+
+        <div class="content">
+
+            <%
+                                    
+            var quantidadeDeFotosPorLinha = 4
+                quantidadeDeDiv = 0;
+
+            if (viewModel.length <= quantidadeDeFotosPorLinha) {
+                quantidadeDeDiv = 1;
+            } else {
+                quantidadeDeDiv = Math.ceil(viewModel.length / quantidadeDeFotosPorLinha);
+            }
+
+            for (var rowIndex = 0; rowIndex < quantidadeDeDiv; rowIndex++) {
+
+            %>
+
+            <div class="row-fluid fluid">
+
+                <%
+                                    
+                var quantidadeDeFoto = 0,
+                    ehUltimaLinha = (rowIndex + 1) === quantidadeDeDiv;
+
+                if (ehUltimaLinha) {
+                    quantidadeDeFoto = viewModel.length;
+                } else {
+                    quantidadeDeFoto = quantidadeDeFotosPorLinha * (rowIndex + 1);
+                }
+
+                for (var fotoIndex = rowIndex * quantidadeDeFotosPorLinha; fotoIndex < quantidadeDeFoto; fotoIndex++) {
+
+                %>
+
+                <div class="span3">
+                    <div class="box color_26 height_medium paint_hover">
+                    <div class="content icon big_icon"> <a href="#"><img align="center" src="img/general/contacts_icon.png"></a>
+                        <div class="description">CONTACTS</div>
+                    </div>
+                    <a class="change_color_outside"><i class="paint_bucket"></i></a></div>
+                </div>
+
+                <% } %> <!-- End FOR -->
+
+            </div>
+
+            <% } %> <!-- End FOR -->
+
+        </div>
+    </div>
+    <!-- End .box --> 
+</div>
+<!-- End .row-fluid --> 
+
+<div class="modal hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+        <h3 id="myModalLabel">Confirmação</h3>
+    </div>
+    <div class="modal-body">
+        <p>Deseja realmente excluir este item?</p>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-primary confirmarExclusao" href="#">Sim</a>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Não</button>
+    </div>
+</div>
+
+<script>
+    jQuery(function () {
+        $('a.excluir').on('click', function (e) {
+            e.preventDefault();
+            var _this = $(e.currentTarget);
+            var urlExclusao = _this.data().urlExclusao;
+            $('a.confirmarExclusao').attr('href', urlExclusao);
+        });
+    });
+</script>
+
+<% include partial/mensagem %>

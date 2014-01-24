@@ -6,7 +6,7 @@ exports.index = function (req, res) {
     fotos.musicos = fotoGerente.obterPorTipo('musico');
     //var fotos = fotoGerente.obterTodas();
 
-    res.render('fotoIndex_', { viewModel: fotos });
+    res.render('fotoIndex', { viewModel: fotos });
 };
 
 exports.nova = function (req, res) {

@@ -171,7 +171,7 @@ var contexto = (function () {
                     foto: {
                         id: 1,
                         titulo: 'Aristides Cavalcante',
-                        tipo: 'estudio',
+                        tipo: 'musico',
                         imagemPequena: 'musico-aristides_cavalcante_xs.jpg',
                         imagemAmpliada: 'musico-aristides_cavalcante_b.jpg'
                     }
@@ -180,7 +180,7 @@ var contexto = (function () {
                     foto: {
                         id: 2,
                         titulo: 'Júnior Finnis',
-                        tipo: 'estudio',
+                        tipo: 'musico',
                         imagemPequena: 'musico-jr_finnis_xs.jpg',
                         imagemAmpliada: 'musico-jr_finnis_b.jpg'
                     }
@@ -189,7 +189,7 @@ var contexto = (function () {
                     foto: {
                         id: 3,
                         titulo: 'Ronald Melo',
-                        tipo: 'estudio',
+                        tipo: 'musico',
                         imagemPequena: 'musico-ronald_melo_xs.jpg',
                         imagemAmpliada: 'musico-ronald_melo_b.jpg'
                     }
@@ -198,7 +198,7 @@ var contexto = (function () {
                     foto: {
                         id: 4,
                         titulo: 'Rodrigo Cardozo',
-                        tipo: 'estudio',
+                        tipo: 'musico',
                         imagemPequena: 'musico-rodrigo_cardozo_xs.jpg',
                         imagemAmpliada: 'musico-rodrigo_cardozo_b.jpg'
                     }
@@ -207,9 +207,162 @@ var contexto = (function () {
                     foto: {
                         id: 5,
                         titulo: 'Backing Vocal - Thiago, Suelen e Daniel',
-                        tipo: 'estudio',
+                        tipo: 'musico',
                         imagemPequena: 'musico-thisudan_xs.jpg',
                         imagemAmpliada: 'musico-thisudan_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 6,
+                        titulo: 'Aquário',
+                        tipo: 'estudio',
+                        imagemPequena: 'aquario-1_xs.jpg',
+                        imagemAmpliada: 'aquario-1_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 7,
+                        titulo: 'Aquário',
+                        tipo: 'estudio',
+                        imagemPequena: 'aquario-2_xs.jpg',
+                        imagemAmpliada: 'aquario-2_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 8,
+                        titulo: 'Bateria',
+                        tipo: 'estudio',
+                        imagemPequena: 'bateria-1_xs.jpg',
+                        imagemAmpliada: 'bateria-1_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 9,
+                        titulo: 'Bateria',
+                        tipo: 'estudio',
+                        imagemPequena: 'bateria-3_xs.jpg',
+                        imagemAmpliada: 'bateria-3_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 10,
+                        titulo: 'Bateria',
+                        tipo: 'estudio',
+                        imagemPequena: 'bateria-4_xs.jpg',
+                        imagemAmpliada: 'bateria-4_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 11,
+                        titulo: 'Instrumentos',
+                        tipo: 'estudio',
+                        imagemPequena: 'instrumentos-1_xs.jpg',
+                        imagemAmpliada: 'instrumentos-1_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 12,
+                        titulo: 'Mesa',
+                        tipo: 'estudio',
+                        imagemPequena: 'mesa-2_xs.jpg',
+                        imagemAmpliada: 'mesa-2_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 13,
+                        titulo: 'Mesa',
+                        tipo: 'estudio',
+                        imagemPequena: 'mesa-3_xs.jpg',
+                        imagemAmpliada: 'mesa-3_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 14,
+                        titulo: 'Mesa',
+                        tipo: 'estudio',
+                        imagemPequena: 'mesa-4_xs.jpg',
+                        imagemAmpliada: 'mesa-4_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 15,
+                        titulo: 'Microfone',
+                        tipo: 'estudio',
+                        imagemPequena: 'microfone_xs.jpg',
+                        imagemAmpliada: 'microfone_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 16,
+                        titulo: 'Periféricos',
+                        tipo: 'estudio',
+                        imagemPequena: 'perifericos-2_xs.jpg',
+                        imagemAmpliada: 'perifericos-2_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 17,
+                        titulo: 'Periféricos',
+                        tipo: 'estudio',
+                        imagemPequena: 'perifericos-3_xs.jpg',
+                        imagemAmpliada: 'perifericos-3_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 18,
+                        titulo: 'Periféricos',
+                        tipo: 'estudio',
+                        imagemPequena: 'perifericos-4_xs.jpg',
+                        imagemAmpliada: 'perifericos-4_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 19,
+                        titulo: 'Recepção',
+                        tipo: 'estudio',
+                        imagemPequena: 'recepcao_xs.jpg',
+                        imagemAmpliada: 'recepcao_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 20,
+                        titulo: 'Teclado',
+                        tipo: 'estudio',
+                        imagemPequena: 'teclado_xs.jpg',
+                        imagemAmpliada: 'teclado_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 21,
+                        titulo: 'Técnica',
+                        tipo: 'estudio',
+                        imagemPequena: 'tecnica-1_xs.jpg',
+                        imagemAmpliada: 'tecnica-1_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 22,
+                        titulo: 'Técnica',
+                        tipo: 'estudio',
+                        imagemPequena: 'tecnica-2_xs.jpg',
+                        imagemAmpliada: 'tecnica-2_b.jpg'
                     }
                 }
             ],

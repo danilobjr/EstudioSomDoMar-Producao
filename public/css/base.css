@@ -12276,3 +12276,9 @@ a#clear-completed:hover {
 #login .error {
     padding: 8px;
 }
+
+/* MAXIMIZAR - WIDTH: 100% - DAS FOTOS EM FOTOINDEX */
+
+#fotoIndexContent .thumbnail > img {
+    width: 100%;
+}

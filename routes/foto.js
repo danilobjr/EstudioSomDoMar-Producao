@@ -1,12 +1,12 @@
 var fotoGerente = require('./../app/gerentes/fotoGerente');
 
 exports.index = function (req, res) {
-    //var fotos = {};
-    //fotos.estudio = fotoGerente.obterPorTipo('estudio');
-    //fotos.musicos = fotoGerente.obterPorTipo('musico');
-    var fotos = fotoGerente.obterTodas();
+    var fotos = {};
+    fotos.estudio = fotoGerente.obterPorTipo('estudio');
+    fotos.musicos = fotoGerente.obterPorTipo('musico');
+    //var fotos = fotoGerente.obterTodas();
 
-    res.render('fotoIndex', { viewModel: fotos });
+    res.render('fotoIndex_', { viewModel: fotos });
 };
 
 exports.nova = function (req, res) {

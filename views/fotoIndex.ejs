@@ -12,24 +12,24 @@
             <%
                                     
             var quantidadeDeFotosPorLinha = 4
-                quantidadeDeDiv = 0;
+                quantidadeDeUl = 0;
 
             if (viewModel.length <= quantidadeDeFotosPorLinha) {
-                quantidadeDeDiv = 1;
+                quantidadeDeUl = 1;
             } else {
-                quantidadeDeDiv = Math.ceil(viewModel.length / quantidadeDeFotosPorLinha);
+                quantidadeDeUl = Math.ceil(viewModel.length / quantidadeDeFotosPorLinha);
             }
 
-            for (var rowIndex = 0; rowIndex < quantidadeDeDiv; rowIndex++) {
+            for (var rowIndex = 0; rowIndex < quantidadeDeUl; rowIndex++) {
 
             %>
 
-            <div class="row-fluid fluid">
+            <ul class="thumbnails row-fluid">
 
                 <%
                                     
                 var quantidadeDeFoto = 0,
-                    ehUltimaLinha = (rowIndex + 1) === quantidadeDeDiv;
+                    ehUltimaLinha = (rowIndex + 1) === quantidadeDeUl;
 
                 if (ehUltimaLinha) {
                     quantidadeDeFoto = viewModel.length;
@@ -41,17 +41,21 @@
 
                 %>
 
-                <div class="span3">
-                    <div class="box color_26 height_medium paint_hover">
-                    <div class="content icon big_icon"> <a href="#"><img align="center" src="img/general/contacts_icon.png"></a>
-                        <div class="description">CONTACTS</div>
+                <li class="span3">
+                    <div class="btn-group"> 
+                        <a class="excluir" data-toggle="modal" href="#myModal" rel="tooltip" data-url-exclusao="/admin/video/excluir/<%= viewModel[fotoIndex].id %>" data-placement="top" data-original-title="Excluir"> 
+                            <i class=" icon-trash"></i> 
+                        </a> 
                     </div>
-                    <a class="change_color_outside"><i class="paint_bucket"></i></a></div>
-                </div>
+                
+                    <a class="thumbnail"> 
+                        <iframe width="293" height="165" src="/img/foto/musico/<%= viewModel[fotoIndex].imagemPequena %>" frameborder="0" allowfullscreen></iframe>
+                    </a> 
+                </li>
 
                 <% } %> <!-- End FOR -->
 
-            </div>
+            </ul>
 
             <% } %> <!-- End FOR -->
 

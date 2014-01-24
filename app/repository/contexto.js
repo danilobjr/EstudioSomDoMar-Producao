@@ -623,6 +623,53 @@ var contexto = (function () {
             return fotosEncontradas;
         };
 
+        var obterFotoPorTitulo = function (titulo) {
+            var contexto = xml.obterContexto();
+            var fotoEncontrada = undefined;
+
+            for (var cont in contexto.fotos) {
+                if (contexto.fotos[cont].titulo === titulo) {
+                    fotoEncontrada = contexto.fotos[cont];
+                }
+            }
+
+            return fotoEncontrada;
+        };
+
+        var incluirNovaFoto = function (novaFoto) {
+            var contexto = xml.obterContexto();
+            var novoId = obterNovoId(contexto.fotos);
+            novaFoto.id = novoId;
+            contexto.artistas.push(novaFoto);
+            xml.salvar(contexto);
+
+            return novaFoto;
+        };
+
+        var excluirFotoPorId = function (id) {
+            var contexto = xml.obterContexto();
+
+            var fotoProcurada = undefined;
+
+            for (var i = 0; i < contexto.fotos.length; i++) {
+                if (contexto.fotos[i].id == id) {
+                    fotoProcurada = contexto.fotos[i];
+                }
+            }
+
+            if (fotoProcurada) {
+                if (contexto.fotos.length > 1) {
+                    var indiceFoto = contexto.fotos.indexOf(fotoProcurada);
+                    contexto.fotos.splice(indiceFoto, 1);
+                    xml.salvar(contexto);
+                } else {
+                    throw new Error('Não é permitido excluir todas as fotos');
+                }
+            }
+
+            return fotoProcurada;
+        };
+
         // Vídeos
 
         var obterTodosOsVideos = function () {
@@ -713,7 +760,10 @@ var contexto = (function () {
             },
             fotos: {
                 obterTodas: obterTodasAsFotos,
-                obterPorTipo: obterFotosPorTipo
+                obterPorTipo: obterFotosPorTipo,
+                obterPorTitulo: obterFotoPorTitulo,
+                incluir: incluirNovaFoto,
+                excluirPorId: excluirFotoPorId
             },
             videos: {
                 obterTodos: obterTodosOsVideos,

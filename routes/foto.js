@@ -4,7 +4,6 @@ exports.index = function (req, res) {
     var fotos = {};
     fotos.estudio = fotoGerente.obterPorTipo('estudio');
     fotos.musicos = fotoGerente.obterPorTipo('musico');
-    //var fotos = fotoGerente.obterTodas();
 
     res.render('fotoIndex', { viewModel: fotos });
 };
@@ -13,41 +12,47 @@ exports.nova = function (req, res) {
     res.render('fotoNova');
 };
 
-//exports.incluir = function (req, res) {
-//    var resultado = { sucesso: false, mensagem: '' };
+exports.incluir = function (req, res) {
+    var resultado = { sucesso: false, mensagem: '' };
 
-//    try {
-//        var novoVideo = {
-//            titulo: req.body.titulo,
-//            url: req.body.url
-//        };
-//        var videoCriado = videoGerente.incluir(novoVideo);
-//        resultado.sucesso = true;
-//        resultado.mensagem = 'Vídeo incluído com sucesso';
-//        //'Vídeo <b>' + videoExcluido.titulo + '</b> incluído com sucesso';
-//    } catch (error) {
-//        resultado.mensagem = 'Erro ao incluir vídeo: ' + error;
-//    }
+    try {
+        var novaFoto = {
+            titulo: req.body.titulo,
+            tipo: req.body.tipo,
+            imagemPequena: req.body.imagemPequena,
+            imagemAmpliada: req.body.imagemAmpliada
+        };
 
-//    var videos = videoGerente.obterTodos();
+        console.log(novaFoto);
+        //fotoGerente.incluir(novaFoto);
+        resultado.sucesso = true;
+        resultado.mensagem = 'Foto incluída com sucesso';
+    } catch (error) {
+        resultado.mensagem = 'Erro ao incluir foto: ' + error;
+    }
 
-//    res.render('videoIndex', { viewModel: videos, resultado: resultado });
-//};
+    var fotos = {};
+    fotos.estudio = fotoGerente.obterPorTipo('estudio');
+    fotos.musicos = fotoGerente.obterPorTipo('musico');
 
-//exports.excluir = function (req, res) {
-//    var resultado = { sucesso: false, mensagem: '' };
+    res.render('fotoIndex', { viewModel: fotos, resultado: resultado });
+};
 
-//    try {
-//        var videoExcluido = videoGerente.excluirPorId(req.params.id);
+exports.excluir = function (req, res) {
+    var resultado = { sucesso: false, mensagem: '' };
 
-//        resultado.sucesso = true;
-//        resultado.mensagem = 'Vídeo excluído com sucesso';
-//        //'Vídeo <b>' + videoExcluido.titulo + '</b> excluído com sucesso';
-//    } catch (error) {
-//        resultado.mensagem = 'Erro ao excluir vídeo: ' + error;
-//    }
+    try {
+        var fotoExcluida = fotoGerente.excluirPorId(req.params.id);
 
-//    var videos = videoGerente.obterTodos();
+        resultado.sucesso = true;
+        resultado.mensagem = 'Foto excluída com sucesso';
+    } catch (error) {
+        resultado.mensagem = 'Erro ao excluir foto: ' + error;
+    }
 
-//    res.render('videoIndex', { viewModel: videos, resultado: resultado });
-//};
+    var fotos = {};
+    fotos.estudio = fotoGerente.obterPorTipo('estudio');
+    fotos.musicos = fotoGerente.obterPorTipo('musico');
+
+    res.render('fotoIndex', { viewModel: fotos, resultado: resultado });
+};

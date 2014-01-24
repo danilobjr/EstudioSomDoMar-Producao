@@ -54,6 +54,8 @@ app.get('/artista/:id', autenticacaoRequerida, artista.exibir);
 // actions
 
 app.post('/login', login.logon);
+app.post('/admin/foto/nova', autenticacaoRequerida, foto.incluir);
+app.get('/admin/foto/excluir/:id', autenticacaoRequerida, foto.excluir);
 app.post('/admin/video/novo', autenticacaoRequerida, video.incluir);
 app.get('/admin/video/excluir/:id', autenticacaoRequerida, video.excluir);
 app.post('/admin/artista/novo', autenticacaoRequerida, artista.incluir);

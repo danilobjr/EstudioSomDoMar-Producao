@@ -5,6 +5,10 @@ module.exports = function () {
         return contexto.videos.obterTodos();
     };
 
+    var obterPorTitulo = function (titulo) {
+        return contexto.videos.obterPorTitulo(titulo);
+    };
+
     var incluir = function (novoVideo) {
         var videoJahExiste = obterPorTitulo(novoVideo.titulo);
 

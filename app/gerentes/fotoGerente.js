@@ -9,30 +9,34 @@ module.exports = function () {
         return contexto.fotos.obterPorTipo(tipo);
     };
 
-    //var incluir = function (novoVideo) {
-    //    var videoJahExiste = obterPorTitulo(novoVideo.titulo);
+    var obterPorTitulo = function (titulo) {
+        return contexto.fotos.obterPorTitulo(titulo);
+    };
 
-    //    if (videoJahExiste) {
-    //        throw new Error('Vídeo já existe');
-    //    } else {
-    //        return contexto.videos.incluir(novoVideo);
-    //    }
-    //};
+    var incluir = function (novaFoto) {
+        var fotoJahExiste = obterPorTitulo(novaFoto.titulo);
 
-    //var excluirPorVideoId = function (id) {
-    //    var videoExcluido = contexto.videos.excluirPorId(id);
+        if (fotoJahExiste) {
+            throw new Error('Foto já existe');
+        } else {
+            return contexto.fotos.incluir(novaFoto);
+        }
+    };
 
-    //    if (!videoExcluido) {
-    //        throw new Error('Vídeo já excluído ou não encontrado');
-    //    }
+    var excluirPorFotoId = function (id) {
+        var fotoExcluida = contexto.fotos.excluirPorId(id);
 
-    //    return videoExcluido;
-    //};
+        if (!fotoExcluida) {
+            throw new Error('Foto já excluída ou não encontrada');
+        }
+
+        return fotoExcluida;
+    };
 
     return {
         obterTodas: obterTodasAsFotos,
-        obterPorTipo: obterFotosPorTipo
-        //excluirPorId: excluirPorVideoId,
-        //incluir: incluir
+        obterPorTipo: obterFotosPorTipo,
+        excluirPorId: excluirPorFotoId,
+        incluir: incluir
     };
 } ();

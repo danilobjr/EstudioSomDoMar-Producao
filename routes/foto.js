@@ -23,8 +23,7 @@ exports.incluir = function (req, res) {
             imagemAmpliada: req.body.imagemAmpliada
         };
 
-        console.log(novaFoto);
-        //fotoGerente.incluir(novaFoto);
+        fotoGerente.incluir(novaFoto);
         resultado.sucesso = true;
         resultado.mensagem = 'Foto incluída com sucesso';
     } catch (error) {
@@ -42,7 +41,7 @@ exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 
     try {
-        var fotoExcluida = fotoGerente.excluirPorId(req.params.id);
+        fotoGerente.excluirPorId(req.params.id);
 
         resultado.sucesso = true;
         resultado.mensagem = 'Foto excluída com sucesso';

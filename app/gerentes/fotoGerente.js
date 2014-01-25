@@ -15,7 +15,7 @@ module.exports = function () {
 
     var incluir = function (novaFoto) {
         var fotoJahExiste = obterPorTitulo(novaFoto.titulo);
-
+        
         if (fotoJahExiste) {
             throw new Error('Foto já existe');
         } else {
@@ -23,7 +23,7 @@ module.exports = function () {
         }
     };
 
-    var excluirPorFotoId = function (id) {
+    var excluirPorId = function (id) {
         var fotoExcluida = contexto.fotos.excluirPorId(id);
 
         if (!fotoExcluida) {
@@ -36,7 +36,7 @@ module.exports = function () {
     return {
         obterTodas: obterTodasAsFotos,
         obterPorTipo: obterFotosPorTipo,
-        excluirPorId: excluirPorFotoId,
+        excluirPorId: excluirPorId,
         incluir: incluir
     };
 } ();

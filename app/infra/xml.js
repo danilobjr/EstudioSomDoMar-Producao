@@ -53,6 +53,9 @@ var corrigirJSONContexto = function (contexto) {
         contexto.fotos = [contexto.fotos];
     }
 
+    //console.log('corrigirJSONContexto: fotos');
+    //console.log(contexto.fotos);
+
     contexto.videos = contexto.videos.video;
 
     if (!util.isArray(contexto.videos)) {
@@ -61,7 +64,6 @@ var corrigirJSONContexto = function (contexto) {
 }
 
 var tornarDadosBrutos = function (dados) {
-
     var dadosBrutos = dados;
 
     for (var i = 0; i < dados.paginas[0].banners.length; i++) {
@@ -76,7 +78,8 @@ var tornarDadosBrutos = function (dados) {
         dados.artistas[i] = { artista: dados.artistas[i] };
     }
 
-    //console.log('# ANTES: dados.artistas[2]');
+    //console.log('# ANTES: dados.artistas');
+    //console.log(dados.artistas);
     //console.log(dados.artistas[2].artista.telefones);
     //console.log(dados.artistas[2].artista.redesSociais);
     //console.log(dados.artistas[2].artista.musicas);
@@ -85,9 +88,11 @@ var tornarDadosBrutos = function (dados) {
         for (var k = 0; k < dados.artistas[i].artista.telefones.length; k++) {
             dados.artistas[i].artista.telefones[k] = { telefone: dados.artistas[i].artista.telefones[k] };
         }
-
-        for (var k = 0; k < dados.artistas[i].artista.redesSociais.length; k++) {
-            dados.artistas[i].artista.redesSociais[k] = { redeSocial: dados.artistas[i].artista.redesSociais[k] };
+        
+        if (dados.artistas[i].artista.redesSociais) {
+            for (var k = 0; k < dados.artistas[i].artista.redesSociais.length; k++) {
+                dados.artistas[i].artista.redesSociais[k] = { redeSocial: dados.artistas[i].artista.redesSociais[k] };
+            }
         }
 
         if (dados.artistas[i].artista.musicas) {
@@ -98,10 +103,12 @@ var tornarDadosBrutos = function (dados) {
     }
 
     //console.log('# DEPOIS: dados.artistas');
-    //console.log(dados.artistas[0].artista.musicas);
+    //console.log(dados.artistas);
+
+    //console.log(dados.fotos);
 
     for (var i = 0; i < dados.fotos.length; i++) {
-        dados.fotos[i] = { video: dados.fotos[i] };
+        dados.fotos[i] = { foto: dados.fotos[i] };
     }
 
     for (var i = 0; i < dados.videos.length; i++) {
@@ -121,7 +128,6 @@ exports.salvar = function (contexto) {
     //console.log(contexto);
 
     var dadosBrutos = tornarDadosBrutos(contexto);
-
     //console.log('# DEPOIS - dados brutos:');
     //console.log(dadosBrutos);
 

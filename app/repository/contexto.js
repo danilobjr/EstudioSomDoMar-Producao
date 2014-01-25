@@ -431,12 +431,14 @@ var contexto = (function () {
             var id = 0;
 
             for (var i = 0; i < array.length; i++) {
+                array[i].id = parseInt(array[i].id);
+
                 if (array[i].id > id) {
                     id = array[i].id;
                 }
             }
 
-            return parseInt(id, 10) + 1;
+            return parseInt(id) + 1;
         };
 
         // Páginas
@@ -615,7 +617,7 @@ var contexto = (function () {
                     if (!fotosEncontradas) {
                         fotosEncontradas = [];
                     }
-                    
+
                     fotosEncontradas.push(contexto.fotos[cont]);
                 }
             }
@@ -640,7 +642,8 @@ var contexto = (function () {
             var contexto = xml.obterContexto();
             var novoId = obterNovoId(contexto.fotos);
             novaFoto.id = novoId;
-            contexto.artistas.push(novaFoto);
+            console.log(novaFoto);
+            contexto.fotos.push(novaFoto);
             xml.salvar(contexto);
 
             return novaFoto;
@@ -649,17 +652,17 @@ var contexto = (function () {
         var excluirFotoPorId = function (id) {
             var contexto = xml.obterContexto();
 
-            var fotoProcurada = undefined;
+            var fotoASerExcluida = undefined;
 
             for (var i = 0; i < contexto.fotos.length; i++) {
                 if (contexto.fotos[i].id == id) {
-                    fotoProcurada = contexto.fotos[i];
+                    fotoASerExcluida = contexto.fotos[i];
                 }
             }
 
-            if (fotoProcurada) {
+            if (fotoASerExcluida) {
                 if (contexto.fotos.length > 1) {
-                    var indiceFoto = contexto.fotos.indexOf(fotoProcurada);
+                    var indiceFoto = contexto.fotos.indexOf(fotoASerExcluida);
                     contexto.fotos.splice(indiceFoto, 1);
                     xml.salvar(contexto);
                 } else {
@@ -667,7 +670,7 @@ var contexto = (function () {
                 }
             }
 
-            return fotoProcurada;
+            return fotoASerExcluida;
         };
 
         // Vídeos

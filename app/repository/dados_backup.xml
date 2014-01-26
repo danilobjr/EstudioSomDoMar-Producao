@@ -1,60 +1,67 @@
 ﻿<contexto>
-  <paginas>
-    <pagina>
-      <id>1</id>
-      <descricao>Home</descricao>
-      <titulo>Bem-vindo!</titulo>
-      <subtitulo>Responsabilidade, compromisso e qualidade são o nosso lema</subtitulo>
-      <banners>
-        <banner>
-          <id>1</id>
-          <grande>/img/site/foto/tecnica-1_b.jpg</grande>
-          <pequeno>/img/site/foto/tecnica-1_s.jpg</pequeno>
-          <legenda>Técnica</legenda>
-        </banner>
-        <banner>
-          <id>2</id>
-          <grande>/img/site/foto/aquario-1_b.jpg</grande>
-          <pequeno>/img/site/foto/aquario-1_s.jpg</pequeno>
-          <legenda>Aquário</legenda>
-        </banner>
-        <banner>
-          <id>3</id>
-          <grande>/img/site/foto/bateria-4_b.jpg</grande>
-          <pequeno>/img/site/foto/bateria-4_s.jpg</pequeno>
-          <legenda>Bateria</legenda>
-        </banner>
-        <banner>
-          <id>4</id>
-          <grande>/img/site/foto/mesa-4_b.jpg</grande>
-          <pequeno>/img/site/foto/mesa-4_s.jpg</pequeno>
-          <legenda>Mesa</legenda>
-        </banner>
-        <banner>
-          <id>5</id>
-          <grande>/img/site/foto/perifericos-3_b.jpg</grande>
-          <pequeno>/img/site/foto/perifericos-3_s.jpg</pequeno>
-          <legenda>Periféricos</legenda>
-        </banner>
-      </banners>
-    </pagina>
-    <pagina>
-      <id>2</id>
-      <descricao>Admin</descricao>
-      <titulo>Dashboard</titulo>
-      <subtitulo></subtitulo>
-      <dica>
-        <titulo>Bem-vindo ao modo Administrador!</titulo>
-        <descricao>Aqui você poderá modificar seu site com facilidade. Esteja sempre atento às instruções. Qualquer dúvida entre em contato conosco.</descricao>
-      </dica>
-    </pagina>
-  </paginas>
-  <usuario>
-    <id>1</id>
-    <email>anfrisiorocha@hotmail.com</email>
-    <nome>Anfrísio Rocha</nome>
-    <senha>b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1</senha>
-  </usuario>
+    <paginas>
+        <pagina>
+            <id>1</id>
+            <descricao>Home</descricao>
+            <titulo>Bem-vindo!</titulo>
+            <subtitulo>Responsabilidade, compromisso e qualidade são o nosso lema</subtitulo>
+        </pagina>
+        <pagina>
+            <id>2</id>
+            <descricao>Estúdio</descricao>
+            <titulo>Bem-Vindo!</titulo>
+            <texto>
+                <paragrafos>
+                    <paragrafo>
+                        <id>1</id>
+                        <descricao>O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho. Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música. Marque seu horário no Estúdio Som do Mar e saia por ai fazendo sucesso. Sentimo-nos orgulhosos de participar de seus sonhos.</descricao>
+                    </paragrafo>
+                </paragrafos>
+            </texto>
+        </pagina>
+        <pagina>
+            <id>3</id>
+            <descricao>Portfólio - Jingles</descricao>
+            <texto>
+                <paragrafos>
+                    <paragrafo>
+                        <id>1</id>
+                        <descricao>O Som do Mar produz para os mais variados ramos da publicidade, desde rádio e TV até campanhas políticas e publicitárias.</descricao>
+                    </paragrafo>
+                    <paragrafo>
+                        <id>2</id>
+                        <descricao>Ouça ao lado alguns trabalhos que produzimos.</descricao>
+                    </paragrafo>
+                </paragrafos>
+            </texto>
+        </pagina>
+        <pagina>
+            <id>4</id>
+            <descricao>Portfólio - Pessoal</descricao>
+            <texto>
+                <paragrafos>
+                    <paragrafo>
+                        <id>1</id>
+                        <descricao>Anfrisio, Diretor e proprietário do Estudio Som do Mar é músico com uma grande história em eventos musicais no Ceará e com trabalhos feitos pelo Brasil à fora.</descricao>
+                    </paragrafo>
+                    <paragrafo>
+                        <id>2</id>
+                        <descricao>Profissional com larga experiência em música, Formado em Licenciatura em Música, sua vida inteira foi dedicar-se à música, fazendo disso sua principal função na vida. É Multi-instrumentista e dono de grande habilidade com os instrumentos.</descricao>
+                    </paragrafo>
+                    <paragrafo>
+                        <id>3</id>
+                        <descricao>Anfrisio é arranjador, compositor, produtor e diretor de seu próprio estúdio em Fortaleza, a Cidade Bela de todos nós.</descricao>
+                    </paragrafo>
+                </paragrafos>
+            </texto>
+        </pagina>
+    </paginas>
+    <usuario>
+        <id>1</id>
+        <email>anfrisiorocha@hotmail.com</email>
+        <nome>Anfrísio Rocha</nome>
+        <senha>b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1</senha>
+    </usuario>
   <artistas>
     <artista>
       <id>1</id>
@@ -334,27 +341,27 @@
       <url>//www.youtube.com/embed/sX1EmPOwBsU</url>
     </video>
     <video>
-      <id>3</id>
+      <id>2</id>
       <titulo>Banda Frequencia 33 || Making Of Gravação</titulo>
       <url>//www.youtube.com/embed/J3ODdCOAY5E</url>
     </video>
     <video>
-      <id>4</id>
+      <id>3</id>
       <titulo>Espera | Anfrísio Rocha</titulo>
       <url>//www.youtube.com/embed/6gUCAy6rWKU</url>
     </video>
     <video>
-      <id>5</id>
+      <id>4</id>
       <titulo>Sarquis Fermanian - Fast Track</titulo>
       <url>//www.youtube.com/embed/2vPa1TT-3xY</url>
     </video>
     <video>
-      <id>6</id>
+      <id>5</id>
       <titulo>Estúdio Som do Mar | Institucional</titulo>
       <url>//www.youtube.com/embed/RWOLnEuKGWA</url>
     </video>
     <video>
-      <id>7</id>
+      <id>6</id>
       <titulo>Discurso Imoral | Flavinho Souza</titulo>
       <url>//www.youtube.com/embed/XP7tnp8GvQA</url>
     </video>

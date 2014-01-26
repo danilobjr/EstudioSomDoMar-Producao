@@ -13,7 +13,15 @@ var pathXmlFile = __dirname + '/../repository/',
 
 var corrigirJSONContexto = function (contexto) {
     contexto.paginas = contexto.paginas.pagina;
-    contexto.paginas[0].banners = contexto.paginas[0].banners.banner;
+    
+    for (var i = 0; i < contexto.paginas.length; i++) {
+        contexto.paginas[i].texto.paragrafos = contexto.paginas[i].texto.paragrafos.paragrafo;
+
+        if (!util.isArray(contexto.paginas[i].texto.paragrafos)) {
+            contexto.paginas[i].texto.paragrafos = [contexto.paginas[i].texto.paragrafos];
+        }
+    }
+
     contexto.artistas = contexto.artistas.artista;
 
     if (!util.isArray(contexto.artistas)) {
@@ -21,8 +29,6 @@ var corrigirJSONContexto = function (contexto) {
     }
 
     for (var i = 0; i < contexto.artistas.length; i++) {
-        //console.log('Musica ' + i + ': ');
-        //console.log(contexto.artistas[i].musicas);
         contexto.artistas[i].telefones = contexto.artistas[i].telefones.telefone;
         contexto.artistas[i].redesSociais = contexto.artistas[i].redesSociais.redeSocial;
 
@@ -43,18 +49,11 @@ var corrigirJSONContexto = function (contexto) {
         }
     }
 
-    //console.log('corrigirJSONContexto: musicas');
-    //console.log(contexto.artistas[0]);
-    //console.log(contexto.artistas[1]);
-
     contexto.fotos = contexto.fotos.foto;
 
     if (!util.isArray(contexto.fotos)) {
         contexto.fotos = [contexto.fotos];
     }
-
-    //console.log('corrigirJSONContexto: fotos');
-    //console.log(contexto.fotos);
 
     contexto.videos = contexto.videos.video;
 
@@ -66,10 +65,6 @@ var corrigirJSONContexto = function (contexto) {
 var tornarDadosBrutos = function (dados) {
     var dadosBrutos = dados;
 
-    for (var i = 0; i < dados.paginas[0].banners.length; i++) {
-        dados.paginas[0].banners[i] = { banner: dados.paginas[0].banners[i] };
-    }
-
     for (var i = 0; i < dados.paginas.length; i++) {
         dados.paginas[i] = { pagina: dados.paginas[i] };
     }
@@ -77,12 +72,6 @@ var tornarDadosBrutos = function (dados) {
     for (var i = 0; i < dados.artistas.length; i++) {
         dados.artistas[i] = { artista: dados.artistas[i] };
     }
-
-    //console.log('# ANTES: dados.artistas');
-    //console.log(dados.artistas);
-    //console.log(dados.artistas[2].artista.telefones);
-    //console.log(dados.artistas[2].artista.redesSociais);
-    //console.log(dados.artistas[2].artista.musicas);
 
     for (var i = 0; i < dados.artistas.length; i++) {
         for (var k = 0; k < dados.artistas[i].artista.telefones.length; k++) {
@@ -102,11 +91,6 @@ var tornarDadosBrutos = function (dados) {
         }
     }
 
-    //console.log('# DEPOIS: dados.artistas');
-    //console.log(dados.artistas);
-
-    //console.log(dados.fotos);
-
     for (var i = 0; i < dados.fotos.length; i++) {
         dados.fotos[i] = { foto: dados.fotos[i] };
     }
@@ -124,12 +108,7 @@ exports.criar = function (dados, recriar) {
 };
 
 exports.salvar = function (contexto) {
-    //console.log('# ANTES - dados normais:');
-    //console.log(contexto);
-
     var dadosBrutos = tornarDadosBrutos(contexto);
-    //console.log('# DEPOIS - dados brutos:');
-    //console.log(dadosBrutos);
 
     var recriar = true;
     this.criar(dadosBrutos, recriar);
@@ -140,15 +119,10 @@ exports.obterContexto = function (callback) {
 
     xmlParser.parseString(contexto, function (err, result) {
         contexto = JSON.parse(JSON.stringify(result));
-        //console.log('obterContexto() [dados puros]:');
-        //console.log(contexto.contexto.artistas.artista[0]);
         contexto = contexto.contexto;
     });
 
     corrigirJSONContexto(contexto);
-
-    //console.log('obterContexto() [dados corrigidos]:');
-    //console.log(contexto.artistas[0].redesSociais);
 
     return contexto;
 };

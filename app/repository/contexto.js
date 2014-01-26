@@ -8,70 +8,77 @@ var contexto = (function () {
     function init() {
 
         var dados = {
-            //paginas: [
-            //    {
-            //        pagina: {
-            //            id: 1,
-            //            descricao: "Home",
-            //            titulo: "Bem-vindo!",
-            //            subtitulo: "Responsabilidade, compromisso e qualidade são o nosso lema",
-            //            banners: [
-            //                {
-            //                    banner: {
-            //                        id: 1,
-            //                        grande: "/img/site/foto/tecnica-1_b.jpg",
-            //                        pequeno: "/img/site/foto/tecnica-1_s.jpg",
-            //                        legenda: "Técnica"
-            //                    }
-            //                },
-            //                {
-            //                    banner: {
-            //                        id: 2,
-            //                        grande: "/img/site/foto/aquario-1_b.jpg",
-            //                        pequeno: "/img/site/foto/aquario-1_s.jpg",
-            //                        legenda: "Aquário"
-            //                    }
-            //                },
-            //                {
-            //                    banner: {
-            //                        id: 3,
-            //                        grande: "/img/site/foto/bateria-4_b.jpg",
-            //                        pequeno: "/img/site/foto/bateria-4_s.jpg",
-            //                        legenda: "Bateria"
-            //                    }
-            //                },
-            //                {
-            //                    banner: {
-            //                        id: 4,
-            //                        grande: "/img/site/foto/mesa-4_b.jpg",
-            //                        pequeno: "/img/site/foto/mesa-4_s.jpg",
-            //                        legenda: "Mesa"
-            //                    }
-            //                },
-            //                {
-            //                    banner: {
-            //                        id: 5,
-            //                        grande: "/img/site/foto/perifericos-3_b.jpg",
-            //                        pequeno: "/img/site/foto/perifericos-3_s.jpg",
-            //                        legenda: "Periféricos"
-            //                    }
-            //                }
-            //            ]
-            //        }
-            //    },
-            //    {
-            //        pagina: {
-            //            id: 2,
-            //            descricao: "Admin",
-            //            titulo: "Dashboard",
-            //            subtitulo: '',
-            //            dica: {
-            //                titulo: 'Bem-vindo ao modo Administrador!',
-            //                descricao: 'Aqui você poderá modificar seu site com facilidade. Esteja sempre atento às instruções. Qualquer dúvida entre em contato conosco.'
-            //            }
-            //        }
-            //    }
-            //],
+            paginas: [
+                {
+                    pagina: {
+                        id: 1,
+                        descricao: "Home",
+                        titulo: "Bem-vindo!",
+                        subtitulo: "Responsabilidade, compromisso e qualidade são o nosso lema"
+                    }
+                },
+                {
+                    pagina: {
+                        id: 2,
+                        descricao: "Estúdio",
+                        titulo: "Bem-Vindo!",
+                        texto: {
+                            paragrafos: [
+                                {
+                                    paragrafo: {
+                                        id: 1,
+                                        descricao: 'O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho. Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música. Marque seu horário no Estúdio Som do Mar e saia por ai fazendo sucesso. Sentimo-nos orgulhosos de participar de seus sonhos.'
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    pagina: {
+                        id: 3,
+                        descricao: "Portfólio - Jingles",
+                        texto: {
+                            paragrafos: [
+                                {
+                                    paragrafo: {
+                                        id: 1,
+                                        descricao: 'O Som do Mar produz para os mais variados ramos da publicidade, desde rádio e TV até campanhas políticas e publicitárias.'
+                                    },
+                                    paragrafo: {
+                                        id: 2,
+                                        descricao: 'Ouça ao lado alguns trabalhos que produzimos.'
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    pagina: {
+                        id: 4,
+                        descricao: "Portfólio - Pessoal",
+                        texto: {
+                            paragrafos: [
+                                {
+                                    paragrafo: {
+                                        id: 1,
+                                        descricao: 'Anfrisio, Diretor e proprietário do Estudio Som do Mar é músico com uma grande história em eventos musicais no Ceará e com trabalhos feitos pelo Brasil à fora.'
+                                    },
+                                    paragrafo: {
+                                        id: 2,
+                                        descricao: 'Profissional com larga experiência em música, Formado em Licenciatura em Música, sua vida inteira foi dedicar-se à música, fazendo disso sua principal função na vida. É Multi-instrumentista e dono de grande habilidade com os instrumentos.'
+                                    },
+                                    paragrafo: {
+                                        id: 3,
+                                        descricao: 'Anfrisio é arranjador, compositor, produtor e diretor de seu próprio estúdio em Fortaleza, a Cidade Bela de todos nós.'
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ],
             usuario: {
                 id: 1,
                 email: 'anfrisiorocha@hotmail.com',

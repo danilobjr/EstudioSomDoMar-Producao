@@ -450,6 +450,11 @@ var contexto = (function () {
 
         // Páginas
 
+        var obterTodasAsPaginas = function () {
+            var contexto = xml.obterContexto();
+            return contexto.paginas;
+        };
+
         var obterPaginaPorId = function (id) {
             var contexto = xml.obterContexto();
             for (var cont in contexto.paginas) {
@@ -459,14 +464,14 @@ var contexto = (function () {
             }
         };
 
-        var obterPaginaPorDescricao = function (descricao) {
-            var contexto = xml.obterContexto();
-            for (var cont in contexto.paginas) {
-                if (contexto.paginas[cont].descricao === descricao) {
-                    return contexto.paginas[cont];
-                }
-            }
-        };
+        //var obterPaginaPorDescricao = function (descricao) {
+        //    var contexto = xml.obterContexto();
+        //    for (var cont in contexto.paginas) {
+        //        if (contexto.paginas[cont].descricao === descricao) {
+        //            return contexto.paginas[cont];
+        //        }
+        //    }
+        //};
 
         // Usuário
 
@@ -750,8 +755,9 @@ var contexto = (function () {
         return {
             obterInstancia: obterInstancia,
             paginas: {
-                obterPorId: obterPaginaPorId,
-                obterPorDescricao: obterPaginaPorDescricao
+                obterTodas: obterTodasAsPaginas,
+                obterPorId: obterPaginaPorId
+                //obterPorDescricao: obterPaginaPorDescricao
             },
             usuario: {
                 obterUsuario: obterUsuario,

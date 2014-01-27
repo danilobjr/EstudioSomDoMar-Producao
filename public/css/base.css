@@ -12282,3 +12282,15 @@ a#clear-completed:hover {
 #fotoIndexContent .thumbnail > img {
     width: 100%;
 }
+
+/* AJUSTE DE ALINHAMENTO DOS BOTÕES DE ADD E REMOVE AO LADO DE TEXTAREA */
+
+.addRemoveBtnsWithTextarea {
+    top: -5px;
+}
+
+/* TEXTAREA SEM REDIMENSIONAMENTO */
+
+textarea {
+    resize: none;
+}

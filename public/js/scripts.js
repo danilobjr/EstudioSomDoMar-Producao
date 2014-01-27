@@ -22,6 +22,7 @@
 
 	  	//General functions
 	  	$("input:checkbox, input:radio, input:file").uniform();
+
 	  	// Enable tooltips
 	    $('[rel=tooltip]').tooltip();
 	    $('.bar_1').sparkline( [3,4,8,5,3,6,3,2,3,5], {type:"bar", barColor:"#fff" });

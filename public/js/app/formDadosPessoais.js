@@ -97,6 +97,7 @@ $(function () {
 
         return haErro;
     };
+
     var verificarErrosDoCampoNome = function (e) {
         var haErro = false;
         haErro = gerarErroRequired(e);
@@ -107,6 +108,7 @@ $(function () {
 
         return haErro;
     };
+
     var verificarErrosDoCampoSite = function (e) {
         var haErro = false;
         haErro = gerarErroMinlength(e, 5);
@@ -117,6 +119,7 @@ $(function () {
 
         return haErro;
     };
+
     var verificarErrosDoCampoEmail = function (e) {
         var haErro = false;
         haErro = gerarErroRequired(e);
@@ -143,6 +146,8 @@ $(function () {
 
         return haErro;
     };
+
+    // Bind de eventos
 
     campoNome.on('keyup', verificarErrosDoCampoNome);
     campoSite.on('keyup', verificarErrosDoCampoSite);

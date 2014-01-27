@@ -108,8 +108,8 @@
                         <article class="col1">
                             
                             <hgroup>
-                                <h1 class="style1" title="BEM-VINDO!">BEM-VINDO!</h1>
-								<h2>Responsabilidade, compromisso e qualidade são o nosso lema.</h2>
+                                <h1 class="style1" title="BEM-VINDO!"><%= viewModel.paginas.home.titulo %></h1>
+								<h2><%= viewModel.paginas.home.subtitulo %></h2>
                             </hgroup>
 
                             <ul id="carousel" class="jcarousel-skin-tango"> 
@@ -174,11 +174,15 @@
                             <article class="col2 cont-line"> 
                                 <h2>BEM-VINDO!</h2> 
                                 <img src="img/foto/tecnica_estudio.jpg" alt="" class="imgIndent"> 
-                                <p>
-                                    O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho.
-                                    Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música.
-                                    Marque seu horário no Estúdio Som do Mar e saia por ai fazendo sucesso. Sentimo-nos orgulhosos de participar de seus sonhos.                                </p>
-                                <a href="#!/page_more" class="ex-8">Mais sobre nós</a>                            </article> 
+
+                                <% for (var i = 0; i < viewModel.paginas.estudio.texto.paragrafos.length; i++) { %>
+
+                                    <p><%= viewModel.paginas.estudio.texto.paragrafos[i].descricao %></p>
+
+                                <% } %>
+
+                                <a href="#!/page_more" class="ex-8">Mais sobre nós</a>                            
+                            </article> 
 
                             <article class="col3 margLeft"> 
                                 <h2>Som do Mar</h2> 
@@ -208,7 +212,8 @@
                             </article> 
                         </div> 
                     </li> 
-<li id="page_works" class="contentPad"> 
+
+                    <li id="page_works" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col9"> 
 
@@ -405,8 +410,17 @@
                                             <!--<p>Fender, Taylor, Condor e etc. Para proporcionar o melhor som, equipamentos de qualidade e instrumentos de marcas renomadas.</p>-->
 
                                             <div class="col5 padRight cont-line descricao">
+
+                                                <% for (var i = 0; i < viewModel.paginas.portfolioJingles.texto.paragrafos.length; i++) { %>
+
+                                                    <p><%= viewModel.paginas.portfolioJingles.texto.paragrafos[i].descricao %></p>
+
+                                                <% } %>
+
+                                                <!--
                                                 <p>O Som do Mar produz para os mais variados ramos da publicidade, desde rádio e TV até campanhas políticas e publicitárias.</p>
                                                 <p>Ouça ao lado alguns trabalhos que produzimos.</p>
+                                                -->
                                             </div>
 
                                             <div class="col6A margLeft scrollable">
@@ -445,9 +459,16 @@
                                             <!--<p>No Som do Mar você encontrará os serviços ideais que trazem a melhor qualidade sonora aliada à experiência de um produtor renomado no cenário musical.</p>-->
 
                                             <div class="col5 padRight cont-line descricao">
+                                                <% for (var i = 0; i < viewModel.paginas.portfolioPessoal.texto.paragrafos.length; i++) { %>
+
+                                                    <p><%= viewModel.paginas.portfolioPessoal.texto.paragrafos[i].descricao %></p>
+
+                                                <% } %>
+                                                <!--
                                                 <p>Anfrisio, Diretor e proprietário do Estudio Som do Mar é músico com uma grande história em eventos musicais no Ceará e com trabalhos feitos pelo Brasil à fora.</p>
                                                 <p>Profissional com larga experiência em música, Formado em Licenciatura em Música, sua vida inteira foi dedicar-se à música, fazendo disso sua principal função na vida. É Multi-instrumentista e dono de grande habilidade com os instrumentos.</p>
                                                 <p>Anfrisio é arranjador, compositor, produtor e diretor de seu próprio estúdio em Fortaleza, a Cidade Bela de todos nós.</p>
+                                                -->
                                             </div>
 
                                             <div class="col6A margLeft scrollable">

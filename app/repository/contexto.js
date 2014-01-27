@@ -455,8 +455,11 @@ var contexto = (function () {
             return contexto.paginas;
         };
 
-        var obterPaginaPorId = function (id) {
-            var contexto = xml.obterContexto();
+        var obterPaginaPorId = function (id, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
             for (var cont in contexto.paginas) {
                 if (contexto.paginas[cont].id.toString() === id) {
                     return contexto.paginas[cont];
@@ -464,14 +467,27 @@ var contexto = (function () {
             }
         };
 
-        //var obterPaginaPorDescricao = function (descricao) {
-        //    var contexto = xml.obterContexto();
-        //    for (var cont in contexto.paginas) {
-        //        if (contexto.paginas[cont].descricao === descricao) {
-        //            return contexto.paginas[cont];
-        //        }
-        //    }
-        //};
+        var obterPaginaPorDescricao = function (descricao) {
+            var contexto = xml.obterContexto();
+            for (var cont in contexto.paginas) {
+                if (contexto.paginas[cont].descricao === descricao) {
+                    return contexto.paginas[cont];
+                }
+            }
+        };
+
+        var alterarPagina = function (paginaAlterada) {
+            var contexto = xml.obterContexto();
+            var paginaExistente = obterPaginaPorId(paginaAlterada.id, contexto);
+
+            paginaExistente.titulo = paginaAlterada.titulo;
+            paginaExistente.subtitulo = paginaAlterada.subtitulo;
+            paginaExistente.texto = paginaAlterada.texto;
+
+            xml.salvar(contexto);
+
+            return obterPaginaPorId(paginaAlterada.id);
+        };
 
         // Usuário
 
@@ -654,7 +670,6 @@ var contexto = (function () {
             var contexto = xml.obterContexto();
             var novoId = obterNovoId(contexto.fotos);
             novaFoto.id = novoId;
-            console.log(novaFoto);
             contexto.fotos.push(novaFoto);
             xml.salvar(contexto);
 
@@ -756,8 +771,9 @@ var contexto = (function () {
             obterInstancia: obterInstancia,
             paginas: {
                 obterTodas: obterTodasAsPaginas,
-                obterPorId: obterPaginaPorId
-                //obterPorDescricao: obterPaginaPorDescricao
+                obterPorId: obterPaginaPorId,
+                alterar: alterarPagina,
+                obterPorDescricao: obterPaginaPorDescricao
             },
             usuario: {
                 obterUsuario: obterUsuario,

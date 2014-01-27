@@ -13,10 +13,9 @@ var pathXmlFile = __dirname + '/../repository/',
 
 var corrigirJSONContexto = function (contexto) {
     contexto.paginas = contexto.paginas.pagina;
-    
+
     for (var i = 0; i < contexto.paginas.length; i++) {
         contexto.paginas[i].texto.paragrafos = contexto.paginas[i].texto.paragrafos.paragrafo;
-
         if (!util.isArray(contexto.paginas[i].texto.paragrafos)) {
             contexto.paginas[i].texto.paragrafos = [contexto.paginas[i].texto.paragrafos];
         }
@@ -69,6 +68,12 @@ var tornarDadosBrutos = function (dados) {
         dados.paginas[i] = { pagina: dados.paginas[i] };
     }
 
+    for (var i = 0; i < dados.paginas.length; i++) {
+        for (var k = 0; k < dados.paginas[i].pagina.texto.paragrafos.length; k++) {
+            dados.paginas[i].pagina.texto.paragrafos[k] = { paragrafo: dados.paginas[i].pagina.texto.paragrafos[k] };
+        }
+    }
+
     for (var i = 0; i < dados.artistas.length; i++) {
         dados.artistas[i] = { artista: dados.artistas[i] };
     }
@@ -77,7 +82,7 @@ var tornarDadosBrutos = function (dados) {
         for (var k = 0; k < dados.artistas[i].artista.telefones.length; k++) {
             dados.artistas[i].artista.telefones[k] = { telefone: dados.artistas[i].artista.telefones[k] };
         }
-        
+
         if (dados.artistas[i].artista.redesSociais) {
             for (var k = 0; k < dados.artistas[i].artista.redesSociais.length; k++) {
                 dados.artistas[i].artista.redesSociais[k] = { redeSocial: dados.artistas[i].artista.redesSociais[k] };
@@ -109,7 +114,7 @@ exports.criar = function (dados, recriar) {
 
 exports.salvar = function (contexto) {
     var dadosBrutos = tornarDadosBrutos(contexto);
-
+    
     var recriar = true;
     this.criar(dadosBrutos, recriar);
 };
@@ -123,6 +128,6 @@ exports.obterContexto = function (callback) {
     });
 
     corrigirJSONContexto(contexto);
-
+    
     return contexto;
 };

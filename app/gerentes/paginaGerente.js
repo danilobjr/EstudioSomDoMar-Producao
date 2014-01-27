@@ -9,34 +9,22 @@ module.exports = function () {
         return contexto.paginas.obterPorId(id);
     };
 
-    //var obterPorTitulo = function (titulo) {
-    //    return contexto.fotos.obterPorTitulo(titulo);
-    //};
+    var obterPaginaPorDescricao = function (descricao) {
+        return contexto.paginas.obterPorDescricao(descricao);
+    };
 
-    //var incluir = function (novaFoto) {
-    //    var fotoJahExiste = obterPorTitulo(novaFoto.titulo);
-    //    
-    //    if (fotoJahExiste) {
-    //        throw new Error('Foto já existe');
-    //    } else {
-    //        return contexto.fotos.incluir(novaFoto);
-    //    }
-    //};
+    var alterar = function (paginaAlterada) {
+        paginaAlterada.titulo = (paginaAlterada.titulo) ? paginaAlterada.titulo : '';
+        paginaAlterada.subtitulo = (paginaAlterada.subtitulo) ? paginaAlterada.subtitulo : '';
+        paginaAlterada.texto.paragrafos = (paginaAlterada.texto.paragrafos.length) ? paginaAlterada.texto.paragrafos : { paragrafo: [] };
 
-    //var excluirPorId = function (id) {
-    //    var fotoExcluida = contexto.fotos.excluirPorId(id);
-
-    //    if (!fotoExcluida) {
-    //        throw new Error('Foto já excluída ou não encontrada');
-    //    }
-
-    //    return fotoExcluida;
-    //};
+        return contexto.paginas.alterar(paginaAlterada);
+    };
 
     return {
         obterTodas: obterTodasAsPaginas,
-        obterPorId: obterPaginaPorId
-        //excluirPorId: excluirPorId,
-        //incluir: incluir
+        obterPorId: obterPaginaPorId,
+        obterPorDescricao: obterPaginaPorDescricao,
+        alterar: alterar
     };
 } ();

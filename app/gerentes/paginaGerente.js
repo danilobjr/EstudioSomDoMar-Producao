@@ -5,9 +5,9 @@ module.exports = function () {
         return contexto.paginas.obterTodas();
     };
 
-    //var obterFotosPorTipo = function (tipo) {
-    //    return contexto.fotos.obterPorTipo(tipo);
-    //};
+    var obterPaginaPorId = function (id) {
+        return contexto.paginas.obterPorId(id);
+    };
 
     //var obterPorTitulo = function (titulo) {
     //    return contexto.fotos.obterPorTitulo(titulo);
@@ -34,8 +34,8 @@ module.exports = function () {
     //};
 
     return {
-        obterTodas: obterTodasAsPaginas
-        //obterPorTipo: obterFotosPorTipo,
+        obterTodas: obterTodasAsPaginas,
+        obterPorId: obterPaginaPorId
         //excluirPorId: excluirPorId,
         //incluir: incluir
     };

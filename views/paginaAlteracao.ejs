@@ -9,217 +9,95 @@
 
         <div class="content">
             <form id="formAlterarPagina" method="post" action="/admin/pagina/alterar" class="form-horizontal cmxform" autocomplete="off">
-                        <input type="hidden" name="idArtista" value="<%= viewModel.id %>" />
-                        <div class="form-row control-group row-fluid">
-                            <label class="control-label span3" for="nome">Nome *</label>
-                            <div class="controls span8">
-                                <input id="nome" name="nome" type="text" class="span12" value="<%= viewModel.nome %>"/>
-                                <label class="error errorRequired" style="display: none;">Por favor, informe o nome do artista</label>
-                                <label class="error errorMinlength" style="display: none;">O nome precisa ter pelo menos 2 caracteres</label>
-                            </div>
+                <input type="hidden" name="idPagina" value="<%= viewModel.id %>" />
+
+                <% var haTituloComConteudo = viewModel.titulo;
+                    if (haTituloComConteudo) { %>
+
+                    <div class="form-row control-group row-fluid">
+                        <label class="control-label span3" for="titulo">Título *</label>
+                        <div class="controls span7">
+                            <input id="titulo" name="titulo" type="text" class="span12" value="<%= viewModel.titulo %>"/>
+                            <label class="error errorRequired" style="display: none;">Por favor, informe o título da página</label>
                         </div>
-                        <div class="form-row control-group row-fluid">
-                            <label class="control-label span3" for="site">Site</label>
-                            <div class="controls span8">
-                                <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-link"></i></span>
-                                    <input class="row-fluid" type="text" id="site" name="site" <% if (typeof viewModel.site != 'undefined') { %> value="<%= viewModel.site %>" <% } %>/>
-                                    <label class="error errorMinlength" style="display: none;">O site precisa ter pelo menos 5 caracteres</label>
-                                    <label class="error errorUrl" style="display: none;">A URL informada não é válida</label>
-                                </div>
-                            </div>
+                    </div>
+
+                <% } %>
+
+                <% var haSubtituloComConteudo = viewModel.subtitulo;
+                    if (haSubtituloComConteudo) { %>
+
+                    <div class="form-row control-group row-fluid">
+                        <label class="control-label span3" for="subtitulo">Subtítulo *</label>
+                        <div class="controls span7">
+                            <input id="subtitulo" name="subtitulo" type="text" class="span12" value="<%= viewModel.subtitulo %>"/>
+                            <label class="error errorRequired" style="display: none;">Por favor, informe o subtítulo da página</label>
                         </div>
-                        <div class="form-row control-group row-fluid">
-                            <label class="control-label span3" for="email">Email *</label>
-                            <div class="controls span8">
-                                <input id="email" name="email" type="text" class="span12" value="<%= viewModel.email %>" />
-                                <label class="error errorRequired" style="display: none;">Por favor, informe o email</label>
-                                <label class="error errorMinlength" style="display: none;">O email precisa ter pelo menos 6 caracteres</label>
-                                <label class="error errorEmail" style="display: none;">O email informado não é válido</label>
-                            </div>
+                    </div>
+
+                <% } %>
+
+                <!-- Campo Parágrafos -->
+
+                <% var haParagrafoNestaPagina = viewModel.texto.paragrafos[0].id;
+                    if (haParagrafoNestaPagina) { %>
+
+                <% for (var i = 0; i < viewModel.texto.paragrafos.length; i++) { %>
+
+                <% if (i === 0) { %>
+
+                    <div class="form-row control-group row-fluid">
+                        <input type="hidden" name="idParagrafo" value="<%= viewModel.texto.paragrafos[i].id %>" />
+                        <label class="control-label span3" for="paragrafo">Parágrafos *</label>
+                        <div class="controls span7">
+                            <textarea id="paragrafo" name="paragrafo" rows="3" class="row-fluid autogrow" placeholder="Escreva aqui o conteúdo do parágrafo..."><%= viewModel.texto.paragrafos[i].descricao %></textarea>
+                            <label class="error errorRequired" style="display: none;">Por favor, escreva o conteúdo do parágrafo</label>
+                            <label class="error errorMinlength" style="display: none;">O parágrafo precisa ter pelo menos 10 caracteres</label>
+                            <label class="error errorMaxlength" style="display: none;">O parágrafo pode conter o máximo de 200 caracteres</label>
                         </div>
-
-                        <!-- Campo Telefones -->
-
-                        <% for (var i = 0; i < viewModel.telefones.length; i++) { %>
-
-                        <% if (i === 0) { %>
-
-                            <div class="form-row control-group row-fluid">
-                                <label class="control-label span3" for="telefone">Telefone *</label>
-                                <div class="controls span3">
-                                    <div class="input-prepend row-fluid">
-                                        <select id="tipoTelefone" name="tipoTelefone" class="row-fluid">
-                                            <option value="residencial" <%= (viewModel.telefones[i].tipo === 'residencial') ? 'selected' : '' %>>Residencial</option>
-                                            <option value="oi" <%= (viewModel.telefones[i].tipo === 'oi') ? 'selected' : '' %>>Oi</option>
-                                            <option value="tim" <%= (viewModel.telefones[i].tipo === 'tim') ? 'selected' : '' %>>TIM</option>
-                                            <option value="claro" <%= (viewModel.telefones[i].tipo === 'claro') ? 'selected' : '' %>>Claro</option>
-                                            <option value="vivo" <%= (viewModel.telefones[i].tipo === 'vivo') ? 'selected' : '' %>>Vivo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="controls span4">
-                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-phone"></i></span>
-                                        <input type="tel" id="telefone" name="telefone" class="row-fluid" alt="phone" placeholder="Número" value="<%= viewModel.telefones[i].numero %>" />
-                                        <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
-                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 14 caracteres</label>
-                                    </div>
-                                </div>
-                                <div class="btn-controls btn-group inline span1">
-                                    <a class="btn adicionarTelefone" href="#">
-                                        <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        <% } else { %>
-
-                            <div class="form-row control-group row-fluid">
-                                <label class="control-label span3" for="telefone"></label>
-                                <div class="controls span3">
-                                    <div class="input-prepend row-fluid">
-                                        <select id="tipoTelefone" name="tipoTelefone" class="row-fluid">
-                                            <option value="residencial" <%= (viewModel.telefones[i].tipo === 'residencial') ? 'selected' : '' %>>Residencial</option>
-                                            <option value="oi" <%= (viewModel.telefones[i].tipo === 'oi') ? 'selected' : '' %>>Oi</option>
-                                            <option value="tim" <%= (viewModel.telefones[i].tipo === 'tim') ? 'selected' : '' %>>TIM</option>
-                                            <option value="claro" <%= (viewModel.telefones[i].tipo === 'claro') ? 'selected' : '' %>>Claro</option>
-                                            <option value="vivo" <%= (viewModel.telefones[i].tipo === 'vivo') ? 'selected' : '' %>>Vivo</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="controls span4">
-                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-phone"></i></span>
-                                        <input type="tel" id="telefone" name="telefone" class="row-fluid" alt="phone" placeholder="Número" value="<%= viewModel.telefones[i].numero %>" />
-                                        <label class="error errorRequired" style="display: none;">Por favor, informe o telefone</label>
-                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 14 caracteres</label>
-                                    </div>
-                                </div>
-                                <div class="btn-controls btn-group inline span1">
-                                    <a class="btn adicionarTelefone" href="#">
-                                        <span class="icon-plus"></span>
-                                    </a>
-                                    <a class="btn removerTelefone" href="#">
-                                        <span class="icon-minus"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        <% } %> <!-- END if -->
-
-                        <% } %> <!-- END for -->
-
-                        <!-- END Campo Telefones -->
-
-                        <!-- Campo RedeSocial -->
-
-                        <% if (typeof viewModel.redesSociais == 'undefined') { %>
-
-                            <div class="form-row control-group row-fluid">
-                                <label class="control-label span3" for="redeSocial">Rede Social</label>
-                                <div class="controls span3">
-                                    <div class="input-prepend row-fluid">
-                                        <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
-                                            <option value="facebook">Facebook</option>
-                                            <option value="twitter">Twitter</option>
-                                            <option value="googleplus">Google+</option>
-                                            <option value="myspace">MySpace</option>
-                                            <option value="soundcloud">SoundCloud</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="controls span4">
-                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
-                                        <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" />
-                                        <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
-                                        <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
-                                    </div>
-                                </div>
-                                <div class="btn-controls btn-group inline span1">
-                                    <a class="btn adicionarSocial" href="#">
-                                        <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                        <% } else { %>
-
-                            <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
-
-                            <% if (i === 0) { %>
-
-                            <div class="form-row control-group row-fluid">
-                                <label class="control-label span3" for="redeSocial">Rede Social</label>
-                                <div class="controls span3">
-                                    <div class="input-prepend row-fluid">
-                                        <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
-                                            <option value="facebook" <%= (viewModel.redesSociais[i].tipo === 'facebook') ? 'selected' : '' %>>Facebook</option>
-                                            <option value="twitter" <%= (viewModel.redesSociais[i].tipo === 'twitter') ? 'selected' : '' %>>Twitter</option>
-                                            <option value="googleplus" <%= (viewModel.redesSociais[i].tipo === 'googleplus') ? 'selected' : '' %>>Google+</option>
-                                            <option value="myspace" <%= (viewModel.redesSociais[i].tipo === 'myspace') ? 'selected' : '' %>>MySpace</option>
-                                            <option value="soundcloud" <%= (viewModel.redesSociais[i].tipo === 'soundcloud') ? 'selected' : '' %>>SoundCloud</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="controls span4">
-                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
-                                        <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" value="<%= viewModel.redesSociais[i].link %>" />
-                                        <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
-                                        <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
-                                    </div>
-                                </div>
-                                <div class="btn-controls btn-group inline span1">
-                                    <a class="btn adicionarSocial" href="#">
-                                        <span class="icon-plus"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <% } else { %>
-
-                            <div class="form-row control-group row-fluid">
-                                <label class="control-label span3" for="redeSocial"></label>
-                                <div class="controls span3">
-                                    <div class="input-prepend row-fluid">
-                                        <select id="tipoRedeSocial" name="tipoRedeSocial" class="row-fluid">
-                                            <option value="facebook" <%= (viewModel.redesSociais[i].tipo === 'facebook') ? 'selected' : '' %>>Facebook</option>
-                                            <option value="twitter" <%= (viewModel.redesSociais[i].tipo === 'twitter') ? 'selected' : '' %>>Twitter</option>
-                                            <option value="googleplus" <%= (viewModel.redesSociais[i].tipo === 'googleplus') ? 'selected' : '' %>>Google+</option>
-                                            <option value="myspace" <%= (viewModel.redesSociais[i].tipo === 'myspace') ? 'selected' : '' %>>MySpace</option>
-                                            <option value="soundcloud" <%= (viewModel.redesSociais[i].tipo === 'soundcloud') ? 'selected' : '' %>>SoundCloud</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="controls span4">
-                                    <div class="input-prepend row-fluid"> <span class="add-on"><i class="icon-facebook"></i></span>
-                                        <input type="text" id="redeSocial" name="redeSocial" class="row-fluid" placeholder="Link de acesso ao perfil" value="<%= viewModel.redesSociais[i].link %>" />
-                                        <label class="error errorMinlength" style="display: none;">O link precisa ter pelo menos 10 caracteres</label>
-                                        <label class="error errorUrl" style="display: none;">O link informado não é válido</label>
-                                    </div>
-                                </div>
-                                <div class="btn-controls btn-group inline span1">
-                                    <a class="btn adicionarSocial" href="#">
-                                        <span class="icon-plus"></span>
-                                    </a>
-                                    <a class="btn removerSocial" href="#">
-                                        <span class="icon-minus"></span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <% } %> <!-- END if -->
-
-                            <% } %> <!-- END for -->
-
-                        <% } %> <!-- END if -->
-
-                        <!-- END Campo Telefones -->
-
-                        <div class="form-actions row-fluid">
-                            <div class="span12">
-                                <a href="/admin/artistas" class="btn btn-large btn-secondary pull-right">Cancelar</a>
-                                <button type="submit" class="btn btn-large btn-success pull-right">Salvar</button>
-                            </div>
+                        <div class="btn-controls btn-group inline span1">
+                            <a class="btn adicionarParagrafo" href="#">
+                                <span class="icon-plus"></span>
+                            </a>
                         </div>
-                    </form>
+                    </div>
+
+                <% } else { %>
+
+                    <div class="form-row control-group row-fluid">
+                        <input type="hidden" name="idParagrafo" value="<%= viewModel.texto.paragrafos[i].id %>" />
+                        <label class="control-label span3" for="paragrafo"></label>
+                        <div class="controls span7">
+                            <textarea id="paragrafo" name="paragrafo" rows="3" class="row-fluid autogrow" placeholder="Escreva aqui o conteúdo do parágrafo"><%= viewModel.texto.paragrafos[i].descricao %></textarea>
+                            <label class="error errorRequired" style="display: none;">Por favor, escreva o conteúdo do parágrafo</label>
+                            <label class="error errorMinlength" style="display: none;">O parágrafo precisa ter pelo menos 10 caracteres</label>
+                            <label class="error errorMaxlength" style="display: none;">O parágrafo pode conter o máximo de 200 caracteres</label>
+                        </div>
+                        <div class="btn-controls btn-group inline span1">
+                            <a class="btn adicionarParagrafo" href="#">
+                                <span class="icon-plus"></span>
+                            </a>
+                            <a class="btn removerParagrafo" href="#">
+                                <span class="icon-minus"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                <% } %> <!-- END if -->
+
+                <% } %> <!-- END for -->
+
+                <% } %> <!-- END if -->
+
+                <!-- END Campo Parágrafos -->
+
+                <div class="form-actions row-fluid">
+                    <div class="span12">
+                        <a href="/admin/paginas" class="btn btn-large btn-secondary pull-right">Cancelar</a>
+                        <button type="submit" class="btn btn-large btn-success pull-right">Salvar</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <!-- End .content --> 
         <a id="abrir-modal" href="#instrucoes" class="btn new_item" data-toggle="modal"><i class="icon-info-sign"></i></a>
@@ -343,5 +221,7 @@
         //    var btnAbrirModal = $('#abrir-modal');
         //    btnAbrirModal.attr('href', _this.data().modal);
         //});
+
+
     });
 </script>

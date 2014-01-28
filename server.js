@@ -48,6 +48,7 @@ app.get('/admin/paginas', autenticacaoRequerida, pagina.index);
 app.get('/admin/pagina/alterar/:id', autenticacaoRequerida, pagina.editar);
 app.get('/admin/portfolio', autenticacaoRequerida, portfolio.index);
 app.get('/admin/portfolio/novo', autenticacaoRequerida, portfolio.novo);
+app.get('/admin/portfolio/alterar/:id', autenticacaoRequerida, portfolio.editar);
 app.get('/admin/fotos', autenticacaoRequerida, foto.index);
 app.get('/admin/foto/nova', autenticacaoRequerida, foto.nova);
 app.get('/admin/videos', autenticacaoRequerida, video.index);
@@ -72,6 +73,7 @@ app.post('/admin/artista/alterar/imagem-perfil', autenticacaoRequerida, artista.
 app.post('/admin/artista/alterar/background', autenticacaoRequerida, artista.alterarBackground);
 app.get('/admin/artista/excluir/:id', autenticacaoRequerida, artista.excluir);
 app.post('/admin/portfolio/novo', autenticacaoRequerida, portfolio.incluir);
+app.post('/admin/portfolio/alterar', autenticacaoRequerida, portfolio.alterar);
 app.get('/admin/portfolio/excluir/:id', autenticacaoRequerida, portfolio.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){

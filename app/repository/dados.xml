@@ -191,7 +191,6 @@
       <artista>Janaina Castro</artista>
       <arquivoMusica>cd_janaina_castro-restaura-me.mp3</arquivoMusica>
       <arquivoCapaAlbum>janaina_castro.jpg</arquivoCapaAlbum>
-      <arquivoCapaAlbumPlayer>janaina_castro_player.jpg</arquivoCapaAlbumPlayer>
       <secao>lancamento</secao>
     </musica>
     <musica>
@@ -200,7 +199,6 @@
       <artista>Daniel Costa</artista>
       <arquivoMusica>musicas/cd_daniel_costa.mp3</arquivoMusica>
       <arquivoCapaAlbum></arquivoCapaAlbum>
-      <arquivoCapaAlbumPlayer></arquivoCapaAlbumPlayer>
       <secao>outro</secao>
     </musica>
     <musica>
@@ -209,7 +207,6 @@
       <artista>Artur Bruno</artista>
       <arquivoMusica>jingle-artur_bruno_1313.mp3</arquivoMusica>
       <arquivoCapaAlbum></arquivoCapaAlbum>
-      <arquivoCapaAlbumPlayer></arquivoCapaAlbumPlayer>
       <secao>jingle</secao>
     </musica>
     <musica>
@@ -218,16 +215,7 @@
       <artista>Anfrísio Rocha</artista>
       <arquivoMusica>cd_recomeco-recomeco.mp3</arquivoMusica>
       <arquivoCapaAlbum>anfrisio_rocha_recomeco.jpg</arquivoCapaAlbum>
-      <arquivoCapaAlbumPlayer>anfrisio_rocha_recomeco_player.jpg</arquivoCapaAlbumPlayer>
       <secao>pessoal</secao>
-    </musica>
-    <musica>
-      <nome>Música Lançamento</nome>
-      <artista>Artista Lançamento</artista>
-      <arquivoMusica>cancao.mp3</arquivoMusica>
-      <arquivoCapaAlbum>cd.jpg</arquivoCapaAlbum>
-      <secao>lancamento</secao>
-      <id>5</id>
     </musica>
   </portfolio>
   <fotos>

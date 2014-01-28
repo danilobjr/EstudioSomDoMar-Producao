@@ -149,7 +149,7 @@ $(function () {
 
     // disparar verificação de validação de campos no submit do form
 
-    $("#formNovoPortfolio").on('submit', function (e) {
+    $("#formPortfolio").on('submit', function (e) {
         var haErros = false;
 
         haErros = verificarErrosDoCampoNome({ currentTarget: campoNome });

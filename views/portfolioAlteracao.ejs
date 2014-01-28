@@ -6,16 +6,17 @@
             </div>
 
             <div class="content">
-                <form id="formPortfolio" method="post" action="/admin/portfolio/novo" class="form-horizontal cmxform" autocomplete="off">
+                <form id="formPortfolio" method="post" action="/admin/portfolio/alterar" class="form-horizontal cmxform" autocomplete="off">
+                    <input type="hidden" name="idMusica" value="<%= viewModel.id %>" />
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="secao">Seção *</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <select id="secao" name="secao" class="row-fluid">
-                                    <option value="lancamento">Últimos Lançamentos</option>
-                                    <option value="outro">Outros Trabalhos</option>
-                                    <option value="jingle">Jingles</option>
-                                    <option value="pessoal">Pessoal</option>
+                                <select id="secao" name="secao" class="row-fluid" disabled>
+                                    <option value="lancamento" <%= (viewModel.secao === 'lancamento') ? 'selected' : '' %>>Últimos Lançamentos</option>
+                                    <option value="outro" <%= (viewModel.secao === 'outro') ? 'selected' : '' %>>Outros Trabalhos</option>
+                                    <option value="jingle" <%= (viewModel.secao === 'jingle') ? 'selected' : '' %>>Jingles</option>
+                                    <option value="pessoal" <%= (viewModel.secao === 'pessoal') ? 'selected' : '' %>>Pessoal</option>
                                 </select>
                             </div>
                         </div>
@@ -23,43 +24,51 @@
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="nome">Nome da Música *</label>
                         <div class="controls span9">
-                            <input id="nome" name="nome" type="text" class="span12" />
+                            <input id="nome" name="nome" type="text" class="span12" value="<%= viewModel.nome %>" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o nome da música</label>
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="artista">Nome do Artista *</label>
                         <div class="controls span9">
-                            <input class="row-fluid" type="text" id="artista" name="artista" />
+                            <input class="row-fluid" type="text" id="artista" name="artista" value="<%= viewModel.artista %>" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o nome do artista</label>
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="arquivoMusica">Arquivo MP3 *</label>
                         <div class="controls span9">
-                            <input id="arquivoMusica" name="arquivoMusica" type="text" class="span12" placeholder="minha_cancao.mp3" />
+                            <input id="arquivoMusica" name="arquivoMusica" type="text" class="span12" placeholder="minha_cancao.mp3"  value="<%= viewModel.arquivoMusica %>" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo MP3</label>
                             <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                             <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                         </div>
                     </div>
-                    <div id="campoImagem" class="form-row control-group row-fluid" style="display: none">
-                        <label class="control-label span3" for="arquivoCapaAlbum">Imagem da Capa do CD</label>
-                        <div class="controls span9">
-                            <input id="arquivoCapaAlbum" name="arquivoCapaAlbum" type="text" class="span12" placeholder="capa_cd.jpg" />
-                            <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
-                            <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
+
+                    <% if (viewModel.secao === 'outros' || viewModel.secao === 'jingles') { %>
+
+                        <div id="campoImagem" class="form-row control-group row-fluid">
+                            <label class="control-label span3" for="arquivoCapaAlbum">Imagem da Capa do CD</label>
+                            <div class="controls span9">
+                                <input id="arquivoCapaAlbum" name="arquivoCapaAlbum" type="text" class="span12" placeholder="capa_cd.jpg" value="<%= viewModel.arquivoCapaAlbum %>" />
+                                <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
+                                <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
+                            </div>
                         </div>
-                    </div>
-                    <div id="campoImagemObrigatorio" class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="arquivoCapaAlbum">Imagem da Capa do CD *</label>
-                        <div class="controls span9">
-                            <input id="arquivoCapaAlbum" name="arquivoCapaAlbum" type="text" class="span12" placeholder="capa_cd.jpg" />
-                            <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo de imagem</label>
-                            <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
-                            <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
+
+                    <% } else { %>
+
+                        <div id="campoImagemObrigatorio" class="form-row control-group row-fluid">
+                            <label class="control-label span3" for="arquivoCapaAlbum">Imagem da Capa do CD *</label>
+                            <div class="controls span9">
+                                <input id="arquivoCapaAlbum" name="arquivoCapaAlbum" type="text" class="span12" placeholder="capa_cd.jpg" value="<%= viewModel.arquivoCapaAlbum %>" />
+                                <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo de imagem</label>
+                                <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
+                                <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
+                            </div>
                         </div>
-                    </div>
+
+                    <% } %>
                     <div class="form-actions row-fluid">
                         <div class="span12">
                             <a href="/admin/portfolio" class="btn btn-large btn-secondary pull-right">Cancelar</a>
@@ -99,3 +108,7 @@
 </div>
 
 <script src="/js/app/formPortfolio.js"></script>
+
+<!-- Modal Mensagem -->
+
+<% include partial/mensagem %>

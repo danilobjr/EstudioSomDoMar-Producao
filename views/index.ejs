@@ -233,16 +233,39 @@
                                         <article id="slide_ultimos_lancamentos" class="slide" data-slide-left-position="0">
                                             <div class="scrollable">
                                                 <ul class="mainList inline"> 
+
+                                                    <% for (var i = 0; i < viewModel.portfolio.lancamentos.length; i++) { %>
+
+                                                        <li class="song marginBottomCD"
+                                                            data-h5a-song-artist="<%= viewModel.portfolio.lancamentos[i].artista %>"
+                                                            data-h5a-song-name="<%= viewModel.portfolio.lancamentos[i].nome %>"
+                                                            data-h5a-song-url="musicas/<%= viewModel.portfolio.lancamentos[i].arquivoMusica %>"
+                                                            data-h5a-cover-url="img/cd/<%= viewModel.portfolio.lancamentos[i].arquivoCapaAlbum %>">
+                                                            <figure class="play" >
+                                                                <img src="img/play.png" alt="" />                                                        
+                                                            </figure>
+                                                            <figure class="pause" >
+                                                                <img src="img/pause.png" alt="" />                                                        
+                                                            </figure>
+                                                            <img src="img/cd/<%= viewModel.portfolio.lancamentos[i].arquivoCapaAlbum %>" alt="" />
+                                                        </li>
+
+                                                    <% } %>
+
+                                                    <!--
                                                     <li class="song marginBottomCD"
                                                         data-h5a-song-artist="Janaina Castro"
                                                         data-h5a-song-name="Restaura-me"
                                                         data-h5a-song-url="musicas/cd_janaina_castro-restaura-me.mp3"
                                                         data-h5a-cover-url="img/cd/janaina_castro_player.jpg">
                                                         <figure class="play" >
-                                                            <img src="img/play.png" alt="" />                                                        </figure>
+                                                            <img src="img/play.png" alt="" />                                                        
+                                                        </figure>
                                                         <figure class="pause" >
-                                                            <img src="img/pause.png" alt="" />                                                        </figure>
-                                                        <img src="img/cd/janaina_castro.jpg" alt="">                                                    </li>
+                                                            <img src="img/pause.png" alt="" />                                                        
+                                                        </figure>
+                                                        <img src="img/cd/janaina_castro.jpg" alt="">                                                    
+                                                    </li>
                                                     <li class="song marginBottomCD"
                                                         data-h5a-song-artist="Flavinho Sousa"
                                                         data-h5a-song-name="Caminho Estreito"
@@ -302,6 +325,21 @@
                                         <article id="slide_outros_trabalhos" class="slide" data-slide-left-position="-860">
                                             <div class="scrollable">
                                                 <ul class="mainList listHoverFX simpleSongs"> 
+                                                    <% for (var i = 0; i < viewModel.portfolio.outros.length; i++) { %>
+
+                                                        <li class="song"
+                                                            data-h5a-song-artist="<%= viewModel.portfolio.outros[i].artista %>"
+                                                            data-h5a-song-name="<%= viewModel.portfolio.outros[i].nome %>"
+                                                            data-h5a-song-url="musicas/<%= viewModel.portfolio.outros[i].arquivoMusica %>">
+                                                            <div class="controls">
+                                                                <img src="img/play.png" alt="" class="play" />
+                                                                <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                            <p><%= viewModel.portfolio.outros[i].artista %> - <%= viewModel.portfolio.outros[i].nome %></p>
+                                                        </li>
+
+                                                    <% } %>
+                                                    
+                                                    <!--
                                                     <li class="song"
                                                         data-h5a-song-artist="Daniel Costa"
                                                         data-h5a-song-name="Demo"
@@ -425,6 +463,21 @@
 
                                             <div class="col6A margLeft scrollable">
                                                 <ul class="mainList listHoverFX simpleSongs">
+                                                    <% for (var i = 0; i < viewModel.portfolio.jingles.length; i++) { %>
+
+                                                        <li class="song"
+                                                            data-h5a-song-artist="<%= viewModel.portfolio.jingles[i].artista %>"
+                                                            data-h5a-song-name="<%= viewModel.portfolio.jingles[i].nome %>"
+                                                            data-h5a-song-url="musicas/<%= viewModel.portfolio.jingles[i].arquivoMusica %>">
+                                                            <div class="controls">
+                                                                <img src="img/play.png" alt="" class="play" />
+                                                                <img src="img/pause.png" alt="" class="pause" />                                                        </div>
+                                                            <p><%= viewModel.portfolio.jingles[i].artista %> - <%= viewModel.portfolio.jingles[i].nome %></p>
+                                                        </li>
+
+                                                    <% } %>
+
+                                                    <!--
                                                     <li class="song"
                                                         data-h5a-song-artist="Artur Bruno"
                                                         data-h5a-song-name="1313"
@@ -452,6 +505,7 @@
                                                             <img src="img/pause.png" alt="" class="pause" />                                                        </div>
                                                         <p>Apiguana</p>
                                                     </li>
+                                                    -->
                                                 </ul>
                                             </div>
                                         </article>
@@ -473,6 +527,26 @@
 
                                             <div class="col6A margLeft scrollable">
                                                 <ul class="mainList inline">
+
+                                                    <% for (var i = 0; i < viewModel.portfolio.pessoal.length; i++) { %>
+
+                                                        <li class="song marginBottomCD"
+                                                            data-h5a-song-artist="<%= viewModel.portfolio.pessoal[i].artista %>"
+                                                            data-h5a-song-name="<%= viewModel.portfolio.pessoal[i].nome %>"
+                                                            data-h5a-song-url="musicas/<%= viewModel.portfolio.pessoal[i].arquivoMusica %>"
+                                                            data-h5a-cover-url="img/cd/<%= viewModel.portfolio.pessoal[i].arquivoCapaAlbum %>">
+                                                            <figure class="play" >
+                                                                <img src="img/play.png" alt="" />                                                        
+                                                            </figure>
+                                                            <figure class="pause" >
+                                                                <img src="img/pause.png" alt="" />                                                        
+                                                            </figure>
+                                                            <img src="img/cd/<%= viewModel.portfolio.pessoal[i].arquivoCapaAlbum %>" alt="" />
+                                                        </li>
+
+                                                    <% } %>
+
+                                                    <!--
                                                     <li class="song marginBottomCD"
                                                         data-h5a-song-artist="Anfrísio Rocha"
                                                         data-h5a-song-name="Recomeço"
@@ -499,6 +573,7 @@
                                                         </figure>
                                                         <img src="img/cd/anfrisio_rocha_hora_de_dormir.jpg" alt="">                                                    
                                                     </li>
+                                                    -->
                                                 </ul>
                                             </div>
                                         </article>                                        

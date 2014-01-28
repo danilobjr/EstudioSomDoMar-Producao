@@ -560,6 +560,18 @@ var contexto = (function () {
             return contexto.portfolio;
         };
 
+        var obterMusicaPorId = function (id, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
+            for (var cont in contexto.portfolio) {
+                if (contexto.portfolio[cont].id.toString() === id) {
+                    return contexto.portfolio[cont];
+                }
+            }
+        };
+
         var obterMusicaPorNomeEArtista = function (nomeMusica, nomeArtista) {
             var contexto = xml.obterContexto();
             for (var cont in contexto.portfolio) {
@@ -597,6 +609,20 @@ var contexto = (function () {
             xml.salvar(contexto);
 
             return novaMusica;
+        };
+
+        var alterarPortfolio = function (musicaAlterada) {
+            var contexto = xml.obterContexto();
+            var musicaExistente = obterMusicaPorId(musicaAlterada.id, contexto);
+
+            musicaExistente.nome = musicaAlterada.nome;
+            musicaExistente.artista = musicaAlterada.artista;
+            musicaExistente.arquivoMusica = musicaAlterada.arquivoMusica;
+            musicaExistente.arquivoCapaAlbum = musicaAlterada.arquivoCapaAlbum;
+
+            xml.salvar(contexto);
+
+            return obterMusicaPorId(musicaAlterada.id);
         };
 
         var excluirMusicaPorId = function (id) {
@@ -913,8 +939,11 @@ var contexto = (function () {
             },
             portfolio: {
                 obterTodasAsMusicas: obterTodasAsMusicas,
+                obterPorId: obterMusicaPorId,
                 obterPorNomeEArtista: obterMusicaPorNomeEArtista,
+                obterPorSecao: obterMusicasPorSecao,
                 incluir: incluirNovaMusica,
+                alterar: alterarPortfolio,
                 excluirPorId: excluirMusicaPorId
             },
             artistas: {

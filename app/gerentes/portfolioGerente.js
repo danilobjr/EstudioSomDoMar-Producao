@@ -5,6 +5,14 @@ module.exports = function () {
         return contexto.portfolio.obterTodasAsMusicas();
     };
 
+    var obterPorId = function (id) {
+        return contexto.portfolio.obterPorId(id);
+    };
+
+    var obterPorSecao = function (secao) {
+        return contexto.portfolio.obterPorSecao(secao);
+    };
+
     var obterPorNomeEArtista = function (nome) {
         return contexto.portfolio.obterPorNomeEArtista(nome);
     };
@@ -19,6 +27,10 @@ module.exports = function () {
         }
     };
 
+    var alterar = function (musicaAlterada) {
+        return contexto.portfolio.alterar(musicaAlterada);
+    };
+
     var excluirPorId = function (id) {
         var musicaExcluida = contexto.portfolio.excluirPorId(id);
 
@@ -28,14 +40,6 @@ module.exports = function () {
 
         return musicaExcluida;
     };
-
-    //var obterPorId = function (id) {
-    //    return contexto.artistas.obterPorId(id);
-    //};
-
-    //var alterarDadosPessoais = function (artistaAlterado) {
-    //    return contexto.artistas.alterarDadosPessoais(artistaAlterado);
-    //};
 
     //var alterarMusicas = function (idArtista, musicas) {
     //    return contexto.artistas.alterarMusicas(idArtista, musicas);
@@ -52,9 +56,10 @@ module.exports = function () {
 
     return {
         obterTodasAsMusicas: obterTodasAsMusicas,
-        //obterPorId: obterPorId,
+        obterPorSecao: obterPorSecao,
+        obterPorId: obterPorId,
         incluir: incluir,
-        //alterarDadosPessoais: alterarDadosPessoais,
+        alterar: alterar,
         //alterarMusicas: alterarMusicas,
         //alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
         //alterarBackground: alterarBackground,

@@ -1,9 +1,15 @@
 <div class="row-fluid">
     <!--<div class="span6">-->
     <div class="box">
-        <div class="title">
-            <div class="row-fluid">
+        <div class="title row-fluid ">
+            <div class="pull-left">
                 <h4>Alterar Artista</h4>
+            </div>
+            <div class="btn-toolbar pull-right ">
+                <div class="btn-group"> 
+                    <a href="/artista/<%= viewModel.id %>" target="_blank" class="btn btnVisualizar">Visualizar</a> 
+                    <a id="abrir-modal" href="#instrucoesDadosPessoais" class="btn new_item" data-toggle="modal"><i class="icon-info-sign"></i></a>
+                </div>
             </div>
         </div>
         <!-- End .title -->
@@ -273,13 +279,13 @@
                                 <div class="controls span8 offset2">
                                     <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Arquivo MP3. Ex.: minha_cancao.mp3" />
                                     <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da música</label>
-                                    <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                    <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                                     <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                 </div>
                                 <div class="controls span8 offset2">
                                     <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Arquivo imagem da Capa do CD. Ex.: capa_cd.jpg" />
                                     <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da capa dp álbum</label>
-                                    <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                    <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                                     <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                 </div>
                                 <div class="btn-controls btn-group inline span1">
@@ -306,13 +312,13 @@
                                     <div class="controls span8 offset2">
                                         <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Nome do Arquivo (MP3) da Música. Ex.: minha_cancao.mp3" value="<%= viewModel.musicas[i].arquivoMusica %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da música</label>
-                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                        <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                     </div>
                                     <div class="controls span8 offset2">
                                         <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Nome do Arquivo (imagem) da Capa do Álbum. Ex.: capa_cd.jpg" value="<%= viewModel.musicas[i].arquivoCapaAlbum %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da capa dp álbum</label>
-                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                        <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                     </div>
                                     <div class="btn-controls btn-group inline span1">
@@ -333,13 +339,13 @@
                                     <div class="controls span8 offset2">
                                         <input type="text" id="nomeArquivoMusica" name="nomeArquivoMusica" class="row-fluid" placeholder="Nome do Arquivo (MP3) da Música. Ex.: minha_cancao.mp3" value="<%= viewModel.musicas[i].arquivoMusica %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da música</label>
-                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                        <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                     </div>
                                     <div class="controls span8 offset2">
                                         <input type="text" id="nomeArquivoCapaAlbum" name="nomeArquivoCapaAlbum" class="row-fluid" placeholder="Nome do Arquivo (imagem) da Capa do Álbum. Ex.: capa_cd.jpg" value="<%= viewModel.musicas[i].arquivoCapaAlbum %>" />
                                         <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo da capa dp álbum</label>
-                                        <label class="error errorMinlength" style="display: none;">O telefone precisa ter pelo menos 5 caracteres</label>
+                                        <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                                         <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                                     </div>
                                     <div class="btn-controls btn-group inline span1">
@@ -427,7 +433,7 @@
             </div>
         </div>
         <!-- End .content --> 
-        <a id="abrir-modal" href="#instrucoesDadosPessoais" class="btn new_item" data-toggle="modal"><i class="icon-info-sign"></i></a>
+        <!--<a id="abrir-modal" href="#instrucoesDadosPessoais" class="btn new_item" data-toggle="modal"><i class="icon-info-sign"></i></a>-->
     </div>
     <!-- End  .box --> 
     <!--</div>-->
@@ -542,6 +548,11 @@
 
 <script>
     $(function () {
+        // TODO
+        //$('[type=text], select, [type=color]').on('change', function (e) {
+        //    $('.btnVisualizar').attr('disabled', true);
+        //});
+
         $('.mostrar-instrucao').on('click', function (e) {
             var _this = $(e.currentTarget);
             var btnAbrirModal = $('#abrir-modal');

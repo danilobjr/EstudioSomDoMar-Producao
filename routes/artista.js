@@ -133,10 +133,10 @@ exports.alterarDadosPessoais = function (req, res) {
         artistaAlterado = artistaGerente.alterarDadosPessoais(artistaAlterado);
 
         resultado.sucesso = true;
-        resultado.mensagem = 'Artista incluído com sucesso';
+        resultado.mensagem = 'Artista alterado com sucesso';
     } catch (error) {
         artistaAlterado = artistaGerente.obterPorId(idArtista);
-        resultado.mensagem = 'Erro ao incluir artista: ' + error;
+        resultado.mensagem = 'Erro ao alterar artista: ' + error;
     }
 
     res.render('artistaAlteracao', { viewModel: artistaAlterado, resultado: resultado });
@@ -170,9 +170,9 @@ exports.alterarMusicas = function (req, res) {
 
         artistaGerente.alterarMusicas(idArtista, musicas);
         resultado.sucesso = true;
-        resultado.mensagem = 'Músicas incluídas/alteradas com sucesso';
+        resultado.mensagem = 'Música(s) alterada(s) com sucesso';
     } catch (error) {
-        resultado.mensagem = 'Erro ao incluir/alterar músicas: ' + error;
+        resultado.mensagem = 'Erro ao alterar música(s): ' + error;
     }
 
     var artistaAlterado = artistaGerente.obterPorId(idArtista);

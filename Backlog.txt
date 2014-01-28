@@ -1,0 +1,15 @@
+OK - Verificar funcionamento (aparecimento / desaparecimento) de botão 'visualizar' na index de artistas (admin);
+- Adicionar em FOTOS o tipo BANNER e completar a lista de imagens com os banners;
+- Modificar nomenclatura de TIPO para SEÇÃO em fotos;
+- Implementar ativação / desativação de artista para apresentar no site;
+- Implementar listagem de artistas ATIVADOS no site 
+OK - Mostrar mensagem de "senha incorreta" na tela de login
+OK - Ampliar a tela de dashboard com mensagens ou links rápidos para q o submenu de usuario (qdo clicado na foto do usuário) apareça por completo
+OK - Permitir a mudança de texto das páginas: home, sobre, portfólio-jingles e portfólio-pessoal
+- Permitir mudança da página de contato através do link "Meu Perfil" em /admin
+!! - Implementar alteração das fotos do site: estúdio, músicos e BANNERS
+- Implementar alteração do portfólio do site: últimos lançamentos, outros trabalhos, jingles e pessoal;
+OK - Implementar validação de SEÇÃO OBRIGATÓRIA para Últimos Lançamentos e Pessoal;
+- Colocar player na portfolioIndex;
+- Modificar as âncoras de links dos sites para o nome em português (ex.: de page_works para portfolio, de page_about para sobre, etc.);
+- Disponibilizar acesso do site via registro A para o domínio estudiosomdomar.com.br

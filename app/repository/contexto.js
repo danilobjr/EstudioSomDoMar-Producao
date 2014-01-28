@@ -182,7 +182,7 @@ var contexto = (function () {
                         arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
                         arquivoCapaAlbum: 'janaina_castro_player.jpg',
                         arquivoCapaAlbumPlayer: 'janaina_castro_player.jpg',
-                        tipo: 'lancamento'
+                        secao: 'lancamento'
                     }
                 },
                 {
@@ -193,7 +193,7 @@ var contexto = (function () {
                         arquivoMusica: 'cd_daniel_costa.mp3',
                         arquivoCapaAlbum: '',
                         arquivoCapaAlbumPlayer: '',
-                        tipo: 'outro'
+                        secao: 'outro'
                     }
                 },
                 {
@@ -204,7 +204,7 @@ var contexto = (function () {
                         arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
                         arquivoCapaAlbum: '',
                         arquivoCapaAlbumPlayer: '',
-                        tipo: 'jingle'
+                        secao: 'jingle'
                     }
                 },
                 {
@@ -215,7 +215,7 @@ var contexto = (function () {
                         arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
                         arquivoCapaAlbum: 'janaina_castro_player.jpg',
                         arquivoCapaAlbumPlayer: 'janaina_castro_player.jpg',
-                        tipo: 'pessoal'
+                        secao: 'pessoal'
                     }
                 }
             ],
@@ -564,7 +564,16 @@ var contexto = (function () {
             return contexto.portfolio;
         };
 
-        var obterMusicasPorTipo = function (tipo, contexto) {
+        var obterMusicaPorNomeEArtista = function (nomeMusica, nomeArtista) {
+            var contexto = xml.obterContexto();
+            for (var cont in contexto.portfolio) {
+                if (contexto.portfolio[cont].nome === nomeMusica && contexto.portfolio[cont].artista === nomeArtista) {
+                    return contexto.portfolio[cont];
+                }
+            }
+        };
+
+        var obterMusicasPorSecao = function (secao, contexto) {
             if (!contexto) {
                 contexto = xml.obterContexto();
             }
@@ -572,7 +581,7 @@ var contexto = (function () {
             var musicasEncontradas = undefined;
 
             for (var cont in contexto.portfolio) {
-                if (contexto.portfolio[cont].tipo === tipo) {
+                if (contexto.portfolio[cont].secao === secao) {
                     if (!musicasEncontradas) {
                         musicasEncontradas = [];
                     }
@@ -582,6 +591,16 @@ var contexto = (function () {
             }
 
             return musicasEncontradas;
+        };
+
+        var incluirNovaMusica = function (novaMusica) {
+            var contexto = xml.obterContexto();
+            var novoId = obterNovoId(contexto.portfolio);
+            novaMusica.id = novoId;
+            contexto.portfolio.push(novaMusica);
+            xml.salvar(contexto);
+
+            return novaMusica;
         };
 
         var excluirMusicaPorId = function (id) {
@@ -596,7 +615,7 @@ var contexto = (function () {
             }
 
             if (musicaProcurada) {
-                var quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada = obterMusicasPorTipo(musicaProcurada.tipo).length;
+                var quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada = obterMusicasPorSecao(musicaProcurada.secao).length;
                 console.log(quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada);
                 if (quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada > 1) {
                     var indiceMusica = contexto.portfolio.indexOf(musicaProcurada);
@@ -605,19 +624,19 @@ var contexto = (function () {
                 } else {
                     var secao = '';
 
-                    if (musicaProcurada.tipo === 'lancamento') {
+                    if (musicaProcurada.secao === 'lancamento') {
                         secao = 'Últimos Lançamentos';
                     }
 
-                    if (musicaProcurada.tipo === 'outo') {
+                    if (musicaProcurada.secao === 'outo') {
                         secao = 'Outros Trabalhos';
                     }
 
-                    if (musicaProcurada.tipo === 'jingle') {
+                    if (musicaProcurada.secao === 'jingle') {
                         secao = 'Jingles';
                     }
 
-                    if (musicaProcurada.tipo === 'pessoal') {
+                    if (musicaProcurada.secao === 'pessoal') {
                         secao = 'Pessoal';
                     }
 
@@ -898,6 +917,8 @@ var contexto = (function () {
             },
             portfolio: {
                 obterTodasAsMusicas: obterTodasAsMusicas,
+                obterPorNomeEArtista: obterMusicaPorNomeEArtista,
+                incluir: incluirNovaMusica,
                 excluirPorId: excluirMusicaPorId
             },
             artistas: {

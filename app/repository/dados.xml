@@ -192,7 +192,7 @@
       <arquivoMusica>cd_janaina_castro-restaura-me.mp3</arquivoMusica>
       <arquivoCapaAlbum>janaina_castro.jpg</arquivoCapaAlbum>
       <arquivoCapaAlbumPlayer>janaina_castro_player.jpg</arquivoCapaAlbumPlayer>
-      <tipo>lancamento</tipo>
+      <secao>lancamento</secao>
     </musica>
     <musica>
       <id>2</id>
@@ -201,7 +201,7 @@
       <arquivoMusica>musicas/cd_daniel_costa.mp3</arquivoMusica>
       <arquivoCapaAlbum></arquivoCapaAlbum>
       <arquivoCapaAlbumPlayer></arquivoCapaAlbumPlayer>
-      <tipo>outro</tipo>
+      <secao>outro</secao>
     </musica>
     <musica>
       <id>3</id>
@@ -210,7 +210,7 @@
       <arquivoMusica>jingle-artur_bruno_1313.mp3</arquivoMusica>
       <arquivoCapaAlbum></arquivoCapaAlbum>
       <arquivoCapaAlbumPlayer></arquivoCapaAlbumPlayer>
-      <tipo>jingle</tipo>
+      <secao>jingle</secao>
     </musica>
     <musica>
       <id>4</id>
@@ -219,7 +219,7 @@
       <arquivoMusica>cd_recomeco-recomeco.mp3</arquivoMusica>
       <arquivoCapaAlbum>anfrisio_rocha_recomeco.jpg</arquivoCapaAlbum>
       <arquivoCapaAlbumPlayer>anfrisio_rocha_recomeco_player.jpg</arquivoCapaAlbumPlayer>
-      <tipo>pessoal</tipo>
+      <secao>pessoal</secao>
     </musica>
   </portfolio>
   <fotos>

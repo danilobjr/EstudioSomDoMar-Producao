@@ -71,6 +71,7 @@ app.post('/admin/artista/alterar/musicas', autenticacaoRequerida, artista.altera
 app.post('/admin/artista/alterar/imagem-perfil', autenticacaoRequerida, artista.alterarImagemPerfil);
 app.post('/admin/artista/alterar/background', autenticacaoRequerida, artista.alterarBackground);
 app.get('/admin/artista/excluir/:id', autenticacaoRequerida, artista.excluir);
+app.post('/admin/portfolio/novo', autenticacaoRequerida, portfolio.incluir);
 app.get('/admin/portfolio/excluir/:id', autenticacaoRequerida, portfolio.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){

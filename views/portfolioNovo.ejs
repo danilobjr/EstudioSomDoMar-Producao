@@ -43,7 +43,7 @@
                             <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                         </div>
                     </div>
-                    <div class="form-row control-group row-fluid">
+                    <div id="campoImagem" class="form-row control-group row-fluid" style="display: none">
                         <label class="control-label span3" for="arquivoCapaAlbum">Imagem da Capa do CD</label>
                         <div class="controls span9">
                             <input id="arquivoCapaAlbum" name="arquivoCapaAlbum" type="text" class="span12" placeholder="capa_cd.jpg" />
@@ -51,16 +51,15 @@
                             <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                         </div>
                     </div>
-                    <!--
-                    <div class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="arquivoCapaAlbumPlayer">Imagem da Capa do CD no Player</label>
+                    <div id="campoImagemObrigatorio" class="form-row control-group row-fluid">
+                        <label class="control-label span3" for="arquivoCapaAlbum">Imagem da Capa do CD *</label>
                         <div class="controls span9">
-                            <input id="arquivoCapaAlbumPlayer" name="arquivoCapaAlbumPlayer" type="text" class="span12" />
+                            <input id="arquivoCapaAlbum" name="arquivoCapaAlbum" type="text" class="span12" placeholder="capa_cd.jpg" />
+                            <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo de imagem</label>
                             <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                             <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                         </div>
                     </div>
-                    -->
                     <div class="form-actions row-fluid">
                         <div class="span12">
                             <a href="/admin/portfolio" class="btn btn-large btn-secondary pull-right">Cancelar</a>
@@ -100,141 +99,4 @@
 </div>
 
 <script src="/js/jquery.meio.mask.min.js"></script>
-<!--<script src="/js/app/formDadosPessoais.js"></script>-->
-
-<script>
-    $(function () {
-        // validações
-
-        var gerarErroRequired = function (e) {
-            var haErros = false;
-            var campo = $(e.currentTarget);
-
-            if (campo.val() === '') {
-                haErros = true;
-                campo.addClass('error');
-                campo.siblings('.error').hide();
-                campo.siblings().filter('.errorRequired').show();
-            } else {
-                campo.removeClass('error');
-                campo.siblings().filter('.errorRequired').hide();
-            }
-
-            return haErros;
-        };
-
-        var gerarErroMinlength = function (e, minlength) {
-            var haErros = false;
-            var campo = $(e.currentTarget);
-
-            if (campo.val() !== '' && campo.val().length < minlength) {
-                haErros = true;
-                campo.addClass('error');
-                campo.siblings('.error').hide();
-                campo.siblings().filter('.errorMinlength').show();
-            } else {
-                campo.removeClass('error');
-                campo.siblings().filter('.errorMinlength').hide();
-            }
-
-            return haErros;
-        };
-
-        var gerarErroNomeArquivo = function (e) {
-            var haErros = false;
-            var campo = $(e.currentTarget);
-
-            var regexp = /[a-zA-Z0-9\.\-\_]{1,}\.{1}[a-zA-Z0-9\.\-\_]{3,4}/;
-
-            if (campo.val() !== '' && !regexp.test(campo.val())) {
-                haErros = true;
-                campo.addClass('error');
-                campo.siblings('.error').hide();
-                campo.siblings().filter('.errorNomeArquivo').show();
-            } else {
-                campo.removeClass('error');
-                campo.siblings().filter('.errorNomeArquivo').hide();
-            }
-
-            return haErros;
-        };
-
-        // campos
-
-        var campoNome = $('[name=nome]').focus();
-        var campoArtista = $('[name=artista]');
-        var campoArquivoMusica = $('[name=arquivoMusica]');
-        var campoArquivoCapaAlbum = $('[name=arquivoCapaAlbum]');
-
-        // eventos
-
-        var verificarErrosDoCampoNome = function (e) {
-            var haErro = false;
-            haErro = gerarErroRequired(e);
-
-            return haErro;
-        };
-
-        var verificarErrosDoCampoArtista = function (e) {
-            var haErro = false;
-            haErro = gerarErroRequired(e);
-
-            return haErro;
-        };
-
-        var verificarErrosDoCampoArquivoMusica = function (e) {
-            var haErro = false;
-            haErro = gerarErroRequired(e);
-
-            if (!haErro) {
-                haErro = gerarErroMinlength(e, 5);
-            }
-
-            if (!haErro) {
-                haErro = gerarErroNomeArquivo(e);
-            }
-
-            return haErro;
-        };
-
-        var verificarErrosDoCampoArquivoImagem = function (e) {
-            var haErro = false;
-
-            haErro = gerarErroMinlength(e, 5);
-
-            if (!haErro) {
-                haErro = gerarErroNomeArquivo(e);
-            }
-
-            return haErro;
-        };
-
-        // Bind de eventos
-
-        campoNome.on('keyup', verificarErrosDoCampoNome);
-        campoArtista.on('keyup', verificarErrosDoCampoArtista);
-        campoArquivoMusica.on('keyup', verificarErrosDoCampoArquivoMusica);
-        campoArquivoCapaAlbum.on('keyup', verificarErrosDoCampoArquivoImagem);
-
-        // disparar verificação de validação de campos no submit do form
-
-        $("#formNovoPortfolio").on('submit', function (e) {
-            var haErros = false;
-
-            haErros = verificarErrosDoCampoNome({ currentTarget: campoNome });
-            if (haErros) { verificarErrosDoCampoArtista({ currentTarget: campoArtista }); } else { haErros = verificarErrosDoCampoArtista({ currentTarget: campoArtista }); }
-            if (haErros) { verificarErrosDoCampoArquivoMusica({ currentTarget: campoArquivoMusica }); } else { haErros = verificarErrosDoCampoArquivoMusica({ currentTarget: campoArquivoMusica }); }
-            if (haErros) { verificarErrosDoCampoArquivoImagem({ currentTarget: campoArquivoCapaAlbum }); } else { haErros = verificarErrosDoCampoArquivoImagem({ currentTarget: campoArquivoCapaAlbum }); }
-
-            var haAlgumaMensagemDeErroSendoExposta = $(e.currentTarget).find('.error:visible').length;
-
-            if (!haErros && haAlgumaMensagemDeErroSendoExposta) {
-                haErros = true;
-            }
-
-            if (haErros) {
-                e.preventDefault();
-            }
-        });
-    });
-</script>
+<script src="/js/app/formNovoPortfolio.js"></script>

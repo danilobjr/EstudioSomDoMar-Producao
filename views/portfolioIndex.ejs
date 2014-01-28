@@ -28,10 +28,10 @@
                         <td><%= viewModel[index].nome %></td>
                         <td><%= viewModel[index].artista %></td>
                         <td>
-                            <% if (viewModel[index].tipo === 'lancamento') { %> Últimos Lançamentos <% } %>
-                            <% if (viewModel[index].tipo === 'outro') { %> Outros Trabalhos <% } %>
-                            <% if (viewModel[index].tipo === 'jingle') { %> Jingles <% } %>
-                            <% if (viewModel[index].tipo === 'pessoal') { %> Pessoal <% } %>
+                            <% if (viewModel[index].secao === 'lancamento') { %> Últimos Lançamentos <% } %>
+                            <% if (viewModel[index].secao === 'outro') { %> Outros Trabalhos <% } %>
+                            <% if (viewModel[index].secao === 'jingle') { %> Jingles <% } %>
+                            <% if (viewModel[index].secao === 'pessoal') { %> Pessoal <% } %>
                         </td>
                         <td class="ms ">
                             <div class="btn-group"> 

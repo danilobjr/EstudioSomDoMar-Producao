@@ -5,6 +5,20 @@ module.exports = function () {
         return contexto.portfolio.obterTodasAsMusicas();
     };
 
+    var obterPorNome = function (nome) {
+        return contexto.portfolio.obterPorNome(nome);
+    };
+
+    var incluir = function (novaMusica) {
+        var musicaJahExiste = obterPorNomeEArtista(novaMusica.nome, novaMusica.artista);
+
+        if (musicaJahExiste) {
+            throw new Error('Música já existe');
+        } else {
+            return contexto.portfolio.incluir(novaMusica);
+        }
+    };
+
     var excluirPorId = function (id) {
         var musicaExcluida = contexto.portfolio.excluirPorId(id);
 
@@ -15,30 +29,8 @@ module.exports = function () {
         return musicaExcluida;
     };
 
-    //var obterPorNome = function (nome) {
-    //    return contexto.artistas.obterPorNome(nome);
-    //};
-
     //var obterPorId = function (id) {
     //    return contexto.artistas.obterPorId(id);
-    //};
-
-    //var incluir = function (novoArtista) {
-    //    var artistaJahExiste = obterPorNome(novoArtista.nome);
-    //    
-    //    if (artistaJahExiste) {
-    //        throw new Error('Artista já existe');
-    //    } else {
-
-    //        // propriedades padrão na criação de um novo artista
-    //        novoArtista.imagens = {
-    //            background: {
-    //                cor: '#ffffff'
-    //            }
-    //        };
-    //        
-    //        return contexto.artistas.incluir(novoArtista);
-    //    }
     //};
 
     //var alterarDadosPessoais = function (artistaAlterado) {
@@ -61,7 +53,7 @@ module.exports = function () {
     return {
         obterTodasAsMusicas: obterTodasAsMusicas,
         //obterPorId: obterPorId,
-        //incluir: incluir,
+        incluir: incluir,
         //alterarDadosPessoais: alterarDadosPessoais,
         //alterarMusicas: alterarMusicas,
         //alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,

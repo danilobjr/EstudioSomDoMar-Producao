@@ -39,7 +39,7 @@ $(function () {
         var haErros = false;
         var campo = $(e.currentTarget);
 
-        var regexp = /[a-zA-Z0-9\.\-\_]{1,}\.{1}[a-zA-Z0-9\.\-\_]{1,4}/;
+        var regexp = /[a-zA-Z0-9\.\-\_]{1,}\.{1}[a-zA-Z0-9\.\-\_]{3,4}/;
 
         if (campo.val() !== '' && !regexp.test(campo.val())) {
             haErros = true;

@@ -12,18 +12,18 @@ exports.novo = function (req, res) {
 
 exports.incluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
-    
+
     try {
         var novaMusica = {
             nome: req.body.nome,
             artista: req.body.artista,
             arquivoMusica: req.body.arquivoMusica,
-            arquivoCapaAlbum: req.body.arquivoCapaAlbum,
+            arquivoCapaAlbum: req.body.arquivoCapaAlbum[0] || req.body.arquivoCapaAlbum[1],
             secao: req.body.secao
         };
 
         portfolioGerente.incluir(novaMusica);
-        
+
         resultado.sucesso = true;
         resultado.mensagem = 'Música incluída com sucesso';
     } catch (error) {

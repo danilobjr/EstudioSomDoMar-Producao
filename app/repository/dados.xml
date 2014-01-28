@@ -221,6 +221,14 @@
       <arquivoCapaAlbumPlayer>anfrisio_rocha_recomeco_player.jpg</arquivoCapaAlbumPlayer>
       <secao>pessoal</secao>
     </musica>
+    <musica>
+      <nome>Música Lançamento</nome>
+      <artista>Artista Lançamento</artista>
+      <arquivoMusica>cancao.mp3</arquivoMusica>
+      <arquivoCapaAlbum>cd.jpg</arquivoCapaAlbum>
+      <secao>lancamento</secao>
+      <id>5</id>
+    </musica>
   </portfolio>
   <fotos>
     <foto>

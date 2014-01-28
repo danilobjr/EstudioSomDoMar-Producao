@@ -5,8 +5,8 @@ module.exports = function () {
         return contexto.portfolio.obterTodasAsMusicas();
     };
 
-    var obterPorNome = function (nome) {
-        return contexto.portfolio.obterPorNome(nome);
+    var obterPorNomeEArtista = function (nome) {
+        return contexto.portfolio.obterPorNomeEArtista(nome);
     };
 
     var incluir = function (novaMusica) {

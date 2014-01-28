@@ -181,7 +181,6 @@ var contexto = (function () {
                         artista: 'Janaina Castro',
                         arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
                         arquivoCapaAlbum: 'janaina_castro_player.jpg',
-                        arquivoCapaAlbumPlayer: 'janaina_castro_player.jpg',
                         secao: 'lancamento'
                     }
                 },
@@ -192,7 +191,6 @@ var contexto = (function () {
                         artista: 'Daniel Costa',
                         arquivoMusica: 'cd_daniel_costa.mp3',
                         arquivoCapaAlbum: '',
-                        arquivoCapaAlbumPlayer: '',
                         secao: 'outro'
                     }
                 },
@@ -203,7 +201,6 @@ var contexto = (function () {
                         artista: 'Janaina Castro',
                         arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
                         arquivoCapaAlbum: '',
-                        arquivoCapaAlbumPlayer: '',
                         secao: 'jingle'
                     }
                 },
@@ -214,7 +211,6 @@ var contexto = (function () {
                         artista: 'Janaina Castro',
                         arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
                         arquivoCapaAlbum: 'janaina_castro_player.jpg',
-                        arquivoCapaAlbumPlayer: 'janaina_castro_player.jpg',
                         secao: 'pessoal'
                     }
                 }

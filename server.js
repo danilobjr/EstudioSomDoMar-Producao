@@ -8,6 +8,7 @@ var express = require('express'),
     home = require('./routes/home'),
     admin = require('./routes/admin'),
     pagina = require('./routes/pagina'),
+    portfolio = require('./routes/portfolio'),
     foto = require('./routes/foto'),
     video = require('./routes/video'),
     artista = require('./routes/artista');
@@ -45,6 +46,7 @@ app.get('/logout', login.logoff);
 app.get('/admin', autenticacaoRequerida, admin.index);
 app.get('/admin/paginas', autenticacaoRequerida, pagina.index);
 app.get('/admin/pagina/alterar/:id', autenticacaoRequerida, pagina.editar);
+app.get('/admin/portfolio', autenticacaoRequerida, portfolio.index);
 app.get('/admin/fotos', autenticacaoRequerida, foto.index);
 app.get('/admin/foto/nova', autenticacaoRequerida, foto.nova);
 app.get('/admin/videos', autenticacaoRequerida, video.index);
@@ -68,6 +70,7 @@ app.post('/admin/artista/alterar/musicas', autenticacaoRequerida, artista.altera
 app.post('/admin/artista/alterar/imagem-perfil', autenticacaoRequerida, artista.alterarImagemPerfil);
 app.post('/admin/artista/alterar/background', autenticacaoRequerida, artista.alterarBackground);
 app.get('/admin/artista/excluir/:id', autenticacaoRequerida, artista.excluir);
+app.get('/admin/portfolio/excluir/:id', autenticacaoRequerida, portfolio.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

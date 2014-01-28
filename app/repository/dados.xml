@@ -184,6 +184,44 @@
       </musicas>
     </artista>
   </artistas>
+  <portfolio>
+    <musica>
+      <id>1</id>
+      <nome>Restaura-me</nome>
+      <artista>Janaina Castro</artista>
+      <arquivoMusica>cd_janaina_castro-restaura-me.mp3</arquivoMusica>
+      <arquivoCapaAlbum>janaina_castro.jpg</arquivoCapaAlbum>
+      <arquivoCapaAlbumPlayer>janaina_castro_player.jpg</arquivoCapaAlbumPlayer>
+      <tipo>lancamento</tipo>
+    </musica>
+    <musica>
+      <id>2</id>
+      <nome>Demo</nome>
+      <artista>Daniel Costa</artista>
+      <arquivoMusica>musicas/cd_daniel_costa.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <arquivoCapaAlbumPlayer></arquivoCapaAlbumPlayer>
+      <tipo>outro</tipo>
+    </musica>
+    <musica>
+      <id>3</id>
+      <nome>Campanha Política Artur Bruno - 1313</nome>
+      <artista>Artur Bruno</artista>
+      <arquivoMusica>jingle-artur_bruno_1313.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <arquivoCapaAlbumPlayer></arquivoCapaAlbumPlayer>
+      <tipo>jingle</tipo>
+    </musica>
+    <musica>
+      <id>4</id>
+      <nome>Recomeço</nome>
+      <artista>Anfrísio Rocha</artista>
+      <arquivoMusica>cd_recomeco-recomeco.mp3</arquivoMusica>
+      <arquivoCapaAlbum>anfrisio_rocha_recomeco.jpg</arquivoCapaAlbum>
+      <arquivoCapaAlbumPlayer>anfrisio_rocha_recomeco_player.jpg</arquivoCapaAlbumPlayer>
+      <tipo>pessoal</tipo>
+    </musica>
+  </portfolio>
   <fotos>
     <foto>
       <id>1</id>

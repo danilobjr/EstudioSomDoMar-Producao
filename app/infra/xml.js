@@ -21,6 +21,12 @@ var corrigirJSONContexto = function (contexto) {
         }
     }
 
+    contexto.portfolio = contexto.portfolio.musica;
+
+    if (!util.isArray(contexto.portfolio)) {
+        contexto.portfolio = [contexto.portfolio];
+    }
+
     contexto.artistas = contexto.artistas.artista;
 
     if (!util.isArray(contexto.artistas)) {
@@ -94,6 +100,10 @@ var tornarDadosBrutos = function (dados) {
                 dados.artistas[i].artista.musicas[k] = { musica: dados.artistas[i].artista.musicas[k] };
             }
         }
+    }
+
+    for (var i = 0; i < dados.portfolio.length; i++) {
+        dados.portfolio[i] = { musica: dados.portfolio[i] };
     }
 
     for (var i = 0; i < dados.fotos.length; i++) {

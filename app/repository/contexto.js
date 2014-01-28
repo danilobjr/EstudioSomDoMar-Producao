@@ -173,6 +173,52 @@ var contexto = (function () {
                     }
                 }
             ],
+            portfolio: [
+                {
+                    musica: {
+                        id: 1,
+                        nome: 'Restaura-me',
+                        artista: 'Janaina Castro',
+                        arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
+                        arquivoCapaAlbum: 'janaina_castro_player.jpg',
+                        arquivoCapaAlbumPlayer: 'janaina_castro_player.jpg',
+                        tipo: 'lancamento'
+                    }
+                },
+                {
+                    musica: {
+                        id: 2,
+                        nome: 'Demo',
+                        artista: 'Daniel Costa',
+                        arquivoMusica: 'cd_daniel_costa.mp3',
+                        arquivoCapaAlbum: '',
+                        arquivoCapaAlbumPlayer: '',
+                        tipo: 'outro'
+                    }
+                },
+                {
+                    musica: {
+                        id: 3,
+                        nome: 'Restaura-me',
+                        artista: 'Janaina Castro',
+                        arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
+                        arquivoCapaAlbum: '',
+                        arquivoCapaAlbumPlayer: '',
+                        tipo: 'jingle'
+                    }
+                },
+                {
+                    musica: {
+                        id: 4,
+                        nome: 'Restaura-me',
+                        artista: 'Janaina Castro',
+                        arquivoMusica: 'cd_janaina_castro-restaura-me.mp3',
+                        arquivoCapaAlbum: 'janaina_castro_player.jpg',
+                        arquivoCapaAlbumPlayer: 'janaina_castro_player.jpg',
+                        tipo: 'pessoal'
+                    }
+                }
+            ],
             fotos: [
                 {
                     foto: {
@@ -511,6 +557,77 @@ var contexto = (function () {
             }
         };
 
+        // Portfólio
+
+        var obterTodasAsMusicas = function () {
+            var contexto = xml.obterContexto();
+            return contexto.portfolio;
+        };
+
+        var obterMusicasPorTipo = function (tipo, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
+            var musicasEncontradas = undefined;
+
+            for (var cont in contexto.portfolio) {
+                if (contexto.portfolio[cont].tipo === tipo) {
+                    if (!musicasEncontradas) {
+                        musicasEncontradas = [];
+                    }
+
+                    musicasEncontradas.push(contexto.portfolio[cont]);
+                }
+            }
+
+            return musicasEncontradas;
+        };
+
+        var excluirMusicaPorId = function (id) {
+            var contexto = xml.obterContexto();
+
+            var musicaProcurada = undefined;
+
+            for (var i = 0; i < contexto.portfolio.length; i++) {
+                if (contexto.portfolio[i].id == id) {
+                    musicaProcurada = contexto.portfolio[i];
+                }
+            }
+
+            if (musicaProcurada) {
+                var quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada = obterMusicasPorTipo(musicaProcurada.tipo).length;
+                console.log(quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada);
+                if (quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada > 1) {
+                    var indiceMusica = contexto.portfolio.indexOf(musicaProcurada);
+                    contexto.portfolio.splice(indiceMusica, 1);
+                    xml.salvar(contexto);
+                } else {
+                    var secao = '';
+
+                    if (musicaProcurada.tipo === 'lancamento') {
+                        secao = 'Últimos Lançamentos';
+                    }
+
+                    if (musicaProcurada.tipo === 'outo') {
+                        secao = 'Outros Trabalhos';
+                    }
+
+                    if (musicaProcurada.tipo === 'jingle') {
+                        secao = 'Jingles';
+                    }
+
+                    if (musicaProcurada.tipo === 'pessoal') {
+                        secao = 'Pessoal';
+                    }
+
+                    throw new Error('Não é permitido excluir todos os itens da seção \'' + secao + '\'');
+                }
+            }
+
+            return musicaProcurada;
+        };
+
         // Artistas
 
         var obterTodosOsArtistas = function () {
@@ -778,6 +895,10 @@ var contexto = (function () {
             usuario: {
                 obterUsuario: obterUsuario,
                 obterPorEmail: obterUsuarioPorEmail
+            },
+            portfolio: {
+                obterTodasAsMusicas: obterTodasAsMusicas,
+                excluirPorId: excluirMusicaPorId
             },
             artistas: {
                 obterTodos: obterTodosOsArtistas,

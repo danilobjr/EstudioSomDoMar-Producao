@@ -1,16 +1,17 @@
 <div class="row-fluid">
     <div class="box boxIndexListagem">
         <div class="title">
-            <h4>Artistas</h4>
+            <h4>Portfólio</h4>
         </div>
         <!-- End .title -->
           
         <div class="content top">
-            <table id="tabelaArtistas" class="table table-bordered table-striped">
+            <table id="tabelaPortfolio" class="table table-bordered table-striped">
                 <thead>
                     <tr role="row">
-                        <th style="width: 274px;">Nome</th>
-                        <th style="width: 74px;">Perfil Completo</th>
+                        <th style="width: 274px;">Música</th>
+                        <th style="width: 74px;">Artista</th>
+                        <th style="width: 74px;">Seção</th>
                         <th class="ms no_sort sorting_disabled" aria-label="Actions" style="width: 100px;">Ações</th>
                     </tr>
                 </thead>
@@ -25,24 +26,18 @@
 
                     <tr>
                         <td><%= viewModel[index].nome %></td>
+                        <td><%= viewModel[index].artista %></td>
                         <td>
-                            <% if (typeof viewModel[index].imagens.perfil != 'undefined' && typeof viewModel[index].musicas != 'undefined') { %> 
-
-                                Sim
-
-                            <% } else { %>
-
-                                Não
-
-                            <% } %>
+                            <% if (viewModel[index].tipo === 'lancamento') { %> Últimos Lançamentos <% } %>
+                            <% if (viewModel[index].tipo === 'outro') { %> Outros Trabalhos <% } %>
+                            <% if (viewModel[index].tipo === 'jingle') { %> Jingles <% } %>
+                            <% if (viewModel[index].tipo === 'pessoal') { %> Pessoal <% } %>
                         </td>
                         <td class="ms ">
                             <div class="btn-group"> 
-                                <% if (typeof viewModel[index].imagens.perfil != 'undefined' && typeof viewModel[index].musicas != 'undefined') { %>
-                                    <a href="/artista/<%= viewModel[index].id %>" target="_blank" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Visualizar"><i class="gicon-eye-open"></i></a>
-                                <% } %>
+                                <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Tocar"><i class="gicon-play"></i></a>
                                 <a href="/admin/artista/alterar/<%= viewModel[index].id %>" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a>
-                                <a href="#exclusaoModal" class="btn btn-small" data-url-exclusao="/admin/artista/excluir/<%= viewModel[index].id %>" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove "></i></a> 
+                                <a href="#exclusaoModal" class="btn btn-small" data-url-exclusao="/admin/portfolio/excluir/<%= viewModel[index].id %>" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove "></i></a> 
                             </div>
                         </td>
                     </tr>
@@ -83,10 +78,10 @@
         <h4>Funcionamento da tabela</h4>
 
         <ul>
-            <li>Ao adicionar um novo artista, este ainda terá a necessidade de que sejam adicionados alguns dados como Músicas e Imagem de Perfil. Para verificar se o artista está com perfil completo basta olhar para a coluna <b>Perfil Completo</b>, a qual mostrará se o perfil está completo com um <b>Sim</b> ou <b>Não</b></li>
-            <li>Para completar o perfil, na linha correspondente ao artista, clique no botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> (<b>Editar</b>) que está na coluna <b>Ações</b></li>
-            <li>Quando o perfil estiver completo, aparecerá um novo botão: <br/><a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Visualizar"><i class="gicon-eye-open"></i></a> (<b>Visualizar</b>). Você poderá ver um <em>preview</em> de como ficará a página do referido artista no site</li>
-            <li>Com o perfil completo, o artista já estará <em>automaticamente</em> na página de artistas do site</li>
+            <li>A coluna <b>Seção</b> mostra o local (página) em que será exibida a música no site</li>
+            <li>Você poderá ouvir a música através do botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Tocar"><i class="gicon-play"></i></a> (<b>Tocar</b>)</li>
+            <li>Você poderá editar/corrigir informações clicando no botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> (<b>Editar</b>) que está na coluna <b>Ações</b></li>
+            <li>Também é possível excluir uma música clicando no botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove"></i></a> (<b>Excluir</b>) que está na coluna <b>Ações</b>. Porém, não é possível excluir todos os itens de uma determinada seção, é necessário que haja pelo menos um item de cada</li>
         </ul>
     </div>
     <div class="modal-footer">
@@ -100,7 +95,7 @@
 <script>
     $(function () {
         var dontSort = [];
-        $('#tabelaArtistas thead th').each(function () {
+        $('#tabelaPortfolio thead th').each(function () {
             if ( $(this).hasClass( 'no_sort' )) {
                 dontSort.push( { "bSortable": false } );
             } else {
@@ -108,7 +103,7 @@
             }
         });
 
-        $('#tabelaArtistas').dataTable({
+        $('#tabelaPortfolio').dataTable({
             "sDom": "<'row-fluid table_top_bar'<'span12'<'to_hide_phone' f>>>t<'row-fluid control-group full top' <'span4 to_hide_tablet'l><'span8 pagination'p>>",
             "aaSorting": [[ 1, "asc" ]],
             "bLengthChange": false,

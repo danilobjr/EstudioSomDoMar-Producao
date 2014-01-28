@@ -6,6 +6,10 @@ exports.index = function (req, res) {
     res.render('portfolioIndex', { viewModel: portfolio });
 };
 
+exports.novo = function (req, res) {
+    res.render('portfolioNovo');
+};
+
 exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 
@@ -28,10 +32,6 @@ exports.excluir = function (req, res) {
 //    var artista = artistaGerente.obterPorId(idArtista);
 
 //    res.render('artista', { _layoutFile: false, viewModel: artista});
-//};
-
-//exports.novo = function (req, res) {
-//    res.render('artistaNovo');
 //};
 
 //exports.incluir = function (req, res) {

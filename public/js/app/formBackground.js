@@ -18,7 +18,7 @@ $(function () {
         return haErros;
     };
 
-    var gerarErroNomeArquivo = function (e, minlength) {
+    var gerarErroNomeArquivo = function (e) {
         var haErros = false;
         var campo = $(e.currentTarget);
 

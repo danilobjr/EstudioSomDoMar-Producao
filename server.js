@@ -7,6 +7,7 @@ var express = require('express'),
     login = require('./routes/login'),
     home = require('./routes/home'),
     admin = require('./routes/admin'),
+    usuario = require('./routes/usuario'),
     pagina = require('./routes/pagina'),
     portfolio = require('./routes/portfolio'),
     foto = require('./routes/foto'),
@@ -44,6 +45,7 @@ app.get('/', home.index);
 app.get('/login', login.index);
 app.get('/logout', login.logoff);
 app.get('/admin', autenticacaoRequerida, admin.index);
+app.get('/admin/perfil', autenticacaoRequerida, usuario.index);
 app.get('/admin/paginas', autenticacaoRequerida, pagina.index);
 app.get('/admin/pagina/alterar/:id', autenticacaoRequerida, pagina.editar);
 app.get('/admin/portfolio', autenticacaoRequerida, portfolio.index);

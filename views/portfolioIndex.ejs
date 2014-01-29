@@ -35,7 +35,10 @@
                         </td>
                         <td class="ms ">
                             <div class="btn-group"> 
-                                <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Tocar"><i class="gicon-play"></i></a>
+                                <a class="btn btn-small play" rel="tooltip" data-placement="top" data-original-title="Play" data-song-url="/musicas/<%= viewModel[index].arquivoMusica %>">
+                                    <i class="gicon-play audio-control"></i>
+                                    <i class="gicon-stop audio-control" style="display: none"></i>
+                                </a>
                                 <a href="/admin/portfolio/alterar/<%= viewModel[index].id %>" class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a>
                                 <a href="#exclusaoModal" class="btn btn-small" data-url-exclusao="/admin/portfolio/excluir/<%= viewModel[index].id %>" data-toggle="modal" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove "></i></a> 
                             </div>
@@ -79,7 +82,7 @@
 
         <ul>
             <li>A coluna <b>Seção</b> mostra o local (página) em que será exibida a música no site</li>
-            <li>Você poderá ouvir a música através do botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Tocar"><i class="gicon-play"></i></a> (<b>Tocar</b>)</li>
+            <li>Você poderá ouvir a música através do botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Tocar"><i class="gicon-play"></i></a> (<b>Play</b>)</li>
             <li>Você poderá editar/corrigir informações clicando no botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Editar"><i class="gicon-edit"></i></a> (<b>Editar</b>) que está na coluna <b>Ações</b></li>
             <li>Também é possível excluir uma música clicando no botão <a class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Excluir"><i class="gicon-remove"></i></a> (<b>Excluir</b>) que está na coluna <b>Ações</b>. Porém, não é possível excluir todos os itens de uma determinada seção, é necessário que haja pelo menos um item de cada</li>
         </ul>
@@ -96,16 +99,16 @@
     $(function () {
         var dontSort = [];
         $('#tabelaPortfolio thead th').each(function () {
-            if ( $(this).hasClass( 'no_sort' )) {
-                dontSort.push( { "bSortable": false } );
+            if ($(this).hasClass('no_sort')) {
+                dontSort.push({ "bSortable": false });
             } else {
-                dontSort.push( null );
+                dontSort.push(null);
             }
         });
 
         $('#tabelaPortfolio').dataTable({
             "sDom": "<'row-fluid table_top_bar'<'span12'<'to_hide_phone' f>>>t<'row-fluid control-group full top' <'span4 to_hide_tablet'l><'span8 pagination'p>>",
-            "aaSorting": [[ 1, "asc" ]],
+            "aaSorting": [[1, "asc"]],
             "bLengthChange": false,
             "bPaginate": true,
             "sPaginationType": "full_numbers",
@@ -133,14 +136,27 @@
             $('a.confirmarExclusao').attr('href', urlExclusao);
         });
 
-        //$.extend( $.fn.dataTableExt.oStdClasses, {
-        //"s`": "dataTables_wrapper form-inline"
-        //} );
+        $('.play').on('click', function (e) {
+            debugger;
+            var _this = $(e.currentTarget);
+            $('audio').remove();
+            var _play = $('.play').not(_this);
+            _play.attr('data-original-title', 'Play');
+            _play.children('.gicon-play').show();
+            _play.children('.gicon-stop').hide();
 
-        //$(".chzn-select, .dataTables_length select").chosen({
-        //            disable_search_threshold: 10
+            _this.find('.audio-control').toggle();
+            var originalTitle = (_this.attr('data-original-title') === 'Play') ? 'Stop' : 'Play';
+            _this.attr('data-original-title', originalTitle);
+            $('.tooltip .tooltip-inner').text(originalTitle);
+            var audio = $('<audio>').attr({ src: _this.data().songUrl, loop: 'loop' }).appendTo(_this).get(0);
 
-        //});
+            if (originalTitle === 'Play') {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+        });
     });
 </script>
 

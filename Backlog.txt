@@ -8,8 +8,8 @@ OK - Ampliar a tela de dashboard com mensagens ou links rápidos para q o submen
 OK - Permitir a mudança de texto das páginas: home, sobre, portfólio-jingles e portfólio-pessoal
 - Permitir mudança da página de contato através do link "Meu Perfil" em /admin
 !! - Implementar alteração das fotos do site: estúdio, músicos e BANNERS
-- Implementar alteração do portfólio do site: últimos lançamentos, outros trabalhos, jingles e pessoal;
+OK - Implementar alteração do portfólio do site: últimos lançamentos, outros trabalhos, jingles e pessoal;
 OK - Implementar validação de SEÇÃO OBRIGATÓRIA para Últimos Lançamentos e Pessoal;
-- Colocar player na portfolioIndex;
+OK - Colocar player na portfolioIndex;
 - Modificar as âncoras de links dos sites para o nome em português (ex.: de page_works para portfolio, de page_about para sobre, etc.);
 - Disponibilizar acesso do site via registro A para o domínio estudiosomdomar.com.br

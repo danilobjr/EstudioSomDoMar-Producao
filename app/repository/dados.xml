@@ -197,7 +197,7 @@
       <id>2</id>
       <nome>Demo</nome>
       <artista>Daniel Costa</artista>
-      <arquivoMusica>musicas/cd_daniel_costa.mp3</arquivoMusica>
+      <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
       <arquivoCapaAlbum></arquivoCapaAlbum>
       <secao>outro</secao>
     </musica>
@@ -211,10 +211,10 @@
     </musica>
     <musica>
       <id>4</id>
-      <nome>Recomeço</nome>
+      <nome>Hora de Dormir</nome>
       <artista>Anfrísio Rocha</artista>
-      <arquivoMusica>cd_recomeco-recomeco.mp3</arquivoMusica>
-      <arquivoCapaAlbum>anfrisio_rocha_recomeco.jpg</arquivoCapaAlbum>
+      <arquivoMusica>cd_hora_de_dormir-mix.mp3</arquivoMusica>
+      <arquivoCapaAlbum>anfrisio_rocha_hora_de_dormir.jpg</arquivoCapaAlbum>
       <secao>pessoal</secao>
     </musica>
   </portfolio>

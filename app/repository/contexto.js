@@ -220,7 +220,7 @@ var contexto = (function () {
                     foto: {
                         id: 1,
                         titulo: 'Aristides Cavalcante',
-                        tipo: 'musico',
+                        secao: 'musico',
                         imagemPequena: 'musico-aristides_cavalcante_xs.jpg',
                         imagemAmpliada: 'musico-aristides_cavalcante_b.jpg'
                     }
@@ -229,7 +229,7 @@ var contexto = (function () {
                     foto: {
                         id: 2,
                         titulo: 'Júnior Finnis',
-                        tipo: 'musico',
+                        secao: 'musico',
                         imagemPequena: 'musico-jr_finnis_xs.jpg',
                         imagemAmpliada: 'musico-jr_finnis_b.jpg'
                     }
@@ -238,7 +238,7 @@ var contexto = (function () {
                     foto: {
                         id: 3,
                         titulo: 'Ronald Melo',
-                        tipo: 'musico',
+                        secao: 'musico',
                         imagemPequena: 'musico-ronald_melo_xs.jpg',
                         imagemAmpliada: 'musico-ronald_melo_b.jpg'
                     }
@@ -247,7 +247,7 @@ var contexto = (function () {
                     foto: {
                         id: 4,
                         titulo: 'Rodrigo Cardozo',
-                        tipo: 'musico',
+                        secao: 'musico',
                         imagemPequena: 'musico-rodrigo_cardozo_xs.jpg',
                         imagemAmpliada: 'musico-rodrigo_cardozo_b.jpg'
                     }
@@ -256,7 +256,7 @@ var contexto = (function () {
                     foto: {
                         id: 5,
                         titulo: 'Backing Vocal - Thiago, Suelen e Daniel',
-                        tipo: 'musico',
+                        secao: 'musico',
                         imagemPequena: 'musico-thisudan_xs.jpg',
                         imagemAmpliada: 'musico-thisudan_b.jpg'
                     }
@@ -265,7 +265,7 @@ var contexto = (function () {
                     foto: {
                         id: 6,
                         titulo: 'Aquário',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'aquario-1_xs.jpg',
                         imagemAmpliada: 'aquario-1_b.jpg'
                     }
@@ -274,7 +274,7 @@ var contexto = (function () {
                     foto: {
                         id: 7,
                         titulo: 'Aquário',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'aquario-2_xs.jpg',
                         imagemAmpliada: 'aquario-2_b.jpg'
                     }
@@ -283,7 +283,7 @@ var contexto = (function () {
                     foto: {
                         id: 8,
                         titulo: 'Bateria',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'bateria-1_xs.jpg',
                         imagemAmpliada: 'bateria-1_b.jpg'
                     }
@@ -292,7 +292,7 @@ var contexto = (function () {
                     foto: {
                         id: 9,
                         titulo: 'Bateria',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'bateria-3_xs.jpg',
                         imagemAmpliada: 'bateria-3_b.jpg'
                     }
@@ -301,7 +301,7 @@ var contexto = (function () {
                     foto: {
                         id: 10,
                         titulo: 'Bateria',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'bateria-4_xs.jpg',
                         imagemAmpliada: 'bateria-4_b.jpg'
                     }
@@ -310,7 +310,7 @@ var contexto = (function () {
                     foto: {
                         id: 11,
                         titulo: 'Instrumentos',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'instrumentos-1_xs.jpg',
                         imagemAmpliada: 'instrumentos-1_b.jpg'
                     }
@@ -319,7 +319,7 @@ var contexto = (function () {
                     foto: {
                         id: 12,
                         titulo: 'Mesa',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'mesa-2_xs.jpg',
                         imagemAmpliada: 'mesa-2_b.jpg'
                     }
@@ -328,7 +328,7 @@ var contexto = (function () {
                     foto: {
                         id: 13,
                         titulo: 'Mesa',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'mesa-3_xs.jpg',
                         imagemAmpliada: 'mesa-3_b.jpg'
                     }
@@ -337,7 +337,7 @@ var contexto = (function () {
                     foto: {
                         id: 14,
                         titulo: 'Mesa',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'mesa-4_xs.jpg',
                         imagemAmpliada: 'mesa-4_b.jpg'
                     }
@@ -346,7 +346,7 @@ var contexto = (function () {
                     foto: {
                         id: 15,
                         titulo: 'Microfone',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'microfone_xs.jpg',
                         imagemAmpliada: 'microfone_b.jpg'
                     }
@@ -355,7 +355,7 @@ var contexto = (function () {
                     foto: {
                         id: 16,
                         titulo: 'Periféricos',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'perifericos-2_xs.jpg',
                         imagemAmpliada: 'perifericos-2_b.jpg'
                     }
@@ -364,7 +364,7 @@ var contexto = (function () {
                     foto: {
                         id: 17,
                         titulo: 'Periféricos',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'perifericos-3_xs.jpg',
                         imagemAmpliada: 'perifericos-3_b.jpg'
                     }
@@ -373,7 +373,7 @@ var contexto = (function () {
                     foto: {
                         id: 18,
                         titulo: 'Periféricos',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'perifericos-4_xs.jpg',
                         imagemAmpliada: 'perifericos-4_b.jpg'
                     }
@@ -382,7 +382,7 @@ var contexto = (function () {
                     foto: {
                         id: 19,
                         titulo: 'Recepção',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'recepcao_xs.jpg',
                         imagemAmpliada: 'recepcao_b.jpg'
                     }
@@ -391,7 +391,7 @@ var contexto = (function () {
                     foto: {
                         id: 20,
                         titulo: 'Teclado',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'teclado_xs.jpg',
                         imagemAmpliada: 'teclado_b.jpg'
                     }
@@ -400,7 +400,7 @@ var contexto = (function () {
                     foto: {
                         id: 21,
                         titulo: 'Técnica',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'tecnica-1_xs.jpg',
                         imagemAmpliada: 'tecnica-1_b.jpg'
                     }
@@ -409,9 +409,54 @@ var contexto = (function () {
                     foto: {
                         id: 22,
                         titulo: 'Técnica',
-                        tipo: 'estudio',
+                        secao: 'estudio',
                         imagemPequena: 'tecnica-2_xs.jpg',
                         imagemAmpliada: 'tecnica-2_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 23,
+                        titulo: 'Técnica',
+                        secao: 'home',
+                        imagemPequena: 'tecnica-1_s.jpg',
+                        imagemAmpliada: 'tecnica-1_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 24,
+                        titulo: 'Aquário',
+                        secao: 'home',
+                        imagemPequena: 'aquario-1_s.jpg',
+                        imagemAmpliada: 'aquario-1_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 25,
+                        titulo: 'Bateria',
+                        secao: 'home',
+                        imagemPequena: 'bateria-4_s.jpg',
+                        imagemAmpliada: 'bateria-4_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 26,
+                        titulo: 'Mesa Controladora',
+                        secao: 'home',
+                        imagemPequena: 'mesa-4_s.jpg',
+                        imagemAmpliada: 'mesa-4_b.jpg'
+                    }
+                },
+                {
+                    foto: {
+                        id: 27,
+                        titulo: 'Periféricos',
+                        secao: 'home',
+                        imagemPequena: 'perifericos-3_s.jpg',
+                        imagemAmpliada: 'perifericos-3_b.jpg'
                     }
                 }
             ],
@@ -638,7 +683,6 @@ var contexto = (function () {
 
             if (musicaProcurada) {
                 var quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada = obterMusicasPorSecao(musicaProcurada.secao).length;
-                console.log(quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada);
                 if (quantidadeDeMusicasRestantesDoMesmoTipoDaMusicaProcurada > 1) {
                     var indiceMusica = contexto.portfolio.indexOf(musicaProcurada);
                     contexto.portfolio.splice(indiceMusica, 1);
@@ -650,7 +694,7 @@ var contexto = (function () {
                         secao = 'Últimos Lançamentos';
                     }
 
-                    if (musicaProcurada.secao === 'outo') {
+                    if (musicaProcurada.secao === 'outro') {
                         secao = 'Outros Trabalhos';
                     }
 
@@ -794,12 +838,12 @@ var contexto = (function () {
             return contexto.fotos;
         };
 
-        var obterFotosPorTipo = function (tipo) {
+        var obterFotosPorSecao = function (secao) {
             var contexto = xml.obterContexto();
             var fotosEncontradas = undefined;
-
+            
             for (var cont in contexto.fotos) {
-                if (contexto.fotos[cont].tipo === tipo) {
+                if (contexto.fotos[cont].secao === secao) {
                     if (!fotosEncontradas) {
                         fotosEncontradas = [];
                     }
@@ -846,12 +890,27 @@ var contexto = (function () {
             }
 
             if (fotoASerExcluida) {
-                if (contexto.fotos.length > 1) {
+                var quantidadeDeFotosRestantesDaMesmaSecaoDaFotoProcurada = obterFotosPorSecao(fotoASerExcluida.secao).length;
+                if (quantidadeDeFotosRestantesDaMesmaSecaoDaFotoProcurada > 1) {
                     var indiceFoto = contexto.fotos.indexOf(fotoASerExcluida);
                     contexto.fotos.splice(indiceFoto, 1);
                     xml.salvar(contexto);
                 } else {
-                    throw new Error('Não é permitido excluir todas as fotos');
+                    var secao = '';
+
+                    if (fotoASerExcluida.secao === 'musico') {
+                        secao = 'Músico';
+                    }
+
+                    if (fotoASerExcluida.secao === 'estudio') {
+                        secao = 'Estúdio';
+                    }
+
+                    if (fotoASerExcluida.secao === 'home') {
+                        secao = 'Home';
+                    }
+
+                    throw new Error('Não é permitido excluir todos os itens da seção \'' + secao + '\'');
                 }
             }
 
@@ -959,7 +1018,7 @@ var contexto = (function () {
             },
             fotos: {
                 obterTodas: obterTodasAsFotos,
-                obterPorTipo: obterFotosPorTipo,
+                obterPorSecao: obterFotosPorSecao,
                 obterPorTitulo: obterFotoPorTitulo,
                 incluir: incluirNovaFoto,
                 excluirPorId: excluirFotoPorId

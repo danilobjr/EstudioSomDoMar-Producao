@@ -15,8 +15,9 @@ exports.index = function (req, res) {
     var artistas = artistaGerente.obterTodos();
 
     var fotos = {};
-    fotos.musicos = fotoGerente.obterPorTipo('musico');
-    fotos.estudio = fotoGerente.obterPorTipo('estudio');
+    fotos.musicos = fotoGerente.obterPorSecao('musico');
+    fotos.estudio = fotoGerente.obterPorSecao('estudio');
+    fotos.home = fotoGerente.obterPorSecao('home');
 
     var portfolio = {};
     portfolio.lancamentos = portfolioGerente.obterPorSecao('lancamento');

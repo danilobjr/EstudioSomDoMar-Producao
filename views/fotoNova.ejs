@@ -15,12 +15,13 @@
                         </div>
                     </div>
                     <div class="form-row control-group row-fluid">
-                        <label class="control-label span3" for="tipo">Tipo de Foto *</label>
+                        <label class="control-label span3" for="secao">Seção *</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <select id="tipo" name="tipo" class="row-fluid">
+                                <select id="secao" name="secao" class="row-fluid">
                                     <option value="estudio">Estúdio</option>
                                     <option value="musico">Músico</option>
+                                    <option value="home">Home</option>
                                 </select>
                             </div>
                         </div>
@@ -70,7 +71,7 @@
 
         <ul>
             <li>Todos os campos são de preenchimento obrigatório</li>
-            <li>O campo <em>Tipo de Foto</em> refere-se onde a foto irá aparecer no site, se na aba <em>ESTÚDIO</em> ou <em>MÚSICOS</em></li>
+            <li>O campo <em>Seção</em> refere-se onde a foto irá aparecer no site, se na aba <em>ESTÚDIO</em>, <em>MÚSICOS</em> ou na página <em>HOME</em></li>
             <li><b>Ambos</b> os arquivos de imagem devem ser copiados para a mesma pasta. O que irá diferenciar <b>qual pasta</b> será, é o tipo de foto que for selecionada</li>
             <li>
                 Como os arquivos serão copiados para a mesma pasta, devem ter <b>nomes diferentes</b>. Por exemplo:
@@ -81,6 +82,7 @@
             </li>
             <li>Caso a seleção seja <b>Estúdio</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\estudio</code></li>
             <li>Caso a seleção seja <b>Músico</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\musico</code></li>
+            <li>Caso a seleção seja <b>Home</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\home</code></li>
             <li>O tamanho ideal para a imagem pequena é de <code>159 x 159</code> pixels</li>
             <li>Não há um tamanho ideal para a imagem ampliada</li>
         </ul>

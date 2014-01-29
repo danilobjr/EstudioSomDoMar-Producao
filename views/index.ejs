@@ -113,10 +113,25 @@
                             </hgroup>
 
                             <ul id="carousel" class="jcarousel-skin-tango"> 
+
+                                <% for (var i = 0; i < viewModel.fotos.home.length; i++) { %>
+                                    <li>
+                                        <a rel="home-gallery" href="img/foto/home/<%= viewModel.fotos.home[i].imagemAmpliada %>" title="<%= viewModel.fotos.home[i].titulo %>">
+                                            <figure>
+                                                <img class="gall-pic" src="img/foto/home/<%= viewModel.fotos.home[i].imagemPequena %>" alt="<%= viewModel.fotos.home[i].titulo %>" />
+                                                <div class="zoom">
+                                                    <img src="img/magnify.png" alt="" />
+                                                </div>
+                                            </figure>
+                                        </a>                                
+                                    </li>
+                                <% } %>
+
+                                <!--
                                 <li>
-                                    <a rel="home-gallery" href="img/foto/banner/tecnica-1_b.jpg" title="Técnica">
+                                    <a rel="home-gallery" href="img/foto/home/tecnica-1_b.jpg" title="Técnica">
                                         <figure>
-                                            <img class="gall-pic" src="img/foto/banner/tecnica-1_s.jpg" alt="Técnica">
+                                            <img class="gall-pic" src="img/foto/home/tecnica-1_s.jpg" alt="Técnica">
                                             <div class="zoom">
                                                 <img src="img/magnify.png" alt="Aquário">                                            
                                             </div>
@@ -124,9 +139,9 @@
                                     </a>                                
                                 </li>
                                 <li>
-                                    <a rel="home-gallery" href="img/foto/banner/aquario-1_b.jpg" title="Aquário">
+                                    <a rel="home-gallery" href="img/foto/home/aquario-1_b.jpg" title="Aquário">
                                         <figure>
-                                            <img class="gall-pic" src="img/foto/banner/aquario-1_s.jpg" alt="Aquário">
+                                            <img class="gall-pic" src="img/foto/home/aquario-1_s.jpg" alt="Aquário">
                                             <div class="zoom">
                                                 <img src="img/magnify.png" alt="Aquário">                                            
                                             </div>
@@ -134,9 +149,9 @@
                                     </a>                                
                                 </li> 
                                 <li>
-                                    <a rel="home-gallery" href="img/foto/banner/bateria-4_b.jpg" title="Bateria">
+                                    <a rel="home-gallery" href="img/foto/home/bateria-4_b.jpg" title="Bateria">
                                         <figure>
-                                            <img class="gall-pic" src="img/foto/banner/bateria-4_s.jpg" alt="Bateria">
+                                            <img class="gall-pic" src="img/foto/home/bateria-4_s.jpg" alt="Bateria">
                                             <div class="zoom">
                                                 <img src="img/magnify.png" alt="Técnica - Bateria">                                            
                                             </div>
@@ -144,9 +159,9 @@
                                     </a>                                
                                 </li>
                                 <li>
-                                    <a rel="home-gallery" href="img/foto/banner/mesa-4_b.jpg" title="Mesa Controladora">
+                                    <a rel="home-gallery" href="img/foto/home/mesa-4_b.jpg" title="Mesa Controladora">
                                         <figure>
-                                            <img class="gall-pic" src="img/foto/banner/mesa-4_s.jpg" alt="Mesa Controladora">
+                                            <img class="gall-pic" src="img/foto/home/mesa-4_s.jpg" alt="Mesa Controladora">
                                             <div class="zoom">
                                                 <img src="img/magnify.png" alt="Recepção">                                            
                                             </div>
@@ -154,15 +169,16 @@
                                     </a>                                
                                 </li>
                                 <li>
-                                    <a rel="home-gallery" href="img/foto/banner/perifericos-3_b.jpg" title="Periféricos">
+                                    <a rel="home-gallery" href="img/foto/home/perifericos-3_b.jpg" title="Periféricos">
                                         <figure>
-                                            <img class="gall-pic" src="img/foto/banner/perifericos-3_s.jpg" alt="Periféricos">
+                                            <img class="gall-pic" src="img/foto/home/perifericos-3_s.jpg" alt="Periféricos">
                                             <div class="zoom">
                                                 <img src="img/magnify.png" alt="Recepação">                                            
                                             </div>
                                         </figure>
                                     </a>                                
                                 </li>
+                                -->
                             </ul> 
                         </article> 
                     </li> 

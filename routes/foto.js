@@ -2,8 +2,9 @@ var fotoGerente = require('./../app/gerentes/fotoGerente');
 
 exports.index = function (req, res) {
     var fotos = {};
-    fotos.estudio = fotoGerente.obterPorTipo('estudio');
-    fotos.musicos = fotoGerente.obterPorTipo('musico');
+    fotos.estudio = fotoGerente.obterPorSecao('estudio');
+    fotos.musicos = fotoGerente.obterPorSecao('musico');
+    fotos.home = fotoGerente.obterPorSecao('home');
 
     res.render('fotoIndex', { viewModel: fotos });
 };
@@ -18,7 +19,7 @@ exports.incluir = function (req, res) {
     try {
         var novaFoto = {
             titulo: req.body.titulo,
-            tipo: req.body.tipo,
+            secao: req.body.secao,
             imagemPequena: req.body.imagemPequena,
             imagemAmpliada: req.body.imagemAmpliada
         };
@@ -31,8 +32,9 @@ exports.incluir = function (req, res) {
     }
 
     var fotos = {};
-    fotos.estudio = fotoGerente.obterPorTipo('estudio');
-    fotos.musicos = fotoGerente.obterPorTipo('musico');
+    fotos.estudio = fotoGerente.obterPorSecao('estudio');
+    fotos.musicos = fotoGerente.obterPorSecao('musico');
+    fotos.home = fotoGerente.obterPorSecao('home');
 
     res.render('fotoIndex', { viewModel: fotos, resultado: resultado });
 };
@@ -50,8 +52,9 @@ exports.excluir = function (req, res) {
     }
 
     var fotos = {};
-    fotos.estudio = fotoGerente.obterPorTipo('estudio');
-    fotos.musicos = fotoGerente.obterPorTipo('musico');
+    fotos.estudio = fotoGerente.obterPorSecao('estudio');
+    fotos.musicos = fotoGerente.obterPorSecao('musico');
+    fotos.home = fotoGerente.obterPorSecao('home');
 
     res.render('fotoIndex', { viewModel: fotos, resultado: resultado });
 };

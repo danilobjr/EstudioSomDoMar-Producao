@@ -5,8 +5,8 @@ module.exports = function () {
         return contexto.fotos.obterTodas();
     };
 
-    var obterFotosPorTipo = function (tipo) {
-        return contexto.fotos.obterPorTipo(tipo);
+    var obterFotosPorSecao = function (secao) {
+        return contexto.fotos.obterPorSecao(secao);
     };
 
     var obterPorTitulo = function (titulo) {
@@ -15,7 +15,7 @@ module.exports = function () {
 
     var incluir = function (novaFoto) {
         var fotoJahExiste = obterPorTitulo(novaFoto.titulo);
-        
+
         if (fotoJahExiste) {
             throw new Error('Foto já existe');
         } else {
@@ -35,7 +35,7 @@ module.exports = function () {
 
     return {
         obterTodas: obterTodasAsFotos,
-        obterPorTipo: obterFotosPorTipo,
+        obterPorSecao: obterFotosPorSecao,
         excluirPorId: excluirPorId,
         incluir: incluir
     };

@@ -13,6 +13,10 @@ module.exports = function () {
         return contexto.usuario.obterUsuario();
     };
 
+    var alterarDadosPessoais = function (artistaAlterado) {
+        return contexto.usuario.alterarDadosPessoais(artistaAlterado);
+    };
+
     //var incluir = function (novoArtista) {
     //    var artistaJahExiste = obterPorNome(novoArtista.nome);
     //    
@@ -29,10 +33,6 @@ module.exports = function () {
     //        
     //        return contexto.artistas.incluir(novoArtista);
     //    }
-    //};
-
-    //var alterarDadosPessoais = function (artistaAlterado) {
-    //    return contexto.artistas.alterarDadosPessoais(artistaAlterado);
     //};
 
     //var alterarMusicas = function (idArtista, musicas) {
@@ -61,7 +61,7 @@ module.exports = function () {
         //obterTodos: obterTodos,
         obterUsuario: obterUsuario,
         //incluir: incluir,
-        //alterarDadosPessoais: alterarDadosPessoais,
+        alterarDadosPessoais: alterarDadosPessoais,
         //alterarMusicas: alterarMusicas,
         //alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
         //alterarBackground: alterarBackground,

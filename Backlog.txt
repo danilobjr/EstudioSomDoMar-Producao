@@ -9,6 +9,7 @@ OK - Mostrar mensagem de "senha incorreta" na tela de login
 OK - Ampliar a tela de dashboard com mensagens ou links rápidos para q o submenu de usuario (qdo clicado na foto do usuário) apareça por completo
 OK - Permitir a mudança de texto das páginas: home, sobre, portfólio-jingles e portfólio-pessoal
 >> - Permitir mudança da página de contato através do link "Meu Perfil" em /admin
+- Permitir mudança de senha
 OK - Implementar alteração das fotos do site: estúdio, músicos e BANNERS
 OK - Implementar alteração do portfólio do site: últimos lançamentos, outros trabalhos, jingles e pessoal;
 OK - Implementar validação de SEÇÃO OBRIGATÓRIA para Últimos Lançamentos e Pessoal;
@@ -17,3 +18,5 @@ OK - Colocar player na portfolioIndex;
 - Disponibilizar acesso do site via registro A para o domínio estudiosomdomar.com.br
 - Detecção de CapsLock no Login
 - Retirar iFrame de email e trocar nodejs
+- Modificar nome de usuário e grupo de usuário q aparece na layout: tirar hardcode e colocar dados dinâmicos
+- Implementar Busca???

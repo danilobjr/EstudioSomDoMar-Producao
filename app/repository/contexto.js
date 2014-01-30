@@ -616,6 +616,21 @@ var contexto = (function () {
             }
         };
 
+        var alterarUsuarioDadosPessoais = function (usuarioAlterado) {
+            var contexto = xml.obterContexto();
+            var usuarioExistente = obterUsuario(usuarioAlterado.id, contexto);
+
+            usuarioExistente.nome = usuarioAlterado.nome;
+            usuarioExistente.sobrenome = usuarioAlterado.sobrenome;
+            usuarioExistente.email = usuarioAlterado.email;
+            usuarioExistente.telefones = usuarioAlterado.telefones;
+            usuarioExistente.redesSociais = usuarioAlterado.redesSociais;
+
+            xml.salvar(contexto);
+
+            return obterUsuario(usuarioAlterado.id);
+        };
+
         // Portfólio
 
         var obterTodasAsMusicas = function () {
@@ -1012,7 +1027,8 @@ var contexto = (function () {
             },
             usuario: {
                 obterUsuario: obterUsuario,
-                obterPorEmail: obterUsuarioPorEmail
+                obterPorEmail: obterUsuarioPorEmail,
+                alterarDadosPessoais: alterarUsuarioDadosPessoais
             },
             portfolio: {
                 obterTodasAsMusicas: obterTodasAsMusicas,

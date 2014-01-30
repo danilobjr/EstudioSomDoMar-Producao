@@ -214,7 +214,7 @@
 
                 <div class="form-actions row-fluid">
                     <div class="span12">
-                        <a class="btn btn-large btn-secondary pull-right btnVoltar">Cancelar</a>
+                        <a href="/admin" class="btn btn-large btn-secondary pull-right">Cancelar</a>
                         <button type="submit" class="btn btn-large btn-success pull-right">Salvar</button>
                     </div>
                 </div>
@@ -260,12 +260,3 @@
 <script src="/js/jquery.validate.min.js"></script>
 <script src="/js/jquery.meio.mask.min.js"></script>
 <script src="/js/app/formUsuarioDadosPessoais.js"></script>
-
-<script>
-    $(function () {
-        $('.btnVoltar').on('click', function (e) {
-            e.preventDefault();
-            window.history.back();
-        });
-    });
-</script>

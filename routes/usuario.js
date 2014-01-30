@@ -1,5 +1,5 @@
-var usuarioGerente = require('./../app/gerentes/usuarioGerente');
-    //util = require('util');
+var usuarioGerente = require('./../app/gerentes/usuarioGerente'),
+    util = require('util');
 
 exports.index = function (req, res) {
     var usuario = usuarioGerente.obterUsuario();
@@ -17,17 +17,17 @@ exports.alterarDadosPessoais = function (req, res) {
     var idUsuario = req.body.idUsuario;
     var usuarioAlterado = {};
     var resultado = { sucesso: false, mensagem: '' };
-    
+
     try {
         usuarioAlterado = {
-            id: idArtista,
+            id: idUsuario,
             nome: req.body.nome,
-            site: req.body.site,
+            sobrenome: req.body.sobrenome,
             email: req.body.email,
             telefones: [],
             redesSociais: []
         };
-        
+
         if (util.isArray(req.body.telefone)) {
             var telefones = req.body.telefone;
             var tiposTelefone = req.body.tipoTelefone;
@@ -61,17 +61,17 @@ exports.alterarDadosPessoais = function (req, res) {
                 tipo: req.body.tipoRedeSocial
             });
         }
-        
-        usuarioAlterado = artistaGerente.alterarDadosPessoais(usuarioAlterado);
 
+        usuarioAlterado = usuarioGerente.alterarDadosPessoais(usuarioAlterado);
+        
         resultado.sucesso = true;
-        resultado.mensagem = 'Artista alterado com sucesso';
+        resultado.mensagem = 'Usuário alterado com sucesso';
     } catch (error) {
-        usuarioAlterado = artistaGerente.obterPorId(idArtista);
-        resultado.mensagem = 'Erro ao alterar artista: ' + error;
+        usuarioAlterado = usuarioGerente.obterUsuario();
+        resultado.mensagem = 'Erro ao alterar usuário: ' + error;
     }
 
-    res.render('artistaAlteracao', { viewModel: usuarioAlterado, resultado: resultado });
+    res.render('usuarioAlteracao', { viewModel: usuarioAlterado, resultado: resultado });
 };
 
 //exports.exibir = function (req, res) {

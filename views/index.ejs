@@ -88,12 +88,19 @@
               </nav> 
 
                 <div id="social" class="social">
+                    <% for (var i = 0; i < viewModel.perfil.redesSociais.length; i++) { %>
+                        <a href="<%= viewModel.perfil.redesSociais[i].link %>" target="_blank">
+                            <img src="img/icons/<%= viewModel.perfil.redesSociais[i].tipo %>.png" alt=""/>
+                        </a>
+                    <% } %>
+                    <!--
                     <a href="http://www.facebook.com/estudiosomdomar" target="_blank">
                         <img src="img/icons/facebook.png" alt=""/>                    
                     </a>
                     <a href="https://www.youtube.com/AnfrisioRocha" target="_blank">
                         <img src="img/icons/youtube.png" alt=""/>                    
-                    </a>                
+                    </a>
+                    -->                
                 </div>
 
               <div id="player"></div>
@@ -551,28 +558,29 @@
                                 </div> -->
                                 
                                 <div class="contacts"> 
-                                    <!--<p class="contactText_1">Av. Almirante Barroso, 911 ,2º andar - Praia de Iracema</p> -->
                                     <p class="contactText_1 margBot">Fortaleza - CE. Brasil</p> 
                                     <p class="contact-info"> 
-                                       <strong> <span class="phone contactText_2">OI:</span>
-                                        <span class="contactText_2">85 8690.9040</span>
-                                        <br/> 
-                                        <span class="phone contactText_2">TIM:</span>
-                                        <span class="contactText_2">85 9985.5193</span>
-                                        <br/> 
-                                        <span class="phone contactText_2">FIXO:</span>
-                                        <span class="contactText_2">85 3067-6885</span></strong>
+                                        <strong>
+                                            <% for (var i = 0; i < viewModel.perfil.telefones.length; i++) { %>
+                                                <span class="phone contactText_2"><%= viewModel.perfil.telefones[i].tipo %>:</span>
+                                                <span class="contactText_2"><%= viewModel.perfil.telefones[i].numero %></span>
+                                                <br/> 
+                                            <% } %>
+                                        </strong>
                                         <br/> 
                                         <span class="mail contactText_2">E-mail: </span>
-                                        <a href="mailto:anfrisiorocha@hotmail.com" class="contactText_3">anfrisiorocha@hotmail.com</a>                                    </p> 
+                                        <a href="mailto:<%= viewModel.perfil.email %>" class="contactText_3"><%= viewModel.perfil.email %></a>
+                                    </p> 
 
                                     <p class="contactText_1 margTop margBot">Encontre-nos nas redes sociais</p> 
 
                                     <div class="social">
-                                        <a href="http://www.facebook.com/estudiosomdomar" target="_blank">
-                                            <img src="img/icons/facebook.png" alt=""/>                                        </a>
-                                        <a href="https://www.youtube.com/AnfrisioRocha" target="_blank">
-                                            <img src="img/icons/youtube.png" alt=""/>                                        </a>                                    </div>
+                                        <% for (var i = 0; i < viewModel.perfil.redesSociais.length; i++) { %>
+                                            <a href="<%= viewModel.perfil.redesSociais[i].link %>" target="_blank">
+                                                <img src="img/icons/<%= viewModel.perfil.redesSociais[i].tipo %>.png" alt=""/>
+                                            </a>
+                                        <% } %>
+                                    </div>
                                 </div> 
                             </article> 
                             <article class="colMessages"> 

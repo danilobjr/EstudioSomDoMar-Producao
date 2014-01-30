@@ -9,9 +9,9 @@
         <div class="content">
             <div class="row-fluid well well-small"> <img class="row-fluid" src="/img/<%= viewModel.arquivoImagemPerfil %>" alt="Imagem de Perfil" /> </div>
             <ul class="nav nav-tabs dark nav-stacked">
-                <li><a href="/admin/usuario/alterar/<%= viewModel.id %>"><i class="gicon-user"></i>Dados Pessoais</a></li>
-                <li><a href="#"><i class="gicon-wrench"></i>Senha</a></li>
-                <li><a href="#"><i class="gicon-globe"></i>Imagem de Perfil</a></li>
+                <li><a href="/admin/usuario/alterar/<%= viewModel.id %>"><i class="icon-file"></i>Dados Pessoais</a></li>
+                <li><a href="#"><i class="icon-lock"></i>Senha</a></li>
+                <li><a href="#"><i class="icon-user"></i>Imagem de Perfil</a></li>
             </ul>
         </div>
         <!-- End .content --> 
@@ -19,6 +19,7 @@
     <!-- End .span3 -->
         
     <div class="span9">
+        <!--
         <div class="row-fluid legend profile">
             <div class="row-fluid ">
                 <div class="span6 spacer">
@@ -37,48 +38,68 @@
         </div>
         <!-- End .legend -->
           
-        <div class="content spacer-big">
-            <h3><span>About Me</span></h3>
+        <div class="content" style="margin-top: 67px">
+            <h3><span>Dados Pessoais</span></h3>
+
+            <dl class="dl-horizontal">
+                <dt>Nome</dt>
+                <dd><%= viewModel.nome %></dd>
+                <dt>Sobrenome</dt>
+                <dd><%= viewModel.sobrenome %></dd>
+                <dt>Email</dt>
+                <dd><a href="emailto:<%= viewModel.email %>"><%= viewModel.email %></a></dd>
+            </dl>
 
             <hr>
 
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, dolor at molestie bibendum, diam est imperdiet libero, vel malesuada augue metus ultricies velit. In semper, neque vel luctus ullamcorper, lectus ligula faucibus risus, eget ultrices nisl magna eu ligula. Proin ipsum metus, varius sit amet dapibus id, dapibus vel felis. Duis eu odio mauris. Maecenas pulvinar dignissim arcu, quis elementum erat volutpat ac. Ut et neque a justo scelerisque pellentesque. Maecenas ut quam vitae mi condimentum iaculis at sed erat.</p>
-            <p> In sit amet urna turpis, sit amet pretium nisi. Maecenas quam sem, aliquam nec vehicula sed, fringilla nec leo. Phasellus nec orci orci, vestibulum rutrum urna. Maecenas aliquam ipsum ut purus posuere suscipit. Vivamus posuere gravida metus. Aliquam erat volutpat. Suspendisse euismod pellentesque leo et imperdiet.</p>
-            <p> In sit amet urna turpis, sit amet pretium nisi. Maecenas quam sem, aliquam nec vehicula sed, fringilla nec leo. Phasellus nec orci orci, vestibulum rutrum urna. Maecenas aliquam ipsum ut purus posuere suscipit. Vivamus posuere gravida metus. Aliquam erat volutpat. Suspendisse euismod pellentesque leo et imperdiet.</p>
+            <h3><span>Telefones</span></h3>
+            
+            <dl class="dl-horizontal">
+                <% for (var i = 0; i < viewModel.telefones.length; i++) { %>
+                    <dt><%= viewModel.telefones[i].tipo %></dt>
+                    <dd><%= viewModel.telefones[i].numero %></dd>
+                <% } %>
+            </dl>
 
             <hr>
 
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                <small>Someone famous <cite title="Source Title">Source Title</cite></small> 
-            </blockquote>
+            <% if (typeof viewModel.redesSociais != 'undefined' && viewModel.redesSociais.length) { %>
 
-            <hr>
+                <h3><span>Redes Sociais</span></h3>
 
-            <h3><span>Address</span></h3>
-
-            <address>
-                <strong>PixelGrade, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                <abbr title="Phone">P:</abbr> (123) 456-7890
-            </address>
-
-            <address>
-                <strong>Full Name</strong><br>
-                <a href="mailto:#">first.last@gmail.com</a>
-            </address>
-
-            <hr>
-
-            <h3><span>Other info</span></h3>
-
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, dolor at molestie bibendum, diam est imperdiet libero, vel malesuada augue metus ultricies velit. In semper, neque vel luctus ullamcorper, lectus ligula faucibus risus, eget ultrices nisl magna eu ligula. Proin ipsum metus, varius sit amet dapibus id, dapibus vel felis. Duis eu odio mauris. Maecenas pulvinar dignissim arcu, quis elementum erat volutpat ac. Ut et neque a justo scelerisque pellentesque. Maecenas ut quam vitae mi condimentum iaculis at sed erat.</p>
-            <p> In sit amet urna turpis, sit amet pretium nisi. Maecenas quam sem, aliquam nec vehicula sed, fringilla nec leo. Phasellus nec orci orci, vestibulum rutrum urna. Maecenas aliquam ipsum ut purus posuere suscipit. Vivamus posuere gravida metus. Aliquam erat volutpat. Suspendisse euismod pellentesque leo et imperdiet.</p>
-            <p> In sit amet urna turpis, sit amet pretium nisi. Maecenas quam sem, aliquam nec vehicula sed, fringilla nec leo. Phasellus nec orci orci, vestibulum rutrum urna. Maecenas aliquam ipsum ut purus posuere suscipit. Vivamus posuere gravida metus. Aliquam erat volutpat. Suspendisse euismod pellentesque leo et imperdiet.</p>
+                <dl class="dl-horizontal">
+                    <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
+                        <dt><%= viewModel.redesSociais[i].tipo %></dt>
+                        <dd><a href="<%= viewModel.redesSociais[i].link %>" target="_blank">Acessar Perfil</a></dd>
+                    <% } %>
+                </dl>
+            <% } %>
         </div>
         <!-- End .content --> 
     </div>
     <!-- End .span9 --> 
 </div>
 <!-- End .row-fluid --> 
+
+<script>
+    $(function () {
+        var caseUpFirstLetter = function (elements) {
+            elements.each(function (i, obj) {
+                var _this = $(obj);
+                
+                if (_this.text() === 'youtube') {
+                    _this.text('YouTube');
+                    return;
+                }
+
+                var palavraComPrimeiraLetraMaiuscula = _this.text().toLowerCase().replace(/\b[a-z]/g, function (letra) {
+                    return letra.toUpperCase();
+                });
+
+                _this.text(palavraComPrimeiraLetraMaiuscula);
+            });
+        };
+
+        caseUpFirstLetter($('dl > dt'));
+    });
+</script>

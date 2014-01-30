@@ -2,9 +2,12 @@ var paginaGerente = require('./../app/gerentes/paginaGerente'),
     videoGerente = require('./../app/gerentes/videoGerente'),
     artistaGerente = require('./../app/gerentes/artistaGerente'),
     fotoGerente = require('./../app/gerentes/fotoGerente'),
-    portfolioGerente = require('./../app/gerentes/portfolioGerente');
+    portfolioGerente = require('./../app/gerentes/portfolioGerente'),
+    usuarioGerente = require('./../app/gerentes/usuarioGerente');
 
 exports.index = function (req, res) {
+    var usuario = usuarioGerente.obterUsuario();
+
     var paginas = {};
     paginas.home = paginaGerente.obterPorDescricao('Home');
     paginas.estudio = paginaGerente.obterPorDescricao('Estúdio');
@@ -26,6 +29,7 @@ exports.index = function (req, res) {
     portfolio.pessoal = portfolioGerente.obterPorSecao('pessoal');
 
     res.render('index', { _layoutFile: false, viewModel: {
+        perfil: usuario,
         paginas: paginas,
         artistas: artistas,
         videos: videos,

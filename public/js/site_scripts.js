@@ -58,9 +58,9 @@ $(window).load(function () {
     //$('.zoomImg, .playSong').fadeTo(500, 0);
 
     /*$('.zoomImg, .playSong').hover(function () {
-        $(this).stop().fadeTo(500, 0.5);
+    $(this).stop().fadeTo(500, 0.5);
     }, function () {
-        $(this).stop().fadeTo(500, 0);
+    $(this).stop().fadeTo(500, 0);
     });
     */
     //Hover a -------------------------------------------------------------------------------------------
@@ -210,29 +210,65 @@ $(window).load(function () {
         });
 
     // banner
-    
+
     $(".banner").revolution(
     {
-        delay:9000,
-        startheight:490,
-        startwidth:890,
+        delay: 9000,
+        startheight: 490,
+        startwidth: 890,
 
-        thumbWidth:100,
-        thumbHeight:50,
-        thumbAmount:5,
+        thumbWidth: 100,
+        thumbHeight: 50,
+        thumbAmount: 5,
 
-        onHoverStop:"on",
-        hideThumbs:200,
-        navigationType:"bullet",
-        navigationStyle:"round",
-        navigationArrows:"verticalcentered",
+        onHoverStop: "on",
+        hideThumbs: 200,
+        navigationType: "bullet",
+        navigationStyle: "round",
+        navigationArrows: "verticalcentered",
 
-        touchenabled:"on",
+        touchenabled: "on",
 
-        navOffsetHorizontal:0,
-        navOffsetVertical:20,
-        shadow:3,
-        fullWidth:"off"
+        navOffsetHorizontal: 0,
+        navOffsetVertical: 20,
+        shadow: 3,
+        fullWidth: "off"
     });
-    
+
+    var caseUpFirstLetter = function (elements) {
+        elements.each(function (i, obj) {
+            var _this = $(obj);
+            var palavraComPrimeiraLetraMaiuscula = _this.text().toLowerCase().replace(/\b[a-z]/g, function (letra) {
+                return letra.toUpperCase();
+            });
+            _this.text(palavraComPrimeiraLetraMaiuscula);
+        });
+    };
+
+    var checkExistHttpInHref = function (sentenca) {
+        var exist = false;
+
+        if (sentenca.indexOf('http://') >= 0) {
+            exist = true;
+        }
+
+        if ((sentenca.indexOf('https://') >= 0) && !exist) {
+            exist = true;
+        }
+
+        return exist;
+    };
+
+    var putHttpInHref = function (elements) {
+        elements.each(function (i, obj) {
+            var _this = $(obj);
+            debugger;
+            if (!checkExistHttpInHref(_this.attr('href'))) {
+                _this.attr('href', 'http://' + _this.attr('href'));
+            }
+        });
+    };
+
+    putHttpInHref($('.social > a'));
+    caseUpFirstLetter($('.phone'));
 });

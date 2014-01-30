@@ -1,4 +1,4 @@
-- Popular BD
+OK - Popular BD
 OK - Verificar funcionamento (aparecimento / desaparecimento) de botão 'visualizar' na index de artistas (admin);
 OK - Adicionar em FOTOS o tipo BANNER e completar a lista de imagens com os banners;
 - Quando clico em imagem do banner e vou passando, chega até nas imagens de outras páginas. EVITAR ISSO;

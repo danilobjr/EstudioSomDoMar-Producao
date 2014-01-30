@@ -67,7 +67,6 @@
     <email>anfrisiorocha@hotmail.com</email>
     <nome>Anfrísio Rocha</nome>
     <senha>b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1</senha>
-    <arquivoImagemPerfil>nova_logo_198x198.jpg</arquivoImagemPerfil>
   </usuario>
   <artistas>
     <artista>
@@ -101,8 +100,8 @@
           <arquivoCapaAlbum>o_amor_e_suas_cancoes_250x250.jpg</arquivoCapaAlbum>
         </musica>
         <musica>
-          <nome>Ah, o amor</nome>
-          <arquivoMusica>cd_priscila_ribeiro_ah_o_amor.mp3</arquivoMusica>
+          <nome>Ensaio Sobre a Dor</nome>
+          <arquivoMusica>Priscila-Ensaio_sobre_a_dor.mp3</arquivoMusica>
           <arquivoCapaAlbum>ensaio_sobre_a_dor_250x250.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
@@ -185,40 +184,6 @@
       </musicas>
     </artista>
   </artistas>
-  <portfolio>
-    <musica>
-      <id>1</id>
-      <nome>Restaura-me</nome>
-      <artista>Janaina Castro</artista>
-      <arquivoMusica>cd_janaina_castro-restaura-me.mp3</arquivoMusica>
-      <arquivoCapaAlbum>janaina_castro.jpg</arquivoCapaAlbum>
-      <secao>lancamento</secao>
-    </musica>
-    <musica>
-      <id>2</id>
-      <nome>Demo</nome>
-      <artista>Daniel Costa</artista>
-      <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
-      <arquivoCapaAlbum></arquivoCapaAlbum>
-      <secao>outro</secao>
-    </musica>
-    <musica>
-      <id>3</id>
-      <nome>Campanha Política Artur Bruno - 1313</nome>
-      <artista>Artur Bruno</artista>
-      <arquivoMusica>jingle-artur_bruno_1313.mp3</arquivoMusica>
-      <arquivoCapaAlbum></arquivoCapaAlbum>
-      <secao>jingle</secao>
-    </musica>
-    <musica>
-      <id>4</id>
-      <nome>Hora de Dormir</nome>
-      <artista>Anfrísio Rocha</artista>
-      <arquivoMusica>cd_hora_de_dormir-mix.mp3</arquivoMusica>
-      <arquivoCapaAlbum>anfrisio_rocha_hora_de_dormir.jpg</arquivoCapaAlbum>
-      <secao>pessoal</secao>
-    </musica>
-  </portfolio>
   <fotos>
     <foto>
       <id>1</id>
@@ -247,13 +212,6 @@
       <secao>musico</secao>
       <imagemPequena>musico-rodrigo_cardozo_xs.jpg</imagemPequena>
       <imagemAmpliada>musico-rodrigo_cardozo_b.jpg</imagemAmpliada>
-    </foto>
-    <foto>
-      <id>5</id>
-      <titulo>Backing Vocal - Thiago, Suelen e Daniel</titulo>
-      <secao>musico</secao>
-      <imagemPequena>musico-thisudan_xs.jpg</imagemPequena>
-      <imagemAmpliada>musico-thisudan_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>6</id>
@@ -375,41 +333,110 @@
       <imagemAmpliada>tecnica-2_b.jpg</imagemAmpliada>
     </foto>
     <foto>
+      <titulo>Adriano Azevêdo</titulo>
+      <secao>musico</secao>
+      <imagemPequena>ADRIANO_p.JPG</imagemPequena>
+      <imagemAmpliada>ADRIANO_g.JPG</imagemAmpliada>
       <id>23</id>
+    </foto>
+    <foto>
+      <titulo>Hoto Júnior</titulo>
+      <secao>musico</secao>
+      <imagemPequena>HOTO_p.jpg</imagemPequena>
+      <imagemAmpliada>HOTO_g.jpg</imagemAmpliada>
+      <id>24</id>
+    </foto>
+    <foto>
+      <titulo>Thiago Rocha</titulo>
+      <secao>musico</secao>
+      <imagemPequena>THIAGO ROCHA_p.jpg</imagemPequena>
+      <imagemAmpliada>THIAGO ROCHA_g.jpg</imagemAmpliada>
+      <id>25</id>
+    </foto>
+    <foto>
+      <titulo>Rafael Maia</titulo>
+      <secao>musico</secao>
+      <imagemPequena>RAFAEL MAIA_p.jpg</imagemPequena>
+      <imagemAmpliada>RAFAEL MAIA_g.jpg</imagemAmpliada>
+      <id>26</id>
+    </foto>
+    <foto>
+      <titulo>Ricardo Abreu</titulo>
+      <secao>musico</secao>
+      <imagemPequena>Ricardinho_p.jpg</imagemPequena>
+      <imagemAmpliada>Ricardinho_g.jpg</imagemAmpliada>
+      <id>27</id>
+    </foto>
+    <foto>
+      <id>28</id>
       <titulo>Técnica</titulo>
       <secao>home</secao>
       <imagemPequena>tecnica-1_s.jpg</imagemPequena>
       <imagemAmpliada>tecnica-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
-      <id>24</id>
+      <id>29</id>
       <titulo>Aquário</titulo>
       <secao>home</secao>
       <imagemPequena>aquario-1_s.jpg</imagemPequena>
       <imagemAmpliada>aquario-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
-      <id>25</id>
+      <id>30</id>
       <titulo>Bateria</titulo>
       <secao>home</secao>
       <imagemPequena>bateria-4_s.jpg</imagemPequena>
       <imagemAmpliada>bateria-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
-      <id>26</id>
+      <id>31</id>
       <titulo>Mesa Controladora</titulo>
       <secao>home</secao>
       <imagemPequena>mesa-4_s.jpg</imagemPequena>
       <imagemAmpliada>mesa-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
-      <id>27</id>
+      <id>32</id>
       <titulo>Periféricos</titulo>
       <secao>home</secao>
       <imagemPequena>perifericos-3_s.jpg</imagemPequena>
       <imagemAmpliada>perifericos-3_b.jpg</imagemAmpliada>
     </foto>
   </fotos>
+  <portfolio>
+    <musica>
+      <id>1</id>
+      <nome>Restaura-me</nome>
+      <artista>Janaina Castro</artista>
+      <arquivoMusica>cd_janaina_castro-restaura-me.mp3</arquivoMusica>
+      <arquivoCapaAlbum>janaina_castro.jpg</arquivoCapaAlbum>
+      <secao>lancamento</secao>
+    </musica>
+    <musica>
+      <id>2</id>
+      <nome>Demo</nome>
+      <artista>Daniel Costa</artista>
+      <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>outro</secao>
+    </musica>
+    <musica>
+      <id>3</id>
+      <nome>Campanha Política Artur Bruno - 1313</nome>
+      <artista>Artur Bruno</artista>
+      <arquivoMusica>jingle-artur_bruno_1313.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>jingle</secao>
+    </musica>
+    <musica>
+      <id>4</id>
+      <nome>Hora de Dormir</nome>
+      <artista>Anfrísio Rocha</artista>
+      <arquivoMusica>cd_hora_de_dormir-mix.mp3</arquivoMusica>
+      <arquivoCapaAlbum>anfrisio_rocha_hora_de_dormir.jpg</arquivoCapaAlbum>
+      <secao>pessoal</secao>
+    </musica>
+  </portfolio>
   <videos>
     <video>
       <id>1</id>
@@ -440,6 +467,11 @@
       <id>6</id>
       <titulo>Discurso Imoral | Flavinho Souza</titulo>
       <url>//www.youtube.com/embed/XP7tnp8GvQA</url>
+    </video>
+    <video>
+      <titulo>Não me rejeites | Ministério O Novo de Deus</titulo>
+      <url>//www.youtube.com/embed/MgU98jkzJxg</url>
+      <id>7</id>
     </video>
   </videos>
 </contexto>

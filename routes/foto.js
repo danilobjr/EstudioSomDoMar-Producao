@@ -5,7 +5,7 @@ exports.index = function (req, res) {
     fotos.estudio = fotoGerente.obterPorSecao('estudio');
     fotos.musicos = fotoGerente.obterPorSecao('musico');
     fotos.home = fotoGerente.obterPorSecao('home');
-
+    
     res.render('fotoIndex', { viewModel: fotos });
 };
 

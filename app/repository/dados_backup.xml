@@ -1,65 +1,52 @@
-﻿<contexto>
+<contexto>
   <paginas>
     <pagina>
       <id>1</id>
       <descricao>Home</descricao>
       <titulo>Bem-vindo!</titulo>
       <subtitulo>Responsabilidade, compromisso e qualidade são o nosso lema</subtitulo>
-      <texto>
-        <paragrafos>
-          <paragrafo>
-            <descricao></descricao>
-          </paragrafo>
-        </paragrafos>
-      </texto>
+      <banners>
+        <banner>
+          <id>1</id>
+          <grande>/img/site/foto/tecnica-1_b.jpg</grande>
+          <pequeno>/img/site/foto/tecnica-1_s.jpg</pequeno>
+          <legenda>Técnica</legenda>
+        </banner>
+        <banner>
+          <id>2</id>
+          <grande>/img/site/foto/aquario-1_b.jpg</grande>
+          <pequeno>/img/site/foto/aquario-1_s.jpg</pequeno>
+          <legenda>Aquário</legenda>
+        </banner>
+        <banner>
+          <id>3</id>
+          <grande>/img/site/foto/bateria-4_b.jpg</grande>
+          <pequeno>/img/site/foto/bateria-4_s.jpg</pequeno>
+          <legenda>Bateria</legenda>
+        </banner>
+        <banner>
+          <id>4</id>
+          <grande>/img/site/foto/mesa-4_b.jpg</grande>
+          <pequeno>/img/site/foto/mesa-4_s.jpg</pequeno>
+          <legenda>Mesa</legenda>
+        </banner>
+        <banner>
+          <id>5</id>
+          <grande>/img/site/foto/perifericos-3_b.jpg</grande>
+          <pequeno>/img/site/foto/perifericos-3_s.jpg</pequeno>
+          <legenda>Periféricos</legenda>
+        </banner>
+      </banners>
     </pagina>
     <pagina>
       <id>2</id>
-      <descricao>Estúdio</descricao>
-      <titulo>Bem-Vindo!</titulo>
+      <descricao>Admin</descricao>
+      <titulo>Dashboard</titulo>
       <subtitulo></subtitulo>
-      <texto>
-        <paragrafos>
-          <paragrafo>
-            <descricao>O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho. Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música. Marque seu horário no Estúdio Som do Mar e saia por ai fazendo sucesso. Sentimo-nos orgulhosos de participar de seus sonhos.</descricao>
-          </paragrafo>
-        </paragrafos>
-      </texto>
-    </pagina>
-    <pagina>
-      <id>3</id>
-      <descricao>Portfólio - Jingles</descricao>
-      <titulo></titulo>
-      <subtitulo></subtitulo>
-      <texto>
-        <paragrafos>
-          <paragrafo>
-            <descricao>O Som do Mar produz para os mais variados ramos da publicidade, desde rádio e TV até campanhas políticas e publicitárias.</descricao>
-          </paragrafo>
-          <paragrafo>
-            <descricao>Ouça ao lado alguns trabalhos que produzimos.</descricao>
-          </paragrafo>
-        </paragrafos>
-      </texto>
-    </pagina>
-    <pagina>
-      <id>4</id>
-      <descricao>Portfólio - Pessoal</descricao>
-      <titulo></titulo>
-      <subtitulo></subtitulo>
-      <texto>
-        <paragrafos>
-          <paragrafo>
-            <descricao>Anfrisio, Diretor e proprietário do Estudio Som do Mar é músico com uma grande história em eventos musicais no Ceará e com trabalhos feitos pelo Brasil à fora.</descricao>
-          </paragrafo>
-          <paragrafo>
-            <descricao>Profissional com larga experiência em música, Formado em Licenciatura em Música, sua vida inteira foi dedicar-se à música, fazendo disso sua principal função na vida. É Multi-instrumentista e dono de grande habilidade com os instrumentos.</descricao>
-          </paragrafo>
-          <paragrafo>
-            <descricao>Anfrisio é arranjador, compositor, produtor e diretor de seu próprio estúdio em Fortaleza, a Cidade Bela de todos nós.</descricao>
-          </paragrafo>
-        </paragrafos>
-      </texto>
+      <dica>
+        <titulo>Bem-vindo ao modo Administrador!</titulo>
+        <descricao>Aqui você poderá modificar seu site com facilidade. Esteja sempre atento às instruções. Qualquer dúvida entre em contato conosco.</descricao>
+      </dica>
     </pagina>
   </paginas>
   <usuario>
@@ -100,8 +87,8 @@
           <arquivoCapaAlbum>o_amor_e_suas_cancoes_250x250.jpg</arquivoCapaAlbum>
         </musica>
         <musica>
-          <nome>Ah, o amor</nome>
-          <arquivoMusica>cd_priscila_ribeiro_ah_o_amor.mp3</arquivoMusica>
+          <nome>Ensaio Sobre a Dor</nome>
+          <arquivoMusica>Priscila-Ensaio_sobre_a_dor.mp3</arquivoMusica>
           <arquivoCapaAlbum>ensaio_sobre_a_dor_250x250.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
@@ -184,229 +171,188 @@
       </musicas>
     </artista>
   </artistas>
-  <portfolio>
-    <musica>
-      <id>1</id>
-      <nome>Restaura-me</nome>
-      <artista>Janaina Castro</artista>
-      <arquivoMusica>cd_janaina_castro-restaura-me.mp3</arquivoMusica>
-      <arquivoCapaAlbum>janaina_castro.jpg</arquivoCapaAlbum>
-      <secao>lancamento</secao>
-    </musica>
-    <musica>
-      <id>2</id>
-      <nome>Demo</nome>
-      <artista>Daniel Costa</artista>
-      <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
-      <arquivoCapaAlbum></arquivoCapaAlbum>
-      <secao>outro</secao>
-    </musica>
-    <musica>
-      <id>3</id>
-      <nome>Campanha Política Artur Bruno - 1313</nome>
-      <artista>Artur Bruno</artista>
-      <arquivoMusica>jingle-artur_bruno_1313.mp3</arquivoMusica>
-      <arquivoCapaAlbum></arquivoCapaAlbum>
-      <secao>jingle</secao>
-    </musica>
-    <musica>
-      <id>4</id>
-      <nome>Hora de Dormir</nome>
-      <artista>Anfrísio Rocha</artista>
-      <arquivoMusica>cd_hora_de_dormir-mix.mp3</arquivoMusica>
-      <arquivoCapaAlbum>anfrisio_rocha_hora_de_dormir.jpg</arquivoCapaAlbum>
-      <secao>pessoal</secao>
-    </musica>
-  </portfolio>
   <fotos>
     <foto>
       <id>1</id>
       <titulo>Aristides Cavalcante</titulo>
-      <secao>musico</secao>
+      <tipo>musico</tipo>
       <imagemPequena>musico-aristides_cavalcante_xs.jpg</imagemPequena>
       <imagemAmpliada>musico-aristides_cavalcante_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>2</id>
       <titulo>Ronald Melo</titulo>
-      <secao>musico</secao>
+      <tipo>musico</tipo>
       <imagemPequena>musico-ronald_melo_xs.jpg</imagemPequena>
       <imagemAmpliada>musico-ronald_melo_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>3</id>
       <titulo>Júnior Finnis</titulo>
-      <secao>musico</secao>
+      <tipo>musico</tipo>
       <imagemPequena>musico-jr_finnis_xs.jpg</imagemPequena>
       <imagemAmpliada>musico-jr_finnis_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>4</id>
       <titulo>Rodrigo Cardozo</titulo>
-      <secao>musico</secao>
+      <tipo>musico</tipo>
       <imagemPequena>musico-rodrigo_cardozo_xs.jpg</imagemPequena>
       <imagemAmpliada>musico-rodrigo_cardozo_b.jpg</imagemAmpliada>
     </foto>
     <foto>
-      <id>5</id>
-      <titulo>Backing Vocal - Thiago, Suelen e Daniel</titulo>
-      <secao>musico</secao>
-      <imagemPequena>musico-thisudan_xs.jpg</imagemPequena>
-      <imagemAmpliada>musico-thisudan_b.jpg</imagemAmpliada>
-    </foto>
-    <foto>
       <id>6</id>
       <titulo>Aquário</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>aquario-1_xs.jpg</imagemPequena>
       <imagemAmpliada>aquario-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>7</id>
       <titulo>Aquário</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>aquario-2_xs.jpg</imagemPequena>
       <imagemAmpliada>aquario-2_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>8</id>
       <titulo>Bateria</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>bateria-1_xs.jpg</imagemPequena>
       <imagemAmpliada>bateria-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>9</id>
       <titulo>Bateria</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>bateria-3_xs.jpg</imagemPequena>
       <imagemAmpliada>bateria-3_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>10</id>
       <titulo>Bateria</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>bateria-4_xs.jpg</imagemPequena>
       <imagemAmpliada>bateria-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>11</id>
       <titulo>Instrumentos</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>instrumentos-1_xs.jpg</imagemPequena>
       <imagemAmpliada>instrumentos-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>12</id>
       <titulo>Mesa</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>mesa-2_xs.jpg</imagemPequena>
       <imagemAmpliada>mesa-2_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>13</id>
       <titulo>Mesa</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>mesa-3_xs.jpg</imagemPequena>
       <imagemAmpliada>mesa-3_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>14</id>
       <titulo>Mesa</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>mesa-4_xs.jpg</imagemPequena>
       <imagemAmpliada>mesa-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>15</id>
       <titulo>Microfone</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>microfone_xs.jpg</imagemPequena>
       <imagemAmpliada>microfone_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>16</id>
       <titulo>Periféricos</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>perifericos-2_xs.jpg</imagemPequena>
       <imagemAmpliada>perifericos-2_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>17</id>
       <titulo>Periféricos</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>perifericos-3_xs.jpg</imagemPequena>
       <imagemAmpliada>perifericos-3_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>18</id>
       <titulo>Periféricos</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>perifericos-4_xs.jpg</imagemPequena>
       <imagemAmpliada>perifericos-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>19</id>
       <titulo>Recepção</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>recepcao_xs.jpg</imagemPequena>
       <imagemAmpliada>recepcao_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>20</id>
       <titulo>Teclado</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>teclado_xs.jpg</imagemPequena>
       <imagemAmpliada>teclado_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>21</id>
       <titulo>Técnica</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>tecnica-1_xs.jpg</imagemPequena>
       <imagemAmpliada>tecnica-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>22</id>
       <titulo>Técnica</titulo>
-      <secao>estudio</secao>
+      <tipo>estudio</tipo>
       <imagemPequena>tecnica-2_xs.jpg</imagemPequena>
       <imagemAmpliada>tecnica-2_b.jpg</imagemAmpliada>
     </foto>
     <foto>
+      <titulo>Adriano Azevêdo</titulo>
+      <tipo>musico</tipo>
+      <imagemPequena>ADRIANO_p.JPG</imagemPequena>
+      <imagemAmpliada>ADRIANO_g.JPG</imagemAmpliada>
       <id>23</id>
-      <titulo>Técnica</titulo>
-      <secao>home</secao>
-      <imagemPequena>tecnica-1_s.jpg</imagemPequena>
-      <imagemAmpliada>tecnica-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
+      <titulo>Hoto Júnior</titulo>
+      <tipo>musico</tipo>
+      <imagemPequena>HOTO_p.jpg</imagemPequena>
+      <imagemAmpliada>HOTO_g.jpg</imagemAmpliada>
       <id>24</id>
-      <titulo>Aquário</titulo>
-      <secao>home</secao>
-      <imagemPequena>aquario-1_s.jpg</imagemPequena>
-      <imagemAmpliada>aquario-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
+      <titulo>Thiago Rocha</titulo>
+      <tipo>musico</tipo>
+      <imagemPequena>THIAGO ROCHA_p.jpg</imagemPequena>
+      <imagemAmpliada>THIAGO ROCHA_g.jpg</imagemAmpliada>
       <id>25</id>
-      <titulo>Bateria</titulo>
-      <secao>home</secao>
-      <imagemPequena>bateria-4_s.jpg</imagemPequena>
-      <imagemAmpliada>bateria-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
+      <titulo>Rafael Maia</titulo>
+      <tipo>musico</tipo>
+      <imagemPequena>RAFAEL MAIA_p.jpg</imagemPequena>
+      <imagemAmpliada>RAFAEL MAIA_g.jpg</imagemAmpliada>
       <id>26</id>
-      <titulo>Mesa Controladora</titulo>
-      <secao>home</secao>
-      <imagemPequena>mesa-4_s.jpg</imagemPequena>
-      <imagemAmpliada>mesa-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
+      <titulo>Ricardo Abreu</titulo>
+      <tipo>musico</tipo>
+      <imagemPequena>Ricardinho_p.jpg</imagemPequena>
+      <imagemAmpliada>Ricardinho_g.jpg</imagemAmpliada>
       <id>27</id>
-      <titulo>Periféricos</titulo>
-      <secao>home</secao>
-      <imagemPequena>perifericos-3_s.jpg</imagemPequena>
-      <imagemAmpliada>perifericos-3_b.jpg</imagemAmpliada>
     </foto>
   </fotos>
   <videos>
@@ -439,6 +385,11 @@
       <id>6</id>
       <titulo>Discurso Imoral | Flavinho Souza</titulo>
       <url>//www.youtube.com/embed/XP7tnp8GvQA</url>
+    </video>
+    <video>
+      <titulo>Não me rejeites | Ministério O Novo de Deus</titulo>
+      <url>//www.youtube.com/embed/MgU98jkzJxg</url>
+      <id>7</id>
     </video>
   </videos>
 </contexto>

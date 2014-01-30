@@ -6,6 +6,13 @@ exports.index = function (req, res) {
     res.render('perfilIndex', { viewModel: usuario });
 };
 
+exports.editar = function (req, res) {
+    //var idUsuario = req.params.id;
+    var usuario = usuarioGerente.obterUsuario();
+
+    res.render('usuarioAlteracao', { viewModel: usuario });
+};
+
 exports.alterarDadosPessoais = function (req, res) {
     var idUsuario = req.body.idUsuario;
     var usuarioAlterado = {};
@@ -133,13 +140,6 @@ exports.alterarDadosPessoais = function (req, res) {
 //    var artistas = artistaGerente.obterTodos();
 
 //    res.render('artistaIndex', { viewModel: artistas, resultado: resultado });
-//};
-
-//exports.editar = function (req, res) {
-//    var idArtista = req.params.id;
-//    var artista = artistaGerente.obterPorId(idArtista);
-
-//    res.render('artistaAlteracao', { viewModel: artista });
 //};
 
 

@@ -46,6 +46,7 @@ app.get('/login', login.index);
 app.get('/logout', login.logoff);
 app.get('/admin', autenticacaoRequerida, admin.index);
 app.get('/admin/perfil', autenticacaoRequerida, usuario.index);
+app.get('/admin/usuario/alterar/:id', autenticacaoRequerida, usuario.editar);
 app.get('/admin/paginas', autenticacaoRequerida, pagina.index);
 app.get('/admin/pagina/alterar/:id', autenticacaoRequerida, pagina.editar);
 app.get('/admin/portfolio', autenticacaoRequerida, portfolio.index);

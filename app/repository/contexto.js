@@ -82,9 +82,26 @@ var contexto = (function () {
             usuario: {
                 id: 1,
                 email: 'anfrisiorocha@hotmail.com',
-                nome: 'Anfrísio Rocha',
+                nome: 'Anfrísio',
+                sobrenome: 'Rocha',
                 senha: 'b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1',
-                arquivoImagemPerfil: 'nova_logo_198x198.jpg'
+                arquivoImagemPerfil: 'nova_logo_198x198.jpg',
+                telefones: [
+                    {
+                        telefone: {
+                            numero: '(85) 8883.6480',
+                            tipo: 'oi'
+                        }
+                    }
+                ],
+                redesSociais: [
+                    {
+                        redeSocial: {
+                            link: 'www.facebook.com/profile.php?id=1012718819&ref=ts',
+                            tipo: 'facebook'
+                        }
+                    }
+                ]
             },
             artistas: [
                 {

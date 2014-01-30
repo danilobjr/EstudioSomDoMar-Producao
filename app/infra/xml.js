@@ -21,6 +21,17 @@ var corrigirJSONContexto = function (contexto) {
         }
     }
 
+    contexto.usuario.telefones = contexto.usuario.telefones.telefone;
+    contexto.usuario.redesSociais = contexto.usuario.redesSociais.redeSocial;
+        
+    if (!util.isArray(contexto.usuario.telefones)) {
+        contexto.usuario.telefones = [contexto.usuario.telefones];
+    }
+
+    if (!util.isArray(contexto.usuario.redesSociais)) {
+        contexto.usuario.redesSociais = [contexto.usuario.redesSociais];
+    }
+
     contexto.portfolio = contexto.portfolio.musica;
 
     if (!util.isArray(contexto.portfolio)) {
@@ -77,6 +88,16 @@ var tornarDadosBrutos = function (dados) {
     for (var i = 0; i < dados.paginas.length; i++) {
         for (var k = 0; k < dados.paginas[i].pagina.texto.paragrafos.length; k++) {
             dados.paginas[i].pagina.texto.paragrafos[k] = { paragrafo: dados.paginas[i].pagina.texto.paragrafos[k] };
+        }
+    }
+
+    for (var k = 0; k < dados.usuario.telefones.length; k++) {
+        dados.usuario.telefones[k] = { telefone: dados.usuario.telefones[k] };
+    }
+
+    if (dados.usuario.redesSociais) {
+        for (var k = 0; k < dados.usuario.redesSociais.length; k++) {
+            dados.usuario.redesSociais[k] = { redeSocial: dados.usuario.redesSociais[k] };
         }
     }
 

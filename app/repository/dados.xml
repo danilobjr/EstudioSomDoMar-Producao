@@ -65,8 +65,34 @@
   <usuario>
     <id>1</id>
     <email>anfrisiorocha@hotmail.com</email>
-    <nome>Anfrísio Rocha</nome>
+    <nome>Anfrísio</nome>
+    <sobrenome>Rocha</sobrenome>
     <senha>b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1</senha>
+    <arquivoImagemPerfil>nova_logo_198x198.jpg</arquivoImagemPerfil>
+    <telefones>
+        <telefone>
+            <numero>(85) 8690.9040</numero>
+            <tipo>oi</tipo>
+        </telefone>
+        <telefone>
+            <numero>(85) 9985.5193</numero>
+            <tipo>tim</tipo>
+        </telefone>
+        <telefone>
+            <numero>(85) 3067.6885</numero>
+            <tipo>fixo</tipo>
+        </telefone>
+    </telefones>
+    <redesSociais>
+        <redeSocial>
+            <link>http://www.facebook.com/estudiosomdomar</link>
+            <tipo>facebook</tipo>
+        </redeSocial>
+        <redeSocial>
+            <link>https://www.youtube.com/AnfrisioRocha</link>
+            <tipo>youtube</tipo>
+        </redeSocial>
+    </redesSociais>
   </usuario>
   <artistas>
     <artista>

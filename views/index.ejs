@@ -143,7 +143,7 @@
                     <li id="page_about" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col2 cont-line"> 
-                                <h2>BEM-VINDO!</h2> 
+                                <h2><%= viewModel.paginas.estudio.titulo %></h2> 
                                 <img src="img/foto/tecnica_estudio.jpg" alt="" class="imgIndent"> 
 
                                 <% for (var i = 0; i < viewModel.paginas.estudio.texto.paragrafos.length; i++) { %>
@@ -218,7 +218,7 @@
                                                             <figure class="pause" >
                                                                 <img src="img/pause.png" alt="" />                                                        
                                                             </figure>
-                                                            <img src="img/cd/<%= viewModel.portfolio.lancamentos[i].arquivoCapaAlbum %>" alt="" />
+                                                            <img src="img/cd/<%= viewModel.portfolio.lancamentos[i].arquivoCapaAlbum %>" alt="" class="imagemCD" />
                                                         </li>
 
                                                     <% } %>
@@ -329,7 +329,7 @@
                                                             <figure class="pause" >
                                                                 <img src="img/pause.png" alt="" />                                                        
                                                             </figure>
-                                                            <img src="img/cd/<%= viewModel.portfolio.pessoal[i].arquivoCapaAlbum %>" alt="" />
+                                                            <img src="img/cd/<%= viewModel.portfolio.pessoal[i].arquivoCapaAlbum %>" alt="" class="imagemCD" />
                                                         </li>
 
                                                     <% } %>

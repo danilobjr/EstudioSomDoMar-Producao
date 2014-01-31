@@ -919,3 +919,10 @@ form .buttons > *:hover {
     font-size: 16px;
     color: white;
 }
+
+/* tamanho padrão das imagens de capa de CD na seção de portfólio */
+
+.imagemCD {
+    width: 157px;
+    height: 157px;
+}

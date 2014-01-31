@@ -37,10 +37,10 @@ exports.alterar = function (req, res) {
             }
         } else {
             paginaAlterada.texto.paragrafos.push({
-                descricao: req.body.paragrafo
+                descricao: req.body.paragrafo || ''
             });
         }
-        
+
         paginaGerente.alterar(paginaAlterada);
         resultado.sucesso = true;
         resultado.mensagem = 'Textos alterados com sucesso';

@@ -262,7 +262,6 @@ $(window).load(function () {
     var putHttpInHref = function (elements) {
         elements.each(function (i, obj) {
             var _this = $(obj);
-            debugger;
             if (!checkExistHttpInHref(_this.attr('href'))) {
                 _this.attr('href', 'http://' + _this.attr('href'));
             }

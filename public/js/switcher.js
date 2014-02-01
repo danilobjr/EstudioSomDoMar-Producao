@@ -11,7 +11,7 @@
 					indx:[],
 					hshx:[],
 					useHash:true,
-					defHash:'#!/page_home',
+					defHash:'#!/home',
 					emptyHash:'#',
 					outerHash:false,
 					autoPlay:false,

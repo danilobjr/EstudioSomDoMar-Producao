@@ -137,10 +137,11 @@ $(window).load(function () {
             }
         },
         preFu: function (_) {
-            $('.menu').css({ top: '130px', opacity: 0 }).delay(600).animate({ top: '85px', opacity: 1 }, 200, 'easeOutSine').animate({ top: '100px' }, 200, 'easeOutSine').animate({ top: '95px' }, 300, 'easeOutSine');
-            $('#logo').css({ left: '-1500px' }).delay(400).animate({ left: '10px' }, 400, 'easeOutExpo').animate({ left: '-1px' }, 400, 'easeOutSine');
+            $('header').css({ top: '-150px' }).delay(100).animate({ top: 0 });
+            $('.menu').css({ top: '130px', opacity: 0 }).delay(600).animate({ top: '90px', opacity: 1 }, 200, 'easeOutSine').animate({ top: '115px' }, 200, 'easeOutSine').animate({ top: '110px' }, 300, 'easeOutSine');
+            $('#logo').css({ left: '-1500px', opacity: 0 }).delay(400).animate({ left: '10px', opacity: 1 }, 400, 'easeOutExpo').animate({ left: '0' }, 400, 'easeOutSine');
             $('#player').css({ 'top': '120px', opacity: 0 }).delay(750).animate({ 'top': '73px', opacity: 1 }, 200, 'easeOutSine').animate({ 'top': '88px' }, 200, 'easeOutSine').animate({ 'top': '83px' }, 300, 'easeOutSine');
-            $('#social').css({ top: '-40px' }).delay(900).animate({ top: '18px' }, 400, 'easeOutExpo').animate({ top: '9px' }, 400, 'easeOutSine');
+            //$('#social').css({ top: '-40px' }).delay(900).animate({ top: '18px' }, 400, 'easeOutExpo').animate({ top: '9px' }, 400, 'easeOutSine');
             content.css({ display: 'block' });
             _.li.css({ left: "2000px" })
         }
@@ -150,7 +151,8 @@ $(window).load(function () {
 
     nav.navs({
         useHash: true,
-        defHash: '#!/page_home',
+        //defHash: '#!/page_home',
+        defHash: '#!/home',
         hoverIn: function (li) {
             $(".mText", li).stop().animate({ color: "#fff" }, 750, 'easeOutExpo');
         },
@@ -195,7 +197,8 @@ $(window).load(function () {
 
     // page_artists
 
-    $('#page_artists a')
+    //$('#page_artists a')
+    $('#artistas a')
         .mouseenter(function (e) {
             var currentTarget = $(e.currentTarget);
             var figcaption = currentTarget.find('figcaption');
@@ -268,6 +271,6 @@ $(window).load(function () {
         });
     };
 
-    putHttpInHref($('.social > a'));
+    putHttpInHref($('.social a'));
     caseUpFirstLetter($('.phone'));
 });

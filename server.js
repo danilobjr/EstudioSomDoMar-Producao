@@ -59,7 +59,7 @@ app.get('/admin/video/novo', autenticacaoRequerida, video.novo);
 app.get('/admin/artistas', autenticacaoRequerida, artista.index);
 app.get('/admin/artista/novo', autenticacaoRequerida, artista.novo);
 app.get('/admin/artista/alterar/:id', autenticacaoRequerida, artista.editar);
-app.get('/artista/:id', autenticacaoRequerida, artista.exibir);
+app.get('/artista/:id', artista.exibir);
 
 // actions
 

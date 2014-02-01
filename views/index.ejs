@@ -65,53 +65,51 @@
         <div class="up-line"></div> 
         <header> 
             <div class="main"> 
+                <div id="logo">
+                    <img src="img/nova_logo.jpg" width="190" height="190" border="0">
+                </div>
+                <!--
                 <table width="329" height="242" border="1" align="left" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td><img src="img/nova_logo.jpg" width="190" height="190" border="0"></td>
-                  </tr>
+                    <tr>
+                        <td><img src="img/nova_logo.jpg" width="190" height="190" border="0"></td>
+                    </tr>
                 </table>
+                -->
                 <h1>&nbsp;</h1> 
-<nav class="menu"> 
+
+                <nav class="menu"> 
                     <ul id="menu"> 
-                        <li><a href="#!/page_home"><span class="mText">home</span></a></li> 
+                        <li><a href="#!/home"><span class="mText">home</span></a></li> 
                         <li class="with_ul">
-                            <a href="#!/page_about"><span class="mText">estúdio</span></a> 
+                            <a href="#!/estudio"><span class="mText">estúdio</span></a> 
                             <ul class="submenu_1"> 
-                                <li><a href="#!/page_works">portfólio</a></li> 
-                                <li><a href="#!/page_photos">fotos</a></li> 
-                                <li><a href="#!/page_videos">vídeos</a></li> 
+                                <li><a href="#!/portfolio">portfólio</a></li> 
+                                <li><a href="#!/fotos">fotos</a></li> 
+                                <li><a href="#!/videos">vídeos</a></li> 
                             </ul>
                         </li> 
-                        <li><a href="#!/page_artists"><span class="mText">artistas</span></a></li>
-                        <li><a href="#!/page_contacts"><span class="mText">contato</span></a></li> 
+                        <li><a href="#!/artistas"><span class="mText">artistas</span></a></li>
+                        <li><a href="#!/contato"><span class="mText">contato</span></a></li> 
                     </ul> 
-              </nav> 
-
+                </nav> 
+                <!--
                 <div id="social" class="social">
-                    <% for (var i = 0; i < viewModel.perfil.redesSociais.length; i++) { %>
-                        <a href="<%= viewModel.perfil.redesSociais[i].link %>" target="_blank">
-                            <img src="img/icons/<%= viewModel.perfil.redesSociais[i].tipo %>.png" alt=""/>
+                    % for (var i = 0; i < viewModel.perfil.redesSociais.length; i++) { %
+                        <a href="%= viewModel.perfil.redesSociais[i].link %" target="_blank">
+                            <img src="img/icons/%= viewModel.perfil.redesSociais[i].tipo %.png" alt=""/>
                         </a>
-                    <% } %>
-                    <!--
-                    <a href="http://www.facebook.com/estudiosomdomar" target="_blank">
-                        <img src="img/icons/facebook.png" alt=""/>                    
-                    </a>
-                    <a href="https://www.youtube.com/AnfrisioRocha" target="_blank">
-                        <img src="img/icons/youtube.png" alt=""/>                    
-                    </a>
-                    -->                
+                    % } %
                 </div>
-
-              <div id="player"></div>
-          </div> 
-      </header>  
+                -->
+                <div id="player"></div>
+            </div> 
+        </header>  
         
         <div class="main">  
             <div class="bgSelector"></div> 
             <article id="content"> 
                 <ul> 
-                    <li id="page_home"> 
+                    <li id="home"> 
                         <article class="col1">
                             
                             <hgroup>
@@ -140,10 +138,10 @@
 
                     <!-- SOBRE -->
 
-                    <li id="page_about" class="contentPad"> 
+                    <li id="estudio" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col2 cont-line"> 
-                                <h2><%= viewModel.paginas.estudio.titulo %></h2> 
+                                <h2><%= viewModel.paginas.estudio.titulo %></h2>
                                 <img src="img/foto/tecnica_estudio.jpg" alt="" class="imgIndent"> 
 
                                 <% for (var i = 0; i < viewModel.paginas.estudio.texto.paragrafos.length; i++) { %>
@@ -152,7 +150,7 @@
 
                                 <% } %>
 
-                                <a href="#!/page_more" class="ex-8">Mais sobre nós</a>                            
+                                <a href="#!/servicos" class="ex-8">Mais sobre nós</a>                            
                             </article> 
 
                             <article class="col3 margLeft"> 
@@ -163,28 +161,28 @@
                                         <div>
                                             <p class="text-icons1">Serviços</p> 
                                             <p class="padBot">Uma gama de serviços em áudio</p> 
-                                            <a href="#!/page_more" class="read-more-butt">Saiba Mais</a>                                        </div> 
+                                            <a href="#!/servicos" class="read-more-butt">Saiba Mais</a>                                        </div> 
                                     </li> 
                                     <li class="icons bord"> 
                                         <img src="img/icons/guitar.png" alt="Equipamentos" class="fleft"> 
                                         <div>
                                             <p class="text-icons1">Equipamentos</p> 
                                             <p class="padBot">Para proporcionar o melhor som, equipamentos e instrumentos de qualidade.</p> 
-                                            <a href="#!/page_more" class="read-more-butt">Saiba Mais</a>                                        </div> 
+                                            <a href="#!/servicos" class="read-more-butt">Saiba Mais</a>                                        </div> 
                                     </li> 
                                     <li class="icons"> 
                                         <img src="img/icons/partners.png" alt="Parcerias" class="fleft parcerias"> 
                                         <div>
                                             <p class="text-icons1">Parcerias</p> 
                                             <p class="padBot">Temos a parceria certa para facilitar e assegurar a qualidade do seu projeto.</p> 
-                                            <a href="#!/page_more" class="read-more-butt">Saiba Mais</a>                                        </div> 
+                                            <a href="#!/servicos" class="read-more-butt">Saiba Mais</a>                                        </div> 
                                     </li> 
                                 </ul> 
                             </article> 
                         </div> 
                     </li> 
 
-                    <li id="page_works" class="contentPad"> 
+                    <li id="portfolio" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col9"> 
 
@@ -343,7 +341,7 @@
                         </div> 
                     </li> 
 
-                    <li id="page_videos" class="contentPad"> 
+                    <li id="videos" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col4"> 
                                 <h2>vídeos</h2>
@@ -397,7 +395,7 @@
 
                     <!-- FOTOS -->
 
-                    <li id="page_photos" class="contentPad"> 
+                    <li id="fotos" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col9">
                                 <h2>fotos</h2>
@@ -460,7 +458,7 @@
 
                     <!-- ARTISTAS -->
 
-                    <li id="page_artists" class="contentPad"> 
+                    <li id="artistas" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col9">
                                 <h2>artistas</h2>
@@ -545,11 +543,11 @@
                             </article>                            
                         </div> 
                     </li> 
-<li id="page_contacts" class="contentPad"> 
+                    <li id="contato" class="contentPad"> 
                         <div class="wrapper">                             
                             
                             <article class="colContacts margRight cont-line"> 
-                                <h2>contatos</h2> 
+                                <h2>contato</h2> 
                                 
                                 <!--<div id="map">
                                     <figure class="map">
@@ -571,13 +569,13 @@
                                         <span class="mail contactText_2">E-mail: </span>
                                         <a href="mailto:<%= viewModel.perfil.email %>" class="contactText_3"><%= viewModel.perfil.email %></a>
                                     </p> 
-
+                                    <!--
                                     <p class="contactText_1 margTop margBot">Encontre-nos nas redes sociais</p> 
-
+                                    -->
                                     <div class="social">
                                         <% for (var i = 0; i < viewModel.perfil.redesSociais.length; i++) { %>
                                             <a href="<%= viewModel.perfil.redesSociais[i].link %>" target="_blank">
-                                                <img src="img/icons/<%= viewModel.perfil.redesSociais[i].tipo %>.png" alt=""/>
+                                                <img src="img/icons/social/<%= viewModel.perfil.redesSociais[i].tipo %>-32.png" alt=""/>
                                             </a>
                                         <% } %>
                                     </div>
@@ -589,7 +587,7 @@
                             </article> 
                         </div> 
                     </li> 
-<li id="page_privacy" class="contentPad"> 
+                    <li id="page_privacy" class="contentPad"> 
                         <div class="wrapper"> 
                             <article class="col9"> 
                                 <h2>Privacy policy</h2> 
@@ -607,7 +605,7 @@
                             </article> 
                         </div> 
                     </li> 
-<li id="page_more" class="contentPad"> 
+                    <li id="servicos" class="contentPad"> 
                         <div class="wrapper">
                             <article class="col9"> 
                                 <h2>Estúdio Som do Mar</h2> 
@@ -889,7 +887,12 @@
         <footer> 
             <div class="main"> 
                 <div class="privacy">
-                    <span class="color">Estúdio Som do Mar</span> &copy; <span class="anoAtual"></span> | Fortaleza - CE. Brasil
+                    <!--<span class="color">Estúdio Som do Mar</span> &copy; <span class="anoAtual"></span> | Fortaleza - CE. Brasil-->
+                    <span class="color">Estúdio Som do Mar</span> &copy; <span class="anoAtual"></span> | 
+                    <% for (var i = 0; i < viewModel.perfil.redesSociais.length; i++) { %>
+                        <a href="<%= viewModel.perfil.redesSociais[i].link %>" target="_blank"><img src="/img/icons/social/<%= viewModel.perfil.redesSociais[i].tipo %>.png" alt="<%= viewModel.perfil.redesSociais[i].tipo %>" /></a>
+                    <% } %>
+                    
                     <div class="design">
                         <div class="designerBox">
                             <span class="color designerContact">Entre em contato</span>
@@ -903,7 +906,7 @@
                                 <div class="arrowDownBorder"></div>
                             </div>
                         </div>
-                        <span>design by: <span class="color">Danilo Jr.</span></span>
+                        <span>design by <span class="color">Danilo Jr.</span></span>
                     </div>
                 </div> 
             </div>  

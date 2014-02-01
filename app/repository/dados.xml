@@ -440,10 +440,10 @@
     </musica>
     <musica>
       <id>2</id>
-      <nome>Demo</nome>
+      <nome>À Capella</nome>
       <artista>Daniel Costa</artista>
       <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
-      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <arquivoCapaAlbum>x.jpg</arquivoCapaAlbum>
       <secao>outro</secao>
     </musica>
     <musica>
@@ -461,6 +461,118 @@
       <arquivoMusica>cd_hora_de_dormir-mix.mp3</arquivoMusica>
       <arquivoCapaAlbum>anfrisio_rocha_hora_de_dormir.jpg</arquivoCapaAlbum>
       <secao>pessoal</secao>
+    </musica>
+    <musica>
+      <nome>Caminho Estreito</nome>
+      <artista>Flavinho Souza</artista>
+      <arquivoMusica>cd_flavinho_sousa-caminho_estreito.mp3</arquivoMusica>
+      <arquivoCapaAlbum>flavinho_sousa.jpg</arquivoCapaAlbum>
+      <secao>lancamento</secao>
+      <id>5</id>
+    </musica>
+    <musica>
+      <nome>Por Um Segundo</nome>
+      <artista>Ana Cléria</artista>
+      <arquivoMusica>cd_ana_cleria-por1seg.mp3</arquivoMusica>
+      <arquivoCapaAlbum>ana_cleria.jpg</arquivoCapaAlbum>
+      <secao>lancamento</secao>
+      <id>6</id>
+    </musica>
+    <musica>
+      <nome>Saudade</nome>
+      <artista>Priscila Ribeiro</artista>
+      <arquivoMusica>cd_priscila_ribeiro_saudade.mp3</arquivoMusica>
+      <arquivoCapaAlbum>priscila_ribeiro.jpg</arquivoCapaAlbum>
+      <secao>lancamento</secao>
+      <id>7</id>
+    </musica>
+    <musica>
+      <nome>Pegada Eletrônica</nome>
+      <artista>Rodrigo Cardozo</artista>
+      <arquivoMusica>cd_rodrigo_cardozo-pegada_eletronica.mp3</arquivoMusica>
+      <arquivoCapaAlbum>rodrigo_cardozo.jpg</arquivoCapaAlbum>
+      <secao>lancamento</secao>
+      <id>8</id>
+    </musica>
+    <musica>
+      <nome>Demo</nome>
+      <artista>Dudu Portela</artista>
+      <arquivoMusica>cd_dudu_portela.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>outro</secao>
+      <id>9</id>
+    </musica>
+    <musica>
+      <nome>Demo</nome>
+      <artista>Eder Rocky</artista>
+      <arquivoMusica>cd_eder_rocky.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>outro</secao>
+      <id>10</id>
+    </musica>
+    <musica>
+      <nome>Demo</nome>
+      <artista>Homero Neto</artista>
+      <arquivoMusica>cd_homero_neto.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>outro</secao>
+      <id>11</id>
+    </musica>
+    <musica>
+      <nome>Demo</nome>
+      <artista>Juniho Pafume</artista>
+      <arquivoMusica>cd_juninho_pafume.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>outro</secao>
+      <id>12</id>
+    </musica>
+    <musica>
+      <nome>Fortal Jangadeiro</nome>
+      <artista>Jangadeiro</artista>
+      <arquivoMusica>jingle-Fortal_-_Jangadeiro_com_vozes.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>jingle</secao>
+      <id>13</id>
+    </musica>
+    <musica>
+      <nome>Renaut</nome>
+      <artista>Jangada</artista>
+      <arquivoMusica>jingle-jangada.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>jingle</secao>
+      <id>14</id>
+    </musica>
+    <musica>
+      <nome>Apiguana e Você</nome>
+      <artista>Apiguana</artista>
+      <arquivoMusica>jingle-apiguana.mp3</arquivoMusica>
+      <arquivoCapaAlbum></arquivoCapaAlbum>
+      <secao>jingle</secao>
+      <id>15</id>
+    </musica>
+    <musica>
+      <nome>CD Untitled</nome>
+      <artista>Sarquis Filho</artista>
+      <arquivoMusica>cd_sarquis_fermanian.mp3</arquivoMusica>
+      <arquivoCapaAlbum>x.jpg</arquivoCapaAlbum>
+      <secao>outro</secao>
+      <id>16</id>
+    </musica>
+    <musica>
+      <nome>CD Paradoxo</nome>
+      <artista>Márcio Cardoso</artista>
+      <arquivoMusica>cd_marcio_cardoso.mp3</arquivoMusica>
+      <arquivoCapaAlbum>marcio_cardoso.jpg</arquivoCapaAlbum>
+      <secao>lancamento</secao>
+      <id>17</id>
+    </musica>
+    <musica>
+      <nome>Recomeço</nome>
+      <artista>Anfrisio Rocha</artista>
+      <arquivoMusica>cd_recomeco-recomeco.mp3</arquivoMusica>
+      <arquivoCapaAlbum>anfrisio_rocha_recomeco.jpg</arquivoCapaAlbum>
+      <secao>pessoal</secao>
+      <id>18</id>
     </musica>
   </portfolio>
   <videos>

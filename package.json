@@ -20,7 +20,8 @@
     "express": "~3.1.0",
     "ejs-locals": "~1.0.2",
     "xmlbuilder": "~2.1.0",
-    "xml2js": "~0.4.1"
+    "xml2js": "~0.4.1",
+    "emailjs": "~0.3.6"
   },
   "noAnalyze": true,
   "license": "Apache",

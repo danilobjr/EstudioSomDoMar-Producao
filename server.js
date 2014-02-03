@@ -4,15 +4,17 @@ var express = require('express'),
     path = require('path'),
     autenticacaoRequerida = require('./app/infra/autenticacao').autenticacaoRequerida,
     hash = require('./app/infra/pass').hash,
-    login = require('./routes/login'),
     home = require('./routes/home'),
+    contato = require('./routes/contato'),
+    login = require('./routes/login'),
     admin = require('./routes/admin'),
     usuario = require('./routes/usuario'),
     pagina = require('./routes/pagina'),
     portfolio = require('./routes/portfolio'),
     foto = require('./routes/foto'),
     video = require('./routes/video'),
-    artista = require('./routes/artista');
+    artista = require('./routes/artista'),
+    servico = require('./routes/servico');
 
 var app = express();
 
@@ -60,9 +62,11 @@ app.get('/admin/artistas', autenticacaoRequerida, artista.index);
 app.get('/admin/artista/novo', autenticacaoRequerida, artista.novo);
 app.get('/admin/artista/alterar/:id', autenticacaoRequerida, artista.editar);
 app.get('/artista/:id', artista.exibir);
+app.get('/admin/servicos', autenticacaoRequerida, servico.index);
 
 // actions
 
+app.post('/contato/enviarEmail', contato.enviarEmail);
 app.post('/login', login.logon);
 app.post('/admin/usuario/alterar/dados-pessoais', autenticacaoRequerida, usuario.alterarDadosPessoais);
 app.post('/admin/pagina/alterar', autenticacaoRequerida, pagina.alterar);

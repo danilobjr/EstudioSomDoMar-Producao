@@ -1,4 +1,4 @@
-var emailjs = require("./path/to/emailjs/email");
+var emailjs = require("emailjs/email");
 
 var server  = emailjs.server.connect({
    user:    "danilo.emailteste", 

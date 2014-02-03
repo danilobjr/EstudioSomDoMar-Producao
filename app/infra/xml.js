@@ -76,6 +76,12 @@ var corrigirJSONContexto = function (contexto) {
     if (!util.isArray(contexto.videos)) {
         contexto.videos = [contexto.videos];
     }
+
+    contexto.servicos = contexto.servicos.servico;
+
+    if (!util.isArray(contexto.servicos)) {
+        contexto.servicos = [contexto.servicos];
+    }
 }
 
 var tornarDadosBrutos = function (dados) {
@@ -133,6 +139,10 @@ var tornarDadosBrutos = function (dados) {
 
     for (var i = 0; i < dados.videos.length; i++) {
         dados.videos[i] = { video: dados.videos[i] };
+    }
+
+    for (var i = 0; i < dados.servicos.length; i++) {
+        dados.servicos[i] = { servico: dados.servicos[i] };
     }
 
     return dadosBrutos;

@@ -41,28 +41,12 @@ module.exports = function () {
         return musicaExcluida;
     };
 
-    //var alterarMusicas = function (idArtista, musicas) {
-    //    return contexto.artistas.alterarMusicas(idArtista, musicas);
-    //};
-
-    //var alterarNomeArquivoImagemPerfil = function (idArtista, nomeArquivoImagemPerfil) {
-    //    return contexto.artistas.alterarNomeArquivoImagemPerfil(idArtista, nomeArquivoImagemPerfil);
-    //};
-
-    //var alterarBackground = function (idArtista, corDeFundo, nomeArquivoImagemBackground) {
-    //    return contexto.artistas.alterarBackground(idArtista, corDeFundo, nomeArquivoImagemBackground);
-    //};
-
-
     return {
         obterTodasAsMusicas: obterTodasAsMusicas,
         obterPorSecao: obterPorSecao,
         obterPorId: obterPorId,
         incluir: incluir,
         alterar: alterar,
-        //alterarMusicas: alterarMusicas,
-        //alterarNomeArquivoImagemPerfil: alterarNomeArquivoImagemPerfil,
-        //alterarBackground: alterarBackground,
         excluirPorId: excluirPorId
     };
 } ();

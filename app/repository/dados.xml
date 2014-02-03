@@ -612,4 +612,161 @@
       <id>7</id>
     </video>
   </videos>
+  <servicos>
+    <servico>
+      <id>1</id>
+      <descricao>Gravação de CD</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>2</id>
+      <descricao>Gravação de Demos</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>3</id>
+      <descricao>Criação e Edição de Trilhas para Teatro e Dança</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>4</id>
+      <descricao>Criação de Arranjos para Cantores Solo e Bandas</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>5</id>
+      <descricao>Direção Musical</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>6</id>
+      <descricao>Mixagem e Masterização</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>7</id>
+      <descricao>Locuções para Carro de Som</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>8</id>
+      <descricao>Jingles, Spots e Vinhetas para Rádio e TV</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>9</id>
+      <descricao>Gravação para Campanha Política</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>10</id>
+      <descricao>Produção e Gravação através da Internet</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>11</id>
+      <descricao>Dublagem</descricao>
+      <secao>servico</secao>
+    </servico>
+    <servico>
+      <id>12</id>
+      <descricao>PC Intel Core 2 duo 3.0 - 4gb ram - HDs 80 + 160 + 1tera (x2)</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>13</id>
+      <descricao>Nuendo 3 e Cubase 3, 4 e 5</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>14</id>
+      <descricao>Placa M-audio Profire LightBrigde (suporta até 32 canais)</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>15</id>
+      <descricao>Pré-amplificador e compressor Focusrite</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>16</id>
+      <descricao>Compressor Valvulado Behringer</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>17</id>
+      <descricao>Conversores ADA 8000</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>18</id>
+      <descricao>Conversores Octopré Focusrite</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>19</id>
+      <descricao>Amplificador Sansui</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>20</id>
+      <descricao>Monitores Yamaha NS-10M, Behringer MS-40, Marantz</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>21</id>
+      <descricao>Bateria Sonor Force 2007 (20, 14,10,12,14)</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>22</id>
+      <descricao>Sintetizador Yamaha CS2X</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>23</id>
+      <descricao>Controlador Behringer</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>24</id>
+      <descricao>Guitarra Yamaha Strato EG303</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>25</id>
+      <descricao>Guitarra Fender Stratocaster Eric Clapton Signature</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>26</id>
+      <descricao>Guitarra Condor LesPaul</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>27</id>
+      <descricao>Baixo Eagle com captação Fender</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>28</id>
+      <descricao>Baixo Condor 5 cordas</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>29</id>
+      <descricao>Baixo Fretless Condor 4 cordas</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>30</id>
+      <descricao>Violão Taylor Aço</descricao>
+      <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <id>31</id>
+      <descricao>Microfones: Neumann TLM 103, CAD M-179, Marshall MXL 770, Superlux condenser, Shure SM-57,. AKG C-418, Shure Beta 98 D/S</descricao>
+      <secao>equipamento</secao>
+    </servico>
+  </servicos>
 </contexto>

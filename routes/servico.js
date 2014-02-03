@@ -1,8 +1,8 @@
-var portfolioGerente = require('./../app/gerentes/portfolioGerente');
+var servicoGerente = require('./../app/gerentes/servicoGerente');
 
 exports.index = function (req, res) {
-    var portfolio = portfolioGerente.obterTodasAsMusicas();
-    res.render('portfolioIndex', { viewModel: portfolio });
+    var servicos = servicoGerente.obterTodos();
+    res.render('servicoIndex', { viewModel: servicos });
 };
 
 exports.novo = function (req, res) {
@@ -32,39 +32,6 @@ exports.incluir = function (req, res) {
     var portfolio = portfolioGerente.obterTodasAsMusicas();
 
     res.render('portfolioIndex', { viewModel: portfolio, resultado: resultado });
-};
-
-exports.editar = function (req, res) {
-    var idMusica = req.params.id;
-    var musica = portfolioGerente.obterPorId(idMusica);
-
-    res.render('portfolioAlteracao', { viewModel: musica });
-};
-
-exports.alterar = function (req, res) {
-    var idMusica = req.body.idMusica;
-    var musicaAlterada = {};
-    var resultado = { sucesso: false, mensagem: '' };
-    
-    try {
-        musicaAlterada = {
-            id: idMusica,
-            nome: req.body.nome,
-            artista: req.body.artista,
-            arquivoMusica: req.body.arquivoMusica,
-            arquivoCapaAlbum: req.body.arquivoCapaAlbum
-        };
-        
-        musicaAlterada = portfolioGerente.alterar(musicaAlterada);
-
-        resultado.sucesso = true;
-        resultado.mensagem = 'Música alterada com sucesso';
-    } catch (error) {
-        musicaAlterada = portfolioGerente.obterPorId(idMusica);
-        resultado.mensagem = 'Erro ao alterar música: ' + error;
-    }
-
-    res.render('portfolioAlteracao', { viewModel: musicaAlterada, resultado: resultado });
 };
 
 exports.excluir = function (req, res) {

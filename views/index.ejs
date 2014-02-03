@@ -583,7 +583,49 @@
                             </article> 
                             <article class="colMessages"> 
                                 <h2>fale conosco</h2>      
-                                <iframe id="contatoIframe" src="http://webservices-3.apphb.com/EstudioSomDoMar/Contato"></iframe>
+                                <!--<iframe id="contatoIframe" src="http://webservices-3.apphb.com/EstudioSomDoMar/Contato"></iframe>-->
+                                <form id="formContato" action="/contato/enviarEmail" method="post" autocomplete="off">
+                                    <!--<div class="success">Mensagem enviada! Em breve entraremos em contato.</div> -->
+
+                                    <div class="field name">
+                                        <input type="text" class="input inputBg" name="nome" placeholder="Nome" required />
+                                    </div>
+
+                                    <div class="field name">
+                                        <input type="email" class="input inputBg" name="email" placeholder="E-mail" required />
+                                    </div>
+
+                                    <div class="field message">
+                                        <textarea rows="1" cols="2" class="inputBg" name="mensagem" placeholder="Mensagem" required></textarea>
+                                    </div>
+
+                                    <div class="clear"></div> 
+
+                                    <div class="buttons">
+                                        <input type="reset" value="limpar">
+                                        <input type="submit" value="enviar">
+                                    </div>
+
+                                    <div class="alert">
+                                        <div class="loading">
+                                            <p>Enviando</p>
+                                        </div>
+                                        <div class="error">
+                                            <p class="title">Ops! Estamos com problemas.</p>
+                                            <p>Tente novamente mais tarde</p>
+                                            <div class="closeButton">
+                                                <img src="/img/close.png" alt="fechar">
+                                            </div>
+                                        </div>
+                                        <div class="success">
+                                            <p class="title">Mensagem enviada!</p>
+                                            <p>Breve entraremos em contato</p>
+                                            <div class="closeButton">
+                                                <img src="/Content/EstudioSomDoMar/delete.png" alt="fechar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </article> 
                         </div> 
                     </li> 
@@ -922,6 +964,7 @@
 </script>
 
 <script type="text/javascript" src="js/anoAtual.js"></script>
+<script src="js/app/formContato.js"></script>
 
 </body> 
 </html>

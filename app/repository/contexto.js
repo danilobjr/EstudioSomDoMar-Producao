@@ -523,6 +523,22 @@ var contexto = (function () {
                         url: '//www.youtube.com/embed/RWOLnEuKGWA'
                     }
                 }
+            ],
+            servicos: [
+                {
+                    servico: {
+                        id: 1,
+                        descricao: 'Gravação de CD',
+                        secao: 'servico'
+                    }
+                },
+                {
+                    servico: {
+                        id: 2,
+                        descricao: 'PC Intel Core 2 duo 3.0 - 4gb ram - HDs 80 + 160 + 1tera (x2)',
+                        secao: 'equipamento'
+                    }
+                }
             ]
         };
 
@@ -874,7 +890,7 @@ var contexto = (function () {
         var obterFotosPorSecao = function (secao) {
             var contexto = xml.obterContexto();
             var fotosEncontradas = undefined;
-            
+
             for (var cont in contexto.fotos) {
                 if (contexto.fotos[cont].secao === secao) {
                     if (!fotosEncontradas) {
@@ -1017,6 +1033,13 @@ var contexto = (function () {
             return videoProcurado;
         };
 
+        // Serviços e Equipamentos
+
+        var obterTodosOsServicos = function () {
+            var contexto = xml.obterContexto();
+            return contexto.servicos;
+        };
+
         return {
             obterInstancia: obterInstancia,
             paginas: {
@@ -1063,6 +1086,9 @@ var contexto = (function () {
                 obterPorTitulo: obterVideoPorTitulo,
                 incluir: incluirNovoVideo,
                 excluirPorId: excluirVideoPorId
+            },
+            servicos: {
+                obterTodos: obterTodosOsServicos
             }
         };
     };

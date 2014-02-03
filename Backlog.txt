@@ -17,7 +17,7 @@ OK - Colocar player na portfolioIndex;
 OK - Modificar as âncoras de links dos sites para o nome em português (ex.: de page_works para portfolio, de page_about para sobre, etc.);
 - Disponibilizar acesso do site via registro A para o domínio estudiosomdomar.com.br
 XX - Detecção de CapsLock no Login
-- Retirar iFrame de email e trocar por email do nodejs
+>> - Retirar iFrame de email e trocar por email do nodejs
 XX - Modificar nome de usuário e grupo de usuário q aparece na layout: tirar hardcode e colocar dados dinâmicos
 XX - Implementar Busca???
 - Retirar local de busca e trocar por Ir Para Site

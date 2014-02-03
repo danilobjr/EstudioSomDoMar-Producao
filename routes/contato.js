@@ -3,7 +3,7 @@ var contatoGerente = require('./../app/gerentes/contatoGerente');
 exports.enviarEmail = function (req, res) {
 
     try {
-        contatoGerente.enviarEmail('Danilo', 'Anfrísio', 'Teste', 'Corpo do Email');
+        contatoGerente.enviarEmail(req.body.nome, req.body.email, req.body.mensagem);
         // TODO
     } catch (erro) {
         // TODO 

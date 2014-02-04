@@ -5,39 +5,38 @@ module.exports = function () {
         return contexto.servicos.obterTodos();
     };
 
-    //var obterPorId = function (id) {
-    //    return contexto.portfolio.obterPorId(id);
-    //};
+    var obterPorDescricao = function (descricao) {
+        return contexto.servicos.obterPorDescricao(descricao);
+    };
+    
+    var obterPorSecao = function (secao) {
+        return contexto.servicos.obterPorSecao(secao);
+    };
 
-    //var obterPorSecao = function (secao) {
-    //    return contexto.portfolio.obterPorSecao(secao);
-    //};
+    var incluir = function (novoServico) {
+        var servicoJahExiste = obterPorDescricao(novoServico.descricao);
 
-    //var incluir = function (novaMusica) {
-    //    var musicaJahExiste = obterPorNomeEArtista(novaMusica.nome, novaMusica.artista);
+        if (servicoJahExiste) {
+            throw new Error('Serviço/equipamento já existe');
+        } else {
+            return contexto.servicos.incluir(novoServico);
+        }
+    };
 
-    //    if (musicaJahExiste) {
-    //        throw new Error('Música já existe');
-    //    } else {
-    //        return contexto.portfolio.incluir(novaMusica);
-    //    }
-    //};
+    var excluirPorId = function (id) {
+        var servicoExcluido = contexto.servicos.excluirPorId(id);
 
-    //var excluirPorId = function (id) {
-    //    var musicaExcluida = contexto.portfolio.excluirPorId(id);
+        if (!servicoExcluido) {
+            throw new Error('Serviço/equipamento já excluído ou não encontrado');
+        }
 
-    //    if (!musicaExcluida) {
-    //        throw new Error('Música já excluída ou não encontrado');
-    //    }
-
-    //    return musicaExcluida;
-    //};
+        return servicoExcluido;
+    };
 
     return {
         obterTodos: obterTodos,
-        //obterPorSecao: obterPorSecao,
-        //obterPorId: obterPorId,
-        //incluir: incluir,
-        //excluirPorId: excluirPorId
+        obterPorSecao: obterPorSecao,
+        incluir: incluir,
+        excluirPorId: excluirPorId
     };
 } ();

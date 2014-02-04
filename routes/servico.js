@@ -6,47 +6,44 @@ exports.index = function (req, res) {
 };
 
 exports.novo = function (req, res) {
-    res.render('portfolioNovo');
+    res.render('servicoNovo');
 };
 
 exports.incluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 
     try {
-        var novaMusica = {
-            nome: req.body.nome,
-            artista: req.body.artista,
-            arquivoMusica: req.body.arquivoMusica,
-            arquivoCapaAlbum: req.body.arquivoCapaAlbum[0] || req.body.arquivoCapaAlbum[1],
+        var novoServico = {
+            descricao: req.body.descricao,
             secao: req.body.secao
         };
 
-        portfolioGerente.incluir(novaMusica);
+        servicoGerente.incluir(novoServico);
 
         resultado.sucesso = true;
-        resultado.mensagem = 'Música incluída com sucesso';
+        resultado.mensagem = 'Serviço/equipamento incluído com sucesso';
     } catch (error) {
-        resultado.mensagem = 'Erro ao incluir música: ' + error;
+        resultado.mensagem = 'Erro ao incluir serviço/equipamento: ' + error;
     }
 
-    var portfolio = portfolioGerente.obterTodasAsMusicas();
+    var servicos = servicoGerente.obterTodos();
 
-    res.render('portfolioIndex', { viewModel: portfolio, resultado: resultado });
+    res.render('servicoIndex', { viewModel: servicos, resultado: resultado });
 };
 
 exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 
     try {
-        portfolioGerente.excluirPorId(req.params.id);
+        servicoGerente.excluirPorId(req.params.id);
 
         resultado.sucesso = true;
-        resultado.mensagem = 'Música excluída com sucesso';
+        resultado.mensagem = 'Serviço/Equipamento excluído com sucesso';
     } catch (error) {
-        resultado.mensagem = 'Erro ao excluir música: ' + error;
+        resultado.mensagem = 'Erro ao excluir serviço/equipamento: ' + error;
     }
 
-    var portfolio = portfolioGerente.obterTodasAsMusicas();
+    var servicos = servicoGerente.obterTodos();
 
-    res.render('portfolioIndex', { viewModel: portfolio, resultado: resultado });
+    res.render('servicoIndex', { viewModel: servicos, resultado: resultado });
 };

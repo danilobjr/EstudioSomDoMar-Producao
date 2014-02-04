@@ -62,6 +62,7 @@ app.get('/admin/artistas', autenticacaoRequerida, artista.index);
 app.get('/admin/artista/novo', autenticacaoRequerida, artista.novo);
 app.get('/admin/artista/alterar/:id', autenticacaoRequerida, artista.editar);
 app.get('/artista/:id', artista.exibir);
+app.get('/admin/servico/novo', autenticacaoRequerida, servico.novo);
 app.get('/admin/servicos', autenticacaoRequerida, servico.index);
 
 // actions
@@ -83,6 +84,8 @@ app.get('/admin/artista/excluir/:id', autenticacaoRequerida, artista.excluir);
 app.post('/admin/portfolio/novo', autenticacaoRequerida, portfolio.incluir);
 app.post('/admin/portfolio/alterar', autenticacaoRequerida, portfolio.alterar);
 app.get('/admin/portfolio/excluir/:id', autenticacaoRequerida, portfolio.excluir);
+app.post('/admin/servico/novo', autenticacaoRequerida, servico.incluir);
+app.get('/admin/servico/excluir/:id', autenticacaoRequerida, servico.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

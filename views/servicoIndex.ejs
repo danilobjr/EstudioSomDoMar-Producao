@@ -118,7 +118,7 @@
             }
         });
 
-        $('a[href=#exclusaoModal]').on('click', function (e) {
+        $(document).on('click', 'a[href=#exclusaoModal]', function (e) {
             e.preventDefault();
             var _this = $(e.currentTarget);
             var urlExclusao = _this.data().urlExclusao;

@@ -1040,6 +1040,81 @@ var contexto = (function () {
             return contexto.servicos;
         };
 
+        var obterServicosPorSecao = function (secao) {
+            var contexto = xml.obterContexto();
+            var servicosEncontrados = undefined;
+
+            for (var cont in contexto.servicos) {
+                if (contexto.servicos[cont].secao === secao) {
+                    if (!servicosEncontrados) {
+                        servicosEncontrados = [];
+                    }
+
+                    servicosEncontrados.push(contexto.servicos[cont]);
+                }
+            }
+
+            return servicosEncontrados;
+        };
+
+        var obterServicoPorDescricao = function (descricao) {
+            var contexto = xml.obterContexto();
+            var servicoEncontrado = undefined;
+
+            for (var cont in contexto.servicos) {
+                if (contexto.servicos[cont].descricao === descricao) {
+                    servicoEncontrado = contexto.servicos[cont];
+                }
+            }
+
+            return servicoEncontrado;
+        };
+
+        var incluirNovoServico = function (novoServico) {
+            var contexto = xml.obterContexto();
+            var novoId = obterNovoId(contexto.servicos);
+            novoServico.id = novoId;
+            contexto.servicos.push(novoServico);
+            xml.salvar(contexto);
+
+            return novoServico;
+        };
+
+        var excluirServicoPorId = function (id) {
+            var contexto = xml.obterContexto();
+
+            var servicoASerExcluido = undefined;
+
+            for (var i = 0; i < contexto.servicos.length; i++) {
+                if (contexto.servicos[i].id == id) {
+                    servicoASerExcluido = contexto.servicos[i];
+                }
+            }
+
+            if (servicoASerExcluido) {
+                var quantidadeDeServicosRestantesDaMesmaSecaoDoServicoProcurada = obterServicosPorSecao(servicoASerExcluido.secao).length;
+                if (quantidadeDeServicosRestantesDaMesmaSecaoDoServicoProcurada > 1) {
+                    var indiceServico = contexto.servicos.indexOf(servicoASerExcluido);
+                    contexto.servicos.splice(indiceServico, 1);
+                    xml.salvar(contexto);
+                } else {
+                    var secao = '';
+
+                    if (servicoASerExcluido.secao === 'servico') {
+                        secao = 'Serviço';
+                    }
+
+                    if (servicoASerExcluido.secao === 'equipamento') {
+                        secao = 'Equipamento';
+                    }
+
+                    throw new Error('Não é permitido excluir todos os itens da seção \'' + secao + '\'');
+                }
+            }
+
+            return servicoASerExcluido;
+        };
+
         return {
             obterInstancia: obterInstancia,
             paginas: {
@@ -1088,7 +1163,11 @@ var contexto = (function () {
                 excluirPorId: excluirVideoPorId
             },
             servicos: {
-                obterTodos: obterTodosOsServicos
+                obterTodos: obterTodosOsServicos,
+                obterPorDescricao: obterServicoPorDescricao,
+                obterPorSecao: obterServicosPorSecao,
+                incluir: incluirNovoServico,
+                excluirPorId: excluirServicoPorId
             }
         };
     };

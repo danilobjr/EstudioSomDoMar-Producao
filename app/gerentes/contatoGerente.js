@@ -6,8 +6,6 @@ module.exports = function () {
         var usuario = { email: 'danilobjr@gmail.com' }; //usuarioGerente.obterUsuario();
         var assuntoMensagem = '[Estúdio Som do Mar - CONTATO]';
 
-        console.log('de: %s; para: %s; assunto: %s; mensagem: %s', nomeRemetente, usuario.email, assuntoMensagem, mensagem);
-
         var callback = function (erro, resultado) {
             if (erro) {
                 throw new Error(erro);
@@ -20,8 +18,7 @@ module.exports = function () {
             }
         };
 
-
-        email.enviar(nomeRemetente, usuario.email, assuntoMensagem, mensagem, callback);
+        email.enviar(nomeRemetente, emailRemetente, usuario.email, assuntoMensagem, mensagem, callback);
     };
 
     return {

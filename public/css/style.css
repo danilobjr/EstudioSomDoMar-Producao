@@ -102,7 +102,7 @@ header {position:absolute; height:149px; width:100%; z-index:300; background-col
 #formContato {padding:0 0 0 0;}
 #formContato .bg {padding:0 0;}
 #formContato .wrapper {overflow:inherit; min-height:40px;}
-#formContato .success {padding-bottom:4px; position:relative; color:#a9a9a9; width:300px; font:12px Trebuchet MS, sans-serif;}
+#formContato .success {color:#a9a9a9; font:12px Trebuchet MS, sans-serif;}
 #formContato label, #formContato .field {position:relative; display:inline-block; padding-bottom:9px;}
 #formContato span {display:block}
 #formContato .error,#formContato .empty {font-size:9px; color:#a9a9a9; line-height:9px; display:none; width:100%; top:0px; position:relative; font-family: Trebuchet MS;}
@@ -176,7 +176,8 @@ header {position:absolute; height:149px; width:100%; z-index:300; background-col
     opacity: 1;
 }
 
-.alert .loading p {
+.alert .carregando p {
+    top: 0 !important;
     margin-top: 33px;
 }
 

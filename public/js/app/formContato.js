@@ -30,11 +30,10 @@ $(function () {
             data: JSON.stringify(data),
             beforeSend: function () {
                 $('.alert > div').removeClass('active');
-                $('.alert .loading').addClass('active');
+                $('.alert .carregando').addClass('active');
                 form.find('[type=text], [type=email], textarea').attr('disabled', true);
             },
             success: function (msg) {
-                debugger;
                 console.log(msg);
                 $('.alert > div').removeClass('active');
                 $('.alert .success').addClass('active');
@@ -43,10 +42,9 @@ $(function () {
                 mensagem.val('');
             },
             error: function (xhr, msg) {
-                debugger;
                 console.log(msg + '\n' + xhr.responseText);
                 $('.alert > div').removeClass('active');
-                $('.alert .error').addClass('active');
+                $('.alert .erro').addClass('active');
             }
         });
         //.done(function (data, textStatus, jqXHR) {

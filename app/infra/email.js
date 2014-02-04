@@ -8,12 +8,17 @@ var server  = emailjs.server.connect({
 });
 
 // send the message and get a callback with an error or details of the message that was sent
-exports.enviar = function (de, para, assunto, mensagem, callback) {
+exports.enviar = function (nomeRemetente, emailRemetente, para, assunto, mensagem, callback) {
     var email = {
-        from: de,
+        from: nomeRemetente,
         to: para,
         subject: assunto,
-        text: mensagem
+        text: mensagem,
+        attachment: 
+       [
+          {data:"<html>" + mensagem + "<br/><br/><b>" + nomeRemetente + "<b><br/>" + emailRemetente + "</html>", alternative: true}
+          //{path:"path/to/file.zip", type:"application/zip", name:"renamed.zip"}
+       ]
     }
 
     server.send(email, function (erro, result) {

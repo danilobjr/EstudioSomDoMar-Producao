@@ -17,9 +17,15 @@ $(function () {
             email: email.val(),
             mensagem: mensagem.val()
         };
+
+        var url = window.location.origin + form.attr('action');
+        //var data = 'nome=' + data.nome + '&email=' + data.email + '&mensagem=' + data.mensagem;
+
+        debugger;
+
         $.ajax({
             type: "post",
-            url: window.location.origin + form.attr('action'),
+            url: form.attr('action'),
             contentType: 'application/json',
             data: JSON.stringify(data),
             beforeSend: function () {

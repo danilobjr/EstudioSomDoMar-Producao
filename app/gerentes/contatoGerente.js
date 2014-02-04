@@ -6,17 +6,17 @@ module.exports = function () {
         var usuario = { email: 'danilobjr@gmail.com' }; //usuarioGerente.obterUsuario();
         var assuntoMensagem = '[Estúdio Som do Mar - CONTATO]';
 
-        console.log('de: %s; para: %s; assunto: %s; mensagem: %s', de, usuario.email, assuntoMensagem, mensagem);
+        console.log('de: %s; para: %s; assunto: %s; mensagem: %s', nomeRemetente, usuario.email, assuntoMensagem, mensagem);
 
         var callback = function (erro, resultado) {
             if (erro) {
-                // TODO throw new Error()
+                throw new Error(erro);
                 console.log('erro');
                 console.log(erro);
             } else {
-                // TODO return true
                 console.log('resultado');
                 console.log(resultado);
+                return true;
             }
         };
 

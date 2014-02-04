@@ -24,3 +24,4 @@ XX - Implementar Busca???
 - Trocar o botão do site por Voltar
 OK - Modificar local de ícones das redes sociais
 OK - Modificar ícones das redes sociais
+OK - Implementar Manter Serviços e Equipamentos

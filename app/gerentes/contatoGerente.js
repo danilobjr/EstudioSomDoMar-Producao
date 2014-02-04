@@ -3,17 +3,13 @@ var usuarioGerente = require('./usuarioGerente'),
 
 module.exports = function () {
     var enviarEmail = function (nomeRemetente, emailRemetente, mensagem) {
-        var usuario = { email: 'danilobjr@gmail.com' }; //usuarioGerente.obterUsuario();
+        var usuario = usuarioGerente.obterUsuario(); //{ email: 'danilobjr@gmail.com' };
         var assuntoMensagem = '[Estúdio Som do Mar - CONTATO]';
 
         var callback = function (erro, resultado) {
             if (erro) {
                 throw new Error(erro);
-                console.log('erro');
-                console.log(erro);
             } else {
-                console.log('resultado');
-                console.log(resultado);
                 return true;
             }
         };

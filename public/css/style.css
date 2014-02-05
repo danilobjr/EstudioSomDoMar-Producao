@@ -1000,3 +1000,17 @@ form .buttons > *:hover {
 #contato .social {
     margin-top: 20px;
 }
+
+/* FUNDO em Outros Trabalhos e Jingles */
+
+#slide_outros_trabalhos .scrollable {
+    background: url(../img/foto/estudio/outros_trabalhos.jpg);
+}
+
+#slide_jingles .scrollable {
+    background: url(../img/foto/estudio/mesa-3_b.jpg);
+}
+
+#slide_outros_trabalhos p, #slide_jingles p {
+    color: white;
+}

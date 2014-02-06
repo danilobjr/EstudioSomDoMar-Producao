@@ -20,9 +20,10 @@
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
                                 <select id="secao" name="secao" class="row-fluid" disabled>
+                                    <option value="home" <%= (viewModel.secao === 'home') ? 'selected' : '' %>>Home</option>
                                     <option value="estudio" <%= (viewModel.secao === 'estudio') ? 'selected' : '' %>>Estúdio</option>
                                     <option value="musico" <%= (viewModel.secao === 'musico') ? 'selected' : '' %>>Músico</option>
-                                    <option value="home" <%= (viewModel.secao === 'home') ? 'selected' : '' %>>Home</option>
+                                    <option value="participacao" <%= (viewModel.secao === 'participacao') ? 'selected' : '' %>>Participação</option>
                                 </select>
                             </div>
                         </div>
@@ -81,9 +82,10 @@
                     <li>Imagem Ampliada: foto_estudio_g.jpg</li>
                 </ul>
             </li>
+            <li>Caso a seleção seja <b>Home</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\home</code></li>
             <li>Caso a seleção seja <b>Estúdio</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\estudio</code></li>
             <li>Caso a seleção seja <b>Músico</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\musico</code></li>
-            <li>Caso a seleção seja <b>Home</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\home</code></li>
+            <li>Caso a seleção seja <b>Participação</b>, os arquivos de ambas as imagens devem ser copiados para a pasta <code>\public\img\foto\participacao</code></li>
             <li>O tamanho ideal para a imagem pequena das seções <em>Estúdio</em> e <em>Músico</em> é de <code>159 x 159</code> pixels</li>
             <li>Já para a seção <em>Home</em>, o tamanho ideal para a imagem pequena é de <code>303 x 227</code> pixels</li>
             <li>Não há um tamanho ideal para a imagem ampliada</li>

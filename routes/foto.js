@@ -2,9 +2,10 @@ var fotoGerente = require('./../app/gerentes/fotoGerente');
 
 exports.index = function (req, res) {
     var fotos = {};
+    fotos.home = fotoGerente.obterPorSecao('home');
     fotos.estudio = fotoGerente.obterPorSecao('estudio');
     fotos.musicos = fotoGerente.obterPorSecao('musico');
-    fotos.home = fotoGerente.obterPorSecao('home');
+    fotos.participacoes = fotoGerente.obterPorSecao('participacao');
     
     res.render('fotoIndex', { viewModel: fotos });
 };
@@ -32,9 +33,10 @@ exports.incluir = function (req, res) {
     }
 
     var fotos = {};
+    fotos.home = fotoGerente.obterPorSecao('home');
     fotos.estudio = fotoGerente.obterPorSecao('estudio');
     fotos.musicos = fotoGerente.obterPorSecao('musico');
-    fotos.home = fotoGerente.obterPorSecao('home');
+    fotos.participacoes = fotoGerente.obterPorSecao('participacao');
 
     res.render('fotoIndex', { viewModel: fotos, resultado: resultado });
 };
@@ -84,9 +86,10 @@ exports.excluir = function (req, res) {
     }
 
     var fotos = {};
+    fotos.home = fotoGerente.obterPorSecao('home');
     fotos.estudio = fotoGerente.obterPorSecao('estudio');
     fotos.musicos = fotoGerente.obterPorSecao('musico');
-    fotos.home = fotoGerente.obterPorSecao('home');
+    fotos.participacoes = fotoGerente.obterPorSecao('participacao');
 
     res.render('fotoIndex', { viewModel: fotos, resultado: resultado });
 };

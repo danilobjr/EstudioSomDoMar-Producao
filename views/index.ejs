@@ -407,13 +407,27 @@
                                         </article>
                                         
                                         <article id="slide_fotos_participacoes" class="slide scrollable" data-slide-left-position="-1720">
+
+                                            <% for (var i = 0; i < viewModel.fotos.participacoes.length; i++) { %>
+                                                <a href="img/foto/participacao/<%= viewModel.fotos.participacoes[i].imagemAmpliada %>" title="<%= viewModel.fotos.participacoes[i].titulo %>">
+                                                    <figure>
+                                                        <img src="img/foto/participacao/<%= viewModel.fotos.participacoes[i].imagemPequena %>" alt="" />
+                                                    </figure>
+                                                    <figure class="picZoom">
+                                                        <img src="img/magnify.png" alt="" />                                                
+                                                    </figure>
+                                                </a>
+                                            <% } %>
+
+                                            <!--
                                             <a href="img/pics/participacoes-anfrisio_e_nelson_b.jpg" title="Anfrísio Rocha e Nelson Bomilcar">
                                                 <figure>
                                                     <img src="img/pics/participacoes-anfrisio_e_nelson_xs.jpg" alt="" />                                                </figure>
                                                 <figure class="picZoom">
                                                     <img src="img/magnify.png" alt="" />                                                
                                                 </figure>
-                                            </a>                                        
+                                            </a>
+                                            -->                                        
                                         </article>
                                     </div>
                                 </section>                                

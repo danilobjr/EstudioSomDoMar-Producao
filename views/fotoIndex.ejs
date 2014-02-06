@@ -9,12 +9,67 @@
 
         <div id="fotoIndexContent" class="content">
             <ul id="tabListagemFotos" class="nav nav-tabs">
-                <li class="active"><a href="#estudio" data-toggle="tab">Estúdio</a></li>
+                <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                <li><a href="#estudio" data-toggle="tab">Estúdio</a></li>
                 <li><a href="#musicos" data-toggle="tab">Músicos</a></li>
-                <li><a href="#home" data-toggle="tab">Home</a></li>
+                <li><a href="#participacoes" data-toggle="tab">Participações</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane fade active in" id="estudio">
+                <div class="tab-pane fade active in" id="home">
+                    <%
+                                    
+                    var quantidadeDeFotosPorLinha = 4
+                        quantidadeDeUl = 0;
+
+                    if (viewModel.home.length <= quantidadeDeFotosPorLinha) {
+                        quantidadeDeUl = 1;
+                    } else {
+                        quantidadeDeUl = Math.ceil(viewModel.home.length / quantidadeDeFotosPorLinha);
+                    }
+
+                    for (var rowIndex = 0; rowIndex < quantidadeDeUl; rowIndex++) {
+
+                    %>
+
+                    <ul class="thumbnails row-fluid">
+
+                        <%
+                                    
+                        var quantidadeDeFoto = 0,
+                            ehUltimaLinha = (rowIndex + 1) === quantidadeDeUl;
+
+                        if (ehUltimaLinha) {
+                            quantidadeDeFoto = viewModel.home.length;
+                        } else {
+                            quantidadeDeFoto = quantidadeDeFotosPorLinha * (rowIndex + 1);
+                        }
+
+                        for (var fotoIndex = rowIndex * quantidadeDeFotosPorLinha; fotoIndex < quantidadeDeFoto; fotoIndex++) {
+
+                        %>
+
+                        <li class="span3">
+                            <div class="btn-group"> 
+                                <a href="/admin/foto/alterar/<%= viewModel.home[fotoIndex].id %>" rel="tooltip" data-placement="top" data-original-title="Editar"> 
+                                    <i class=" icon-edit"></i> 
+                                </a>
+                                <a class="excluir" data-toggle="modal" href="#confirmacao" rel="tooltip" data-url-exclusao="/admin/foto/excluir/<%= viewModel.home[fotoIndex].id %>" data-placement="top" data-original-title="Excluir"> 
+                                    <i class=" icon-trash"></i> 
+                                </a> 
+                            </div>
+                
+                            <a class="thumbnail"> 
+                                <img src="/img/foto/home/<%= viewModel.home[fotoIndex].imagemPequena %>" alt="<%= viewModel.home[fotoIndex].titulo %>" />
+                            </a> 
+                        </li>
+
+                        <% } %> <!-- End FOR -->
+
+                    </ul>
+
+                    <% } %> <!-- End FOR -->
+                </div>
+                <div class="tab-pane fade" id="estudio">
                     <%
                                     
                     var quantidadeDeFotosPorLinha = 4
@@ -122,16 +177,16 @@
 
                     <% } %> <!-- End FOR -->
                 </div>
-                <div class="tab-pane fade" id="home">
+                <div class="tab-pane fade" id="participacoes">
                     <%
                                     
                     var quantidadeDeFotosPorLinha = 4
                         quantidadeDeUl = 0;
 
-                    if (viewModel.home.length <= quantidadeDeFotosPorLinha) {
+                    if (viewModel.participacoes.length <= quantidadeDeFotosPorLinha) {
                         quantidadeDeUl = 1;
                     } else {
-                        quantidadeDeUl = Math.ceil(viewModel.home.length / quantidadeDeFotosPorLinha);
+                        quantidadeDeUl = Math.ceil(viewModel.participacoes.length / quantidadeDeFotosPorLinha);
                     }
 
                     for (var rowIndex = 0; rowIndex < quantidadeDeUl; rowIndex++) {
@@ -146,7 +201,7 @@
                             ehUltimaLinha = (rowIndex + 1) === quantidadeDeUl;
 
                         if (ehUltimaLinha) {
-                            quantidadeDeFoto = viewModel.home.length;
+                            quantidadeDeFoto = viewModel.participacoes.length;
                         } else {
                             quantidadeDeFoto = quantidadeDeFotosPorLinha * (rowIndex + 1);
                         }
@@ -157,16 +212,16 @@
 
                         <li class="span3">
                             <div class="btn-group"> 
-                                <a href="/admin/foto/alterar/<%= viewModel.home[fotoIndex].id %>" rel="tooltip" data-placement="top" data-original-title="Editar"> 
+                                <a href="/admin/foto/alterar/<%= viewModel.participacoes[fotoIndex].id %>" rel="tooltip" data-placement="top" data-original-title="Editar"> 
                                     <i class=" icon-edit"></i> 
                                 </a>
-                                <a class="excluir" data-toggle="modal" href="#confirmacao" rel="tooltip" data-url-exclusao="/admin/foto/excluir/<%= viewModel.home[fotoIndex].id %>" data-placement="top" data-original-title="Excluir"> 
+                                <a class="excluir" data-toggle="modal" href="#confirmacao" rel="tooltip" data-url-exclusao="/admin/foto/excluir/<%= viewModel.musicos[fotoIndex].id %>" data-placement="top" data-original-title="Excluir"> 
                                     <i class=" icon-trash"></i> 
                                 </a> 
                             </div>
                 
                             <a class="thumbnail"> 
-                                <img src="/img/foto/home/<%= viewModel.home[fotoIndex].imagemPequena %>" alt="<%= viewModel.home[fotoIndex].titulo %>" />
+                                <img src="/img/foto/participacao/<%= viewModel.participacoes[fotoIndex].imagemPequena %>" alt="<%= viewModel.musicos[fotoIndex].titulo %>" />
                             </a> 
                         </li>
 

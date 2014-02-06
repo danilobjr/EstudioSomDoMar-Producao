@@ -480,6 +480,13 @@
       <imagemAmpliada>Conversores-g.JPG</imagemAmpliada>
       <id>36</id>
     </foto>
+    <foto>
+      <titulo>Anfrísio e Nelson Bomilcar</titulo>
+      <secao>participacao</secao>
+      <imagemPequena>participacoes-anfrisio_e_nelson_xs.jpg</imagemPequena>
+      <imagemAmpliada>participacoes-anfrisio_e_nelson_b.jpg</imagemAmpliada>
+      <id>37</id>
+    </foto>
   </fotos>
   <portfolio>
     <musica>

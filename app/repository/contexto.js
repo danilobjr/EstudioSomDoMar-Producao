@@ -988,6 +988,10 @@ var contexto = (function () {
                         secao = 'Home';
                     }
 
+                    if (fotoASerExcluida.secao === 'participacao') {
+                        secao = 'Participação';
+                    }
+
                     throw new Error('Não é permitido excluir todos os itens da seção \'' + secao + '\'');
                 }
             }

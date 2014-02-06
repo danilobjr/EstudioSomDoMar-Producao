@@ -5,6 +5,10 @@ module.exports = function () {
         return contexto.servicos.obterTodos();
     };
 
+    var obterPorId = function (id) {
+        return contexto.servicos.obterPorId(id);
+    };
+
     var obterPorDescricao = function (descricao) {
         return contexto.servicos.obterPorDescricao(descricao);
     };
@@ -23,6 +27,10 @@ module.exports = function () {
         }
     };
 
+    var alterar = function (servicoAlterado) {
+        return contexto.servicos.alterar(servicoAlterado);
+    };
+
     var excluirPorId = function (id) {
         var servicoExcluido = contexto.servicos.excluirPorId(id);
 
@@ -35,8 +43,10 @@ module.exports = function () {
 
     return {
         obterTodos: obterTodos,
+        obterPorId: obterPorId,
         obterPorSecao: obterPorSecao,
         incluir: incluir,
+        alterar: alterar,
         excluirPorId: excluirPorId
     };
 } ();

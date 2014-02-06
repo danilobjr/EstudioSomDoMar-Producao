@@ -16,7 +16,7 @@
     <pagina>
       <id>2</id>
       <descricao>Estúdio</descricao>
-      <titulo>Bem-Vindo!</titulo>
+      <titulo>Estúdio</titulo>
       <subtitulo></subtitulo>
       <texto>
         <paragrafos>
@@ -34,7 +34,7 @@
       <texto>
         <paragrafos>
           <paragrafo>
-            <descricao>O Som do Mar produz para os mais variados ramos da publicidade, desde rádio e TV até campanhas políticas e publicitárias.</descricao>
+            <descricao>O Som do Mar produz para os mais variados ramos da publicidade, entre eles, rádio, TV, campanhas políticas e publicitárias.</descricao>
           </paragrafo>
           <paragrafo>
             <descricao>Ouça ao lado alguns trabalhos que produzimos.</descricao>
@@ -115,8 +115,8 @@
       <imagens>
         <perfil>artistas_priscila_ribeiro.jpg</perfil>
         <background>
-          <cor>#c0c0c0</cor>
-          <imagem>priscila_ribeiro_background.jpg</imagem>
+          <cor>#454545</cor>
+          <imagem>x.jpg</imagem>
         </background>
       </imagens>
       <musicas>
@@ -151,7 +151,7 @@
       <imagens>
         <perfil>artistas_flavinho.jpg</perfil>
         <background>
-          <cor>#ffffff</cor>
+          <cor>#454545</cor>
           <imagem>imagem.jpg</imagem>
         </background>
       </imagens>
@@ -186,7 +186,7 @@
       </redesSociais>
       <imagens>
         <background>
-          <cor>#ffffff</cor>
+          <cor>#454545</cor>
         </background>
         <perfil>artistas_rodrigo_cardozo.jpg</perfil>
       </imagens>
@@ -206,6 +206,37 @@
           <nome>No Meu Lugar</nome>
           <arquivoMusica>rodrigo_cardozo_no_meu_lugar.mp3</arquivoMusica>
           <arquivoCapaAlbum>cd_rodrigo_cardozo_no_meu_lugar.jpg</arquivoCapaAlbum>
+        </musica>
+      </musicas>
+    </artista>
+    <artista>
+      <nome>Ana Cléria</nome>
+      <site></site>
+      <email>anacleriasax@yahoo.com.br</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 8818-1099</numero>
+          <tipo>oi</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>https://www.facebook.com/anacleria.rocha</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+      </redesSociais>
+      <imagens>
+        <background>
+          <cor>#454545</cor>
+        </background>
+        <perfil>AnaPorumsegundo-159.jpg</perfil>
+      </imagens>
+      <id>4</id>
+      <musicas>
+        <musica>
+          <nome>CD Por um segundo</nome>
+          <arquivoMusica>previanovocd.mp3</arquivoMusica>
+          <arquivoCapaAlbum>AnaPorumsegundo-p.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
     </artista>

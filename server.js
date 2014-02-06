@@ -55,6 +55,7 @@ app.get('/admin/portfolio', autenticacaoRequerida, portfolio.index);
 app.get('/admin/portfolio/novo', autenticacaoRequerida, portfolio.novo);
 app.get('/admin/portfolio/alterar/:id', autenticacaoRequerida, portfolio.editar);
 app.get('/admin/fotos', autenticacaoRequerida, foto.index);
+app.get('/admin/foto/alterar/:id', autenticacaoRequerida, foto.editar);
 app.get('/admin/foto/nova', autenticacaoRequerida, foto.nova);
 app.get('/admin/videos', autenticacaoRequerida, video.index);
 app.get('/admin/video/novo', autenticacaoRequerida, video.novo);
@@ -63,6 +64,7 @@ app.get('/admin/artista/novo', autenticacaoRequerida, artista.novo);
 app.get('/admin/artista/alterar/:id', autenticacaoRequerida, artista.editar);
 app.get('/artista/:id', artista.exibir);
 app.get('/admin/servico/novo', autenticacaoRequerida, servico.novo);
+app.get('/admin/servico/alterar/:id', autenticacaoRequerida, servico.editar);
 app.get('/admin/servicos', autenticacaoRequerida, servico.index);
 
 // actions
@@ -72,6 +74,7 @@ app.post('/login', login.logon);
 app.post('/admin/usuario/alterar/dados-pessoais', autenticacaoRequerida, usuario.alterarDadosPessoais);
 app.post('/admin/pagina/alterar', autenticacaoRequerida, pagina.alterar);
 app.post('/admin/foto/nova', autenticacaoRequerida, foto.incluir);
+app.post('/admin/foto/alterar', autenticacaoRequerida, foto.alterar);
 app.get('/admin/foto/excluir/:id', autenticacaoRequerida, foto.excluir);
 app.post('/admin/video/novo', autenticacaoRequerida, video.incluir);
 app.get('/admin/video/excluir/:id', autenticacaoRequerida, video.excluir);
@@ -85,6 +88,7 @@ app.post('/admin/portfolio/novo', autenticacaoRequerida, portfolio.incluir);
 app.post('/admin/portfolio/alterar', autenticacaoRequerida, portfolio.alterar);
 app.get('/admin/portfolio/excluir/:id', autenticacaoRequerida, portfolio.excluir);
 app.post('/admin/servico/novo', autenticacaoRequerida, servico.incluir);
+app.post('/admin/servico/alterar', autenticacaoRequerida, servico.alterar);
 app.get('/admin/servico/excluir/:id', autenticacaoRequerida, servico.excluir);
 
 http.createServer(app).listen(app.get('port'), function(){

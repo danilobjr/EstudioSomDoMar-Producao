@@ -16,7 +16,7 @@
     <pagina>
       <id>2</id>
       <descricao>Estúdio</descricao>
-      <titulo>O ESTÚDIO</titulo>
+      <titulo>Estúdio</titulo>
       <subtitulo></subtitulo>
       <texto>
         <paragrafos>
@@ -34,10 +34,11 @@
       <texto>
         <paragrafos>
           <paragrafo>
-            <descricao>O Som do Mar produz para os mais variados ramos da publicidade, desde rádio e TV até campanhas políticas e publicitárias.</descricao>
+            <descricao>O Som do Mar produz para os mais variados ramos da publicidade, entre eles, rádio, TV, campanhas políticas e publicitárias.</descricao>
           </paragrafo>
           <paragrafo>
-            <descricao>Ouça ao lado alguns trabalhos que produzimos.</descricao>
+            <descricao>Ouça ao lado alguns trabalhos que produzimos.
+</descricao>
           </paragrafo>
         </paragrafos>
       </texto>
@@ -65,8 +66,34 @@
   <usuario>
     <id>1</id>
     <email>anfrisiorocha@hotmail.com</email>
-    <nome>Anfrísio Rocha</nome>
+    <nome>Anfrísio</nome>
+    <sobrenome>Rocha</sobrenome>
     <senha>b8697f01954168599e814940515ba00972699bd62dcdd5756214c10dba9c84d1</senha>
+    <arquivoImagemPerfil>nova_logo_198x198.jpg</arquivoImagemPerfil>
+    <telefones>
+      <telefone>
+        <numero>(85) 8690-9040</numero>
+        <tipo>oi</tipo>
+      </telefone>
+      <telefone>
+        <numero>(85) 9985-5193</numero>
+        <tipo>tim</tipo>
+      </telefone>
+      <telefone>
+        <numero>(85) 3067-6885</numero>
+        <tipo>fixo</tipo>
+      </telefone>
+    </telefones>
+    <redesSociais>
+      <redeSocial>
+        <link>http://www.facebook.com/estudiosomdomar</link>
+        <tipo>facebook</tipo>
+      </redeSocial>
+      <redeSocial>
+        <link>https://www.youtube.com/AnfrisioRocha</link>
+        <tipo>youtube</tipo>
+      </redeSocial>
+    </redesSociais>
   </usuario>
   <artistas>
     <artista>
@@ -89,8 +116,8 @@
       <imagens>
         <perfil>artistas_priscila_ribeiro.jpg</perfil>
         <background>
-          <cor>#c0c0c0</cor>
-          <imagem>priscila_ribeiro_background.jpg</imagem>
+          <cor>#454545</cor>
+          <imagem>x.jpg</imagem>
         </background>
       </imagens>
       <musicas>
@@ -125,7 +152,7 @@
       <imagens>
         <perfil>artistas_flavinho.jpg</perfil>
         <background>
-          <cor>#ffffff</cor>
+          <cor>#454545</cor>
           <imagem>imagem.jpg</imagem>
         </background>
       </imagens>
@@ -160,7 +187,7 @@
       </redesSociais>
       <imagens>
         <background>
-          <cor>#ffffff</cor>
+          <cor>#454545</cor>
         </background>
         <perfil>artistas_rodrigo_cardozo.jpg</perfil>
       </imagens>
@@ -180,6 +207,37 @@
           <nome>No Meu Lugar</nome>
           <arquivoMusica>rodrigo_cardozo_no_meu_lugar.mp3</arquivoMusica>
           <arquivoCapaAlbum>cd_rodrigo_cardozo_no_meu_lugar.jpg</arquivoCapaAlbum>
+        </musica>
+      </musicas>
+    </artista>
+    <artista>
+      <nome>Ana Cléria</nome>
+      <site></site>
+      <email>anacleriasax@yahoo.com.br</email>
+      <telefones>
+        <telefone>
+          <numero>(85) 8818-1099</numero>
+          <tipo>oi</tipo>
+        </telefone>
+      </telefones>
+      <redesSociais>
+        <redeSocial>
+          <link>https://www.facebook.com/anacleria.rocha</link>
+          <tipo>facebook</tipo>
+        </redeSocial>
+      </redesSociais>
+      <imagens>
+        <background>
+          <cor>#454545</cor>
+        </background>
+        <perfil>AnaPorumsegundo-159.jpg</perfil>
+      </imagens>
+      <id>4</id>
+      <musicas>
+        <musica>
+          <nome>CD Por um segundo</nome>
+          <arquivoMusica>previanovocd.mp3</arquivoMusica>
+          <arquivoCapaAlbum>AnaPorumsegundo-p.jpg</arquivoCapaAlbum>
         </musica>
       </musicas>
     </artista>
@@ -536,7 +594,7 @@
       <nome>CD Paradoxo</nome>
       <artista>Márcio Cardoso</artista>
       <arquivoMusica>cd_marcio_cardoso.mp3</arquivoMusica>
-      <arquivoCapaAlbum>MarcioCardoso-Paradoxo-p.jpg</arquivoCapaAlbum>
+      <arquivoCapaAlbum>marcio_cardoso.jpg</arquivoCapaAlbum>
       <secao>lancamento</secao>
       <id>17</id>
     </musica>

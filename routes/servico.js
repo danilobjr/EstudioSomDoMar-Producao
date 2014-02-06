@@ -31,6 +31,36 @@ exports.incluir = function (req, res) {
     res.render('servicoIndex', { viewModel: servicos, resultado: resultado });
 };
 
+exports.editar = function (req, res) {
+    var idServico = req.params.id;
+    var servico = servicoGerente.obterPorId(idServico);
+    res.render('servicoAlteracao', { viewModel: servico });
+};
+
+exports.alterar = function (req, res) {
+    var resultado = { sucesso: false, mensagem: '' };
+    var idServico = req.body.idServico;
+
+    try {
+        var servicoAlterado = {
+            id: idServico,
+            descricao: req.body.descricao
+        };
+
+        console.log(servicoAlterado);
+
+        servicoGerente.alterar(servicoAlterado);
+        resultado.sucesso = true;
+        resultado.mensagem = 'Servico alterado com sucesso';
+    } catch (error) {
+        resultado.mensagem = 'Erro ao alterar servico: ' + error;
+    }
+
+    var servico = servicoGerente.obterPorId(idServico);
+
+    res.render('servicoAlteracao', { viewModel: servico, resultado: resultado });
+};
+
 exports.excluir = function (req, res) {
     var resultado = { sucesso: false, mensagem: '' };
 

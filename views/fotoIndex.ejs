@@ -48,7 +48,10 @@
                         %>
 
                         <li class="span3">
-                            <div class="btn-group"> 
+                            <div class="btn-group">
+                                <a href="/admin/foto/alterar/<%= viewModel.estudio[fotoIndex].id %>" rel="tooltip" data-placement="top" data-original-title="Editar"> 
+                                    <i class=" icon-edit"></i> 
+                                </a>
                                 <a class="excluir" data-toggle="modal" href="#confirmacao" rel="tooltip" data-url-exclusao="/admin/foto/excluir/<%= viewModel.estudio[fotoIndex].id %>" data-placement="top" data-original-title="Excluir"> 
                                     <i class=" icon-trash"></i> 
                                 </a> 
@@ -100,6 +103,9 @@
 
                         <li class="span3">
                             <div class="btn-group"> 
+                                <a href="/admin/foto/alterar/<%= viewModel.musicos[fotoIndex].id %>" rel="tooltip" data-placement="top" data-original-title="Editar"> 
+                                    <i class=" icon-edit"></i> 
+                                </a>
                                 <a class="excluir" data-toggle="modal" href="#confirmacao" rel="tooltip" data-url-exclusao="/admin/foto/excluir/<%= viewModel.musicos[fotoIndex].id %>" data-placement="top" data-original-title="Excluir"> 
                                     <i class=" icon-trash"></i> 
                                 </a> 
@@ -151,6 +157,9 @@
 
                         <li class="span3">
                             <div class="btn-group"> 
+                                <a href="/admin/foto/alterar/<%= viewModel.home[fotoIndex].id %>" rel="tooltip" data-placement="top" data-original-title="Editar"> 
+                                    <i class=" icon-edit"></i> 
+                                </a>
                                 <a class="excluir" data-toggle="modal" href="#confirmacao" rel="tooltip" data-url-exclusao="/admin/foto/excluir/<%= viewModel.home[fotoIndex].id %>" data-placement="top" data-original-title="Excluir"> 
                                     <i class=" icon-trash"></i> 
                                 </a> 

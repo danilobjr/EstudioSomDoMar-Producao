@@ -1004,13 +1004,21 @@ form .buttons > *:hover {
 /* FUNDO em Outros Trabalhos e Jingles */
 
 #slide_outros_trabalhos .scrollable {
-    background: url(../img/foto/estudio/outros_trabalhos.jpg);
+    background: url(../img/foto/estudio/aba_outros_trabalhos_bateria.jpg);
 }
 
 #slide_jingles .scrollable {
-    background: url(../img/foto/estudio/mesa-3_b.jpg);
+    background: url(../img/foto/estudio/aba_jingles_mesa.jpg);
 }
 
-#slide_outros_trabalhos p, #slide_jingles p {
+#slide_servicos .scrollable {
+    background: url(../img/foto/estudio/aba-servicos-teclado.jpg);
+}
+
+#slide_equipamentos .scrollable {
+    background: url(../img/foto/estudio/aba_equipamentos_perifericos.jpg);
+}
+
+#slide_outros_trabalhos p, #slide_jingles p, #slide_servicos p, #slide_equipamentos p {
     color: white;
 }

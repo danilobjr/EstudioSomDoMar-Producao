@@ -6,11 +6,12 @@
             </div>
 
             <div class="content">
-                <form id="formNovaFoto" method="post" action="/admin/foto/nova" class="form-horizontal cmxform" autocomplete="off">
+                <form id="formNovaFoto" method="post" action="/admin/foto/alterar" class="form-horizontal cmxform" autocomplete="off">
+                    <input type="hidden" name="idFoto" value="<%= viewModel.id %>" />
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="titulo">Título *</label>
                         <div class="controls span9">
-                            <input id="titulo" name="titulo" type="text" class="span12" placeholder="Legenda que aparecerá na foto quando ampliada"/>
+                            <input id="titulo" name="titulo" type="text" class="span12" placeholder="Legenda que aparecerá na foto quando ampliada" value="<%= viewModel.titulo %>" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o título da foto</label>
                         </div>
                     </div>
@@ -18,10 +19,10 @@
                         <label class="control-label span3" for="secao">Seção *</label>
                         <div class="controls span3">
                             <div class="input-prepend row-fluid">
-                                <select id="secao" name="secao" class="row-fluid">
-                                    <option value="estudio">Estúdio</option>
-                                    <option value="musico">Músico</option>
-                                    <option value="home">Home</option>
+                                <select id="secao" name="secao" class="row-fluid" disabled>
+                                    <option value="estudio" <%= (viewModel.secao === 'estudio') ? 'selected' : '' %>>Estúdio</option>
+                                    <option value="musico" <%= (viewModel.secao === 'musico') ? 'selected' : '' %>>Músico</option>
+                                    <option value="home" <%= (viewModel.secao === 'home') ? 'selected' : '' %>>Home</option>
                                 </select>
                             </div>
                         </div>
@@ -29,7 +30,7 @@
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="imagemPequena">Imagem Pequena *</label>
                         <div class="controls span9">
-                            <input id="imagemPequena" name="imagemPequena" type="text" class="span12" placeholder="Exemplo: imagem_pequena.jpg" />
+                            <input id="imagemPequena" name="imagemPequena" type="text" class="span12" placeholder="Exemplo: imagem_pequena.jpg" value="<%= viewModel.imagemPequena %>" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo referente à imagem pequena que aparecerá na listagem</label>
                             <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                             <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
@@ -38,7 +39,7 @@
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="imagemAmpliada">Imagem Ampliada *</label>
                         <div class="controls span9">
-                            <input id="imagemAmpliada" name="imagemAmpliada" type="text" class="span12" placeholder="Exemplo: imagem_ampliada.jpg" />
+                            <input id="imagemAmpliada" name="imagemAmpliada" type="text" class="span12" placeholder="Exemplo: imagem_ampliada.jpg" value="<%= viewModel.imagemAmpliada %>" />
                             <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo referente à imagem apliada</label>
                             <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
                             <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
@@ -71,7 +72,7 @@
 
         <ul>
             <li>Todos os campos são de preenchimento obrigatório</li>
-            <li>O campo <em>Seção</em> refere-se onde a foto irá aparecer no site, se na aba <em>ESTÚDIO</em>, <em>MÚSICOS</em> ou na página <em>HOME</em></li>
+            <li>Não é possível alterar o campo <em>Seção</em>. Caso queira um item com outros parâmetros em uma outra seção, é necessário criá-lo novamente e escolher a seção desejada</li>
             <li><b>Ambos</b> os arquivos de imagem devem ser copiados para a mesma pasta. O que irá diferenciar <b>qual pasta</b> será, é o tipo de foto que for selecionada</li>
             <li>
                 Como os arquivos serão copiados para a mesma pasta, devem ter <b>nomes diferentes</b>. Por exemplo:
@@ -94,3 +95,7 @@
 </div>
 
 <script src="/js/app/formNovaFoto.js"></script>
+
+<!-- Modal Mensagem -->
+
+<% include partial/mensagem %>

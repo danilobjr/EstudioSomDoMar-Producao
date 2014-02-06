@@ -5,6 +5,10 @@ module.exports = function () {
         return contexto.fotos.obterTodas();
     };
 
+    var obterPorId = function (id) {
+        return contexto.fotos.obterPorId(id);
+    };
+
     var obterFotosPorSecao = function (secao) {
         return contexto.fotos.obterPorSecao(secao);
     };
@@ -23,6 +27,10 @@ module.exports = function () {
         }
     };
 
+    var alterar = function (fotoAlterada) {
+        return contexto.fotos.alterar(fotoAlterada);
+    };
+
     var excluirPorId = function (id) {
         var fotoExcluida = contexto.fotos.excluirPorId(id);
 
@@ -35,8 +43,10 @@ module.exports = function () {
 
     return {
         obterTodas: obterTodasAsFotos,
+        obterPorId: obterPorId,
         obterPorSecao: obterFotosPorSecao,
-        excluirPorId: excluirPorId,
-        incluir: incluir
+        incluir: incluir,
+        alterar: alterar,
+        excluirPorId: excluirPorId
     };
 } ();

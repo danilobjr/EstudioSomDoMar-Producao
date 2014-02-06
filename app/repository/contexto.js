@@ -904,6 +904,22 @@ var contexto = (function () {
             return fotosEncontradas;
         };
 
+        var obterFotoPorId = function (id, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
+            var fotoEncontrada = undefined;
+
+            for (var cont in contexto.fotos) {
+                if (contexto.fotos[cont].id === id) {
+                    fotoEncontrada = contexto.fotos[cont];
+                }
+            }
+
+            return fotoEncontrada;
+        };
+
         var obterFotoPorTitulo = function (titulo) {
             var contexto = xml.obterContexto();
             var fotoEncontrada = undefined;
@@ -925,6 +941,19 @@ var contexto = (function () {
             xml.salvar(contexto);
 
             return novaFoto;
+        };
+
+        var alterarFoto = function (fotoAlterada) {
+            var contexto = xml.obterContexto();
+            var fotoExistente = obterFotoPorId(fotoAlterada.id, contexto);
+
+            fotoExistente.titulo = fotoAlterada.titulo;
+            fotoExistente.imagemPequena = fotoAlterada.imagemPequena;
+            fotoExistente.imagemAmpliada = fotoAlterada.imagemAmpliada;
+
+            xml.salvar(contexto);
+
+            return obterFotoPorId(fotoAlterada.id);
         };
 
         var excluirFotoPorId = function (id) {
@@ -1040,6 +1069,22 @@ var contexto = (function () {
             return contexto.servicos;
         };
 
+        var obterServicoPorId = function (id, contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+            
+            var servicoEncontrado = undefined;
+
+            for (var cont in contexto.servicos) {
+                if (contexto.servicos[cont].id === id) {
+                    servicoEncontrado = contexto.servicos[cont];
+                }
+            }
+
+            return servicoEncontrado;
+        };
+
         var obterServicosPorSecao = function (secao) {
             var contexto = xml.obterContexto();
             var servicosEncontrados = undefined;
@@ -1078,6 +1123,17 @@ var contexto = (function () {
             xml.salvar(contexto);
 
             return novoServico;
+        };
+
+        var alterarServico = function (servicoAlterado) {
+            var contexto = xml.obterContexto();
+            var servicoExistente = obterServicoPorId(servicoAlterado.id, contexto);
+
+            servicoExistente.descricao = servicoAlterado.descricao;
+            
+            xml.salvar(contexto);
+
+            return obterMusicaPorId(servicoAlterado.id);
         };
 
         var excluirServicoPorId = function (id) {
@@ -1150,9 +1206,11 @@ var contexto = (function () {
             },
             fotos: {
                 obterTodas: obterTodasAsFotos,
+                obterPorId: obterFotoPorId,
                 obterPorSecao: obterFotosPorSecao,
                 obterPorTitulo: obterFotoPorTitulo,
                 incluir: incluirNovaFoto,
+                alterar: alterarFoto,
                 excluirPorId: excluirFotoPorId
             },
             videos: {
@@ -1164,9 +1222,11 @@ var contexto = (function () {
             },
             servicos: {
                 obterTodos: obterTodosOsServicos,
+                obterPorId: obterServicoPorId,
                 obterPorDescricao: obterServicoPorDescricao,
                 obterPorSecao: obterServicosPorSecao,
                 incluir: incluirNovoServico,
+                alterar: alterarServico,
                 excluirPorId: excluirServicoPorId
             }
         };

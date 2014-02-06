@@ -453,11 +453,32 @@
       <imagemAmpliada>mesa-4_b.jpg</imagemAmpliada>
     </foto>
     <foto>
-      <id>32</id>
-      <titulo>Periféricos</titulo>
+      <titulo>Marcus Vinicius</titulo>
+      <secao>musico</secao>
+      <imagemPequena>MARC_VINICIUS-p.JPG</imagemPequena>
+      <imagemAmpliada>MARC_VINICIUS-g.JPG</imagemAmpliada>
+      <id>33</id>
+    </foto>
+    <foto>
+      <titulo>George Luis</titulo>
+      <secao>musico</secao>
+      <imagemPequena>GEORGE-p.JPG</imagemPequena>
+      <imagemAmpliada>GEORGE-g.JPG</imagemAmpliada>
+      <id>34</id>
+    </foto>
+    <foto>
+      <titulo>Robson Gomes</titulo>
+      <secao>musico</secao>
+      <imagemPequena>ROBSON-p.JPG</imagemPequena>
+      <imagemAmpliada>ROBSON-g.JPG</imagemAmpliada>
+      <id>35</id>
+    </foto>
+    <foto>
+      <titulo>Perifericos</titulo>
       <secao>home</secao>
-      <imagemPequena>perifericos-3_s.jpg</imagemPequena>
-      <imagemAmpliada>perifericos-3_b.jpg</imagemAmpliada>
+      <imagemPequena>Conversores-p.JPG</imagemPequena>
+      <imagemAmpliada>Conversores-g.JPG</imagemAmpliada>
+      <id>36</id>
     </foto>
   </fotos>
   <portfolio>
@@ -604,6 +625,14 @@
       <arquivoCapaAlbum>anfrisio_rocha_recomeco.jpg</arquivoCapaAlbum>
       <secao>pessoal</secao>
       <id>18</id>
+    </musica>
+    <musica>
+      <nome>A Porta</nome>
+      <artista> Banda Êxodo 7</artista>
+      <arquivoMusica>exodo7_aporta.mp3</arquivoMusica>
+      <arquivoCapaAlbum>exodo7_capa-p.jpg</arquivoCapaAlbum>
+      <secao>outro</secao>
+      <id>19</id>
     </musica>
   </portfolio>
   <videos>

@@ -272,24 +272,24 @@
     </foto>
     <foto>
       <id>6</id>
-      <titulo>Aquário</titulo>
+      <titulo>Técnica</titulo>
       <secao>estudio</secao>
-      <imagemPequena>aquario-1_xs.jpg</imagemPequena>
-      <imagemAmpliada>aquario-1_b.jpg</imagemAmpliada>
+      <imagemPequena>tecnica-1_xs.jpg</imagemPequena>
+      <imagemAmpliada>tecnica-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>7</id>
+      <titulo>Técnica</titulo>
+      <secao>estudio</secao>
+      <imagemPequena>tecnica-2_xs.jpg</imagemPequena>
+      <imagemAmpliada>tecnica-2_b.jpg</imagemAmpliada>
+    </foto>
+    <foto>
+      <id>8</id>
       <titulo>Aquário</titulo>
       <secao>estudio</secao>
       <imagemPequena>aquario-2_xs.jpg</imagemPequena>
       <imagemAmpliada>aquario-2_b.jpg</imagemAmpliada>
-    </foto>
-    <foto>
-      <id>8</id>
-      <titulo>Bateria</titulo>
-      <secao>estudio</secao>
-      <imagemPequena>bateria-1_xs.jpg</imagemPequena>
-      <imagemAmpliada>bateria-1_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <id>9</id>
@@ -309,8 +309,8 @@
       <id>11</id>
       <titulo>Instrumentos</titulo>
       <secao>estudio</secao>
-      <imagemPequena>instrumentos-1_xs.jpg</imagemPequena>
-      <imagemAmpliada>instrumentos-1_b.jpg</imagemAmpliada>
+      <imagemPequena>instrumentos3-p.JPG</imagemPequena>
+      <imagemAmpliada>instrumentos3-g.JPG</imagemAmpliada>
     </foto>
     <foto>
       <id>12</id>
@@ -374,20 +374,6 @@
       <secao>estudio</secao>
       <imagemPequena>teclado_xs.jpg</imagemPequena>
       <imagemAmpliada>teclado_b.jpg</imagemAmpliada>
-    </foto>
-    <foto>
-      <id>21</id>
-      <titulo>Técnica</titulo>
-      <secao>estudio</secao>
-      <imagemPequena>tecnica-1_xs.jpg</imagemPequena>
-      <imagemAmpliada>tecnica-1_b.jpg</imagemAmpliada>
-    </foto>
-    <foto>
-      <id>22</id>
-      <titulo>Técnica</titulo>
-      <secao>estudio</secao>
-      <imagemPequena>tecnica-2_xs.jpg</imagemPequena>
-      <imagemAmpliada>tecnica-2_b.jpg</imagemAmpliada>
     </foto>
     <foto>
       <titulo>Adriano Azevêdo</titulo>
@@ -772,7 +758,7 @@
     </servico>
     <servico>
       <id>19</id>
-      <descricao>Amplificador Sansui</descricao>
+      <descricao>Receiver Sansui</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
@@ -807,7 +793,7 @@
     </servico>
     <servico>
       <id>26</id>
-      <descricao>Guitarra Condor LesPaul</descricao>
+      <descricao>Guitarra PRS Yellow</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
@@ -834,6 +820,16 @@
       <id>31</id>
       <descricao>Microfones: Neumann TLM 103, CAD M-179, Marshall MXL 770, Superlux condenser, Shure SM-57,. AKG C-418, Shure Beta 98 D/S</descricao>
       <secao>equipamento</secao>
+    </servico>
+    <servico>
+      <descricao>Baixo Viola Epiphone</descricao>
+      <secao>equipamento</secao>
+      <id>32</id>
+    </servico>
+    <servico>
+      <descricao>Produção de Vídeo-clips</descricao>
+      <secao>servico</secao>
+      <id>33</id>
     </servico>
   </servicos>
 </contexto>

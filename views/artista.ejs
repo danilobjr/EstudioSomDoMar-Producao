@@ -49,40 +49,48 @@
                     </div>
                 </article>
                 <footer>
-                    <!--<h3>Contatos</h3>-->
-                    <div>
-                        <span>Email:</span>
-                        <span><a href="mailto:<%= viewModel.email %>" target="_blank"><%= viewModel.email %></a></span>
-                    </div>
+                    <section id="contatos">
+                        <h3>Contatos</h3>
 
-                    <% for (var i = 0; i < viewModel.telefones.length; i++) { %>
                         <div>
-                            <span><%= viewModel.telefones[i].tipo %>:</span>
-                            <span><%= viewModel.telefones[i].numero %></span>
+                            <span>Email:</span>
+                            <span><a href="mailto:<%= viewModel.email %>" target="_blank"><%= viewModel.email %></a></span>
                         </div>
-                    <% } %>
 
-                    <% if (typeof viewModel.redesSociais != 'undefined') { %>
-
-                        <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
+                        <% for (var i = 0; i < viewModel.telefones.length; i++) { %>
                             <div>
-                                <span><%= viewModel.redesSociais[i].tipo %>:</span>
-                                <span><a href="<%= viewModel.redesSociais[i].link %>" target="_blank" class="site">Acessar perfil</a></span>
+                                <span><%= viewModel.telefones[i].tipo %>:</span>
+                                <span><%= viewModel.telefones[i].numero %></span>
                             </div>
                         <% } %>
 
-                    <% } %>
+                        <% if (typeof viewModel.site != 'undefined' && viewModel.site != '') { %>
 
-                    <% if (typeof viewModel.site != 'undefined' && viewModel.site != '') { %>
+                        <div>
+                            <span>Site:</span>
+                            <span><a href="<%= viewModel.site %>" target="_blank" class="site"><%= viewModel.site %></a></span>
+                        </div>
 
-                    <div>
-                        <span>Site:</span>
-                        <span><a href="<%= viewModel.site %>" target="_blank" class="site"><%= viewModel.site %></a></span>
-                    </div>
+                        <% } %>
+                    </section>
 
-                    <% } %>
+                    <div class="vertical-separator"></div>
+
+                    <section id="social" class="last">
+                        <h3>Redes Sociais</h3>
+                        <% if (typeof viewModel.redesSociais != 'undefined') { %>
+
+                            <% for (var i = 0; i < viewModel.redesSociais.length; i++) { %>
+                                <a href="<%= viewModel.redesSociais[i].link %>" target="_blank"><img src="/img/icons/social/<%= viewModel.redesSociais[i].tipo %>-32.png" alt="<%= viewModel.redesSociais[i].tipo %>" /></a>
+                            <% } %>
+
+                        <% } %>
+                    </section>
                 </footer>
             </section>
+
+            <br clear="all" />
+
             <footer>
                 <div>
                     <span class="color">Estúdio Som do Mar</span>

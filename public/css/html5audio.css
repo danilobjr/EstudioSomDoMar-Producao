@@ -93,18 +93,27 @@
     height: 20px;
 }
 
-.h5aVolume {
+.h5aVolume, .h5aRadioContainer {
     position: relative;
     float: left;
     width: 47px;
     height: 100%;
 }
 
-.h5aVolume img {
+.h5aVolume img, .h5aRadioContainer img {
     position: absolute;
+}
+
+.h5aVolume img, {
     height: 15px;
     left: 15px;
     top: 15px;
+}
+
+.h5aRadioContainer img {
+    height: 25px;
+    left: 12px;
+    top: 9px;
 }
     
 .h5aPlayBtn {

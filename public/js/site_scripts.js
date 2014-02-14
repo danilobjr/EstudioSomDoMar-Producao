@@ -1,4 +1,4 @@
-    jQuery(document).ready(function() {
+jQuery(document).ready(function() {
    	var h_cont=856;
 	var h, new_h;
 	setHeight();
@@ -30,6 +30,7 @@
         jQuery('#carousel2').jcarousel({wrap: 'circular'});
         jQuery('#carousel3').jcarousel({wrap: 'circular'});
 });
+
 $(window).load(function () {
     //Gallery arrows-------------------------------------------------------------------------------------
     /* TIREI O EFEITO DA SOBREPOSIÇÃO DE IMAGENS NO CARROSSEL
@@ -193,7 +194,7 @@ $(window).load(function () {
 
     // html5Audio
 
-    $('#player').html5Audio({ songSources: '.song' });
+    $('#player').html5Audio({ songSources: '.song', useRadio: true, radioSource: '.radioSource' });
 
     // page_artists
 

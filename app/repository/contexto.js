@@ -233,6 +233,11 @@ var contexto = (function () {
                     }
                 }
             ],
+            radio: {
+                id: 1,
+                descricao: 'Programa Tal',
+                arquivoMusica: 'radio.mp3'
+            },
             fotos: [
                 {
                     foto: {
@@ -762,6 +767,28 @@ var contexto = (function () {
             return musicaProcurada;
         };
 
+        // Rádio
+
+        var obterProgramaDeRadio = function (contexto) {
+            if (!contexto) {
+                contexto = xml.obterContexto();
+            }
+
+            return contexto.radio;
+        };
+
+        var alterarProgramaDeRadio = function (radioAlterada) {
+            var contexto = xml.obterContexto();
+            var radioExistente = obterProgramaDeRadio(contexto);
+
+            radioExistente.descricao = radioAlterada.descricao;
+            radioExistente.arquivoMusica = radioAlterada.arquivoMusica;
+
+            xml.salvar(contexto);
+
+            return obterProgramaDeRadio();
+        };
+
         // Artistas
 
         var obterTodosOsArtistas = function () {
@@ -1077,7 +1104,7 @@ var contexto = (function () {
             if (!contexto) {
                 contexto = xml.obterContexto();
             }
-            
+
             var servicoEncontrado = undefined;
 
             for (var cont in contexto.servicos) {
@@ -1134,7 +1161,7 @@ var contexto = (function () {
             var servicoExistente = obterServicoPorId(servicoAlterado.id, contexto);
 
             servicoExistente.descricao = servicoAlterado.descricao;
-            
+
             xml.salvar(contexto);
 
             return obterMusicaPorId(servicoAlterado.id);
@@ -1196,6 +1223,10 @@ var contexto = (function () {
                 incluir: incluirNovaMusica,
                 alterar: alterarPortfolio,
                 excluirPorId: excluirMusicaPorId
+            },
+            radio: {
+                obterPrograma: obterProgramaDeRadio,
+                alterar: alterarProgramaDeRadio
             },
             artistas: {
                 obterTodos: obterTodosOsArtistas,

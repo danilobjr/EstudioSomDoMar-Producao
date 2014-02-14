@@ -14,7 +14,8 @@ var express = require('express'),
     foto = require('./routes/foto'),
     video = require('./routes/video'),
     artista = require('./routes/artista'),
-    servico = require('./routes/servico');
+    servico = require('./routes/servico'),
+    radio = require('./routes/radio');
 
 var app = express();
 
@@ -66,6 +67,7 @@ app.get('/artista/:id', artista.exibir);
 app.get('/admin/servico/novo', autenticacaoRequerida, servico.novo);
 app.get('/admin/servico/alterar/:id', autenticacaoRequerida, servico.editar);
 app.get('/admin/servicos', autenticacaoRequerida, servico.index);
+app.get('/admin/radio', autenticacaoRequerida, radio.index);
 
 // actions
 
@@ -90,6 +92,7 @@ app.get('/admin/portfolio/excluir/:id', autenticacaoRequerida, portfolio.excluir
 app.post('/admin/servico/novo', autenticacaoRequerida, servico.incluir);
 app.post('/admin/servico/alterar', autenticacaoRequerida, servico.alterar);
 app.get('/admin/servico/excluir/:id', autenticacaoRequerida, servico.excluir);
+app.post('/admin/radio/alterar', autenticacaoRequerida, radio.alterar);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

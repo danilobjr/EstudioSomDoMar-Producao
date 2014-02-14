@@ -4,7 +4,8 @@ var paginaGerente = require('./../app/gerentes/paginaGerente'),
     fotoGerente = require('./../app/gerentes/fotoGerente'),
     portfolioGerente = require('./../app/gerentes/portfolioGerente'),
     usuarioGerente = require('./../app/gerentes/usuarioGerente'),
-    servicoGerente = require('./../app/gerentes/servicoGerente');
+    servicoGerente = require('./../app/gerentes/servicoGerente'),
+    radioGerente = require('./../app/gerentes/radioGerente');
 
 exports.index = function (req, res) {
     var usuario = usuarioGerente.obterUsuario();
@@ -33,15 +34,18 @@ exports.index = function (req, res) {
     var servicos = servicoGerente.obterPorSecao('servico');
     var equipamentos = servicoGerente.obterPorSecao('equipamento');
 
+    var radio = radioGerente.obterPrograma();
+
     res.render('index', { _layoutFile: false, viewModel: {
-            perfil: usuario,
-            paginas: paginas,
-            artistas: artistas,
-            videos: videos,
-            fotos: fotos,
-            portfolio: portfolio,
-            servicos: servicos,
-            equipamentos: equipamentos
-        }
+        perfil: usuario,
+        paginas: paginas,
+        artistas: artistas,
+        videos: videos,
+        fotos: fotos,
+        portfolio: portfolio,
+        servicos: servicos,
+        equipamentos: equipamentos,
+        radio: radio
+    }
     });
 };

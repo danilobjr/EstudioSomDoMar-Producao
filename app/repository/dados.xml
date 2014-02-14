@@ -21,7 +21,10 @@
       <texto>
         <paragrafos>
           <paragrafo>
-            <descricao>O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho. Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música. Marque seu horário no Estúdio Som do Mar e saia por ai fazendo sucesso. Sentimo-nos orgulhosos de participar de seus sonhos.</descricao>
+            <descricao>O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho. Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música. Marque seu horário e faça-nos uma visita. Sentimo-nos orgulhosos de participar de seus sonhos.</descricao>
+          </paragrafo>
+          <paragrafo>
+            <descricao>Situado na Praia de Iracema, o estúdio se localiza em uma das áreas mais culturais e turísticas de Fortaleza, além do corredor de hotéis e pousadas.</descricao>
           </paragrafo>
         </paragrafos>
       </texto>
@@ -188,7 +191,7 @@
         <background>
           <cor>#454545</cor>
         </background>
-        <perfil>artistas_rodrigo_cardozo.jpg</perfil>
+        <perfil>artistas_rodrigo_cardozo2.jpg</perfil>
       </imagens>
       <id>3</id>
       <musicas>
@@ -467,11 +470,32 @@
       <id>36</id>
     </foto>
     <foto>
-      <titulo>Anfrísio e Nelson Bomilcar</titulo>
+      <titulo>Nelson Bomilcar</titulo>
       <secao>participacao</secao>
       <imagemPequena>participacoes-anfrisio_e_nelson_xs.jpg</imagemPequena>
       <imagemAmpliada>participacoes-anfrisio_e_nelson_b.jpg</imagemAmpliada>
       <id>37</id>
+    </foto>
+    <foto>
+      <titulo>Marcos Lessa</titulo>
+      <secao>participacao</secao>
+      <imagemPequena>MARCOS LESSA_p.jpg</imagemPequena>
+      <imagemAmpliada>MARCOS LESSA_g.jpg</imagemAmpliada>
+      <id>38</id>
+    </foto>
+    <foto>
+      <titulo>Jefferson Portela</titulo>
+      <secao>musico</secao>
+      <imagemPequena>Jefferson-p.JPG</imagemPequena>
+      <imagemAmpliada>Jefferson-g.JPG</imagemAmpliada>
+      <id>39</id>
+    </foto>
+    <foto>
+      <titulo>Neo dos Santos</titulo>
+      <secao>musico</secao>
+      <imagemPequena>Neo-p.JPG</imagemPequena>
+      <imagemAmpliada>Neo-g.JPG</imagemAmpliada>
+      <id>40</id>
     </foto>
   </fotos>
   <portfolio>
@@ -628,6 +652,11 @@
       <id>19</id>
     </musica>
   </portfolio>
+  <radio>
+    <id>1</id>
+    <descricao>Rádio do Daniel</descricao>
+    <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
+  </radio>
   <videos>
     <video>
       <id>1</id>
@@ -728,12 +757,12 @@
     </servico>
     <servico>
       <id>13</id>
-      <descricao>Nuendo 3 e Cubase 3, 4 e 5</descricao>
+      <descricao>Cubase 5.0</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
       <id>14</id>
-      <descricao>Placa M-audio Profire LightBrigde (suporta até 32 canais)</descricao>
+      <descricao>Interface M-audio Profire LightBrigde (suporta até 32 canais)</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
@@ -763,12 +792,12 @@
     </servico>
     <servico>
       <id>20</id>
-      <descricao>Monitores Yamaha NS-10M, Behringer MS-40, Marantz</descricao>
+      <descricao>Monitores Yamaha NS-10M, Yamaha HS-50, Behringer MS-40, Marantz</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
       <id>21</id>
-      <descricao>Bateria Sonor Force 2007 (20, 14,10,12,14)</descricao>
+      <descricao>Baterias: Sonor Force 2007 (20, 14,10,12,14), Grestch Catalina Ash (8, 10, 12,14, 22)</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
@@ -793,17 +822,17 @@
     </servico>
     <servico>
       <id>26</id>
-      <descricao>Guitarra PRS Yellow</descricao>
+      <descricao>Guitarra PRS SE Santana</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
       <id>27</id>
-      <descricao>Baixo Eagle com captação Fender</descricao>
+      <descricao>Baixo Eagle Jazz Bass com captação Fender</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
       <id>28</id>
-      <descricao>Baixo Condor 5 cordas</descricao>
+      <descricao>Baixo Condor CJB-500 5 cordas</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
@@ -818,7 +847,7 @@
     </servico>
     <servico>
       <id>31</id>
-      <descricao>Microfones: Neumann TLM 103, CAD M-179, Marshall MXL 770, Superlux condenser, Shure SM-57,. AKG C-418, Shure Beta 98 D/S</descricao>
+      <descricao>Microfones: Neumann TLM 103, CAD M-179, Marshall MXL 770, Superlux condenser, Shure SM-57,. AKG C-418, Shure Beta 98 D/S, Audix.</descricao>
       <secao>equipamento</secao>
     </servico>
     <servico>
@@ -830,6 +859,16 @@
       <descricao>Produção de Vídeo-clips</descricao>
       <secao>servico</secao>
       <id>33</id>
+    </servico>
+    <servico>
+      <descricao>Violão Nylon Jasmine by Takamine</descricao>
+      <secao>equipamento</secao>
+      <id>34</id>
+    </servico>
+    <servico>
+      <descricao>Registro das músicas com ISRC (código de gravação padrão internacional) ISO 3901.</descricao>
+      <secao>servico</secao>
+      <id>35</id>
     </servico>
   </servicos>
 </contexto>

@@ -11879,11 +11879,12 @@ ul.wysihtml5-commands-disabled .dropdown-menu {
     z-index: 999;
 }
 
-#login img {
-    position: relative;
-    -webkit-box-shadow: #000 0 1px 1px;
-    -moz-box-shadow: #000 0 1px 1px;
-    box-shadow: #000 0 1px 1px;
+#imagem-container {
+    background-color: rgba(255,255,255,0.1);
+    padding: 5px;
+    box-shadow: 0 0 20px black;
+    -webkit-box-shadow: 0 0 20px black;
+    -moz-box-shadow: 0 0 20px black;
 }
 
 #login span.name {

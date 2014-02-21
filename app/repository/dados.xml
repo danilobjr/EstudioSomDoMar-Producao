@@ -656,6 +656,7 @@
     <id>1</id>
     <descricao>Rádio do Daniel</descricao>
     <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
+    <arquivoImagem>teste.jpg</arquivoImagem>
   </radio>
   <videos>
     <video>

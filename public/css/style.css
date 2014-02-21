@@ -1023,3 +1023,15 @@ form .buttons > *:hover {
 #slide_outros_trabalhos p, #slide_jingles p, #slide_servicos p, #slide_equipamentos p {
     color: white;
 }
+
+/* LOGO */
+
+#logo .imagem {
+    margin-top: 7px;
+    width: 175px;
+    height: 180px;
+}
+
+#logo .nome {
+    
+}

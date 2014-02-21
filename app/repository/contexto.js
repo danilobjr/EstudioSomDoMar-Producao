@@ -783,6 +783,7 @@ var contexto = (function () {
 
             radioExistente.descricao = radioAlterada.descricao;
             radioExistente.arquivoMusica = radioAlterada.arquivoMusica;
+            radioExistente.arquivoImagem = radioAlterada.arquivoImagem;
 
             xml.salvar(contexto);
 

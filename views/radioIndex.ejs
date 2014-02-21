@@ -8,6 +8,7 @@
             <div class="content">
                 <form id="formRadio" method="post" action="/admin/radio/alterar" class="form-horizontal cmxform" autocomplete="off">
                     <input type="hidden" name="idRadio" value="<%= viewModel.id %>" />
+
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="descricao">Nome do Programa *</label>
                         <div class="controls span9">
@@ -15,6 +16,7 @@
                             <label class="error errorRequired" style="display: none;">Por favor, informe o nome do programa de rádio</label>
                         </div>
                     </div>
+
                     <div class="form-row control-group row-fluid">
                         <label class="control-label span3" for="arquivoMusica">Arquivo MP3 *</label>
                         <div class="controls span9">
@@ -24,6 +26,17 @@
                             <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
                         </div>
                     </div>
+
+                    <div class="form-row control-group row-fluid">
+                        <label class="control-label span3" for="arquivoImagem">Arquivo Imagem *</label>
+                        <div class="controls span9">
+                            <input id="arquivoImagem" name="arquivoImagem" type="text" class="span12" placeholder="imagem_radio_player.jpg"  value="<%= viewModel.arquivoImagem %>" />
+                            <label class="error errorRequired" style="display: none;">Por favor, informe o nome do arquivo de imagem</label>
+                            <label class="error errorMinlength" style="display: none;">O nome do arquivo precisa ter pelo menos 5 caracteres</label>
+                            <label class="error errorNomeArquivo" style="display: none;">Não é permitio espaços, apenas '-' e '_'. É necessário um '.' separando o nome da extensão do arquivo.</label>
+                        </div>
+                    </div>
+
                     <div class="form-actions row-fluid">
                         <div class="span12">
                             <a href="/admin" class="btn btn-large btn-secondary pull-right">Cancelar</a>
@@ -52,6 +65,7 @@
         <ul>
             <li>Todos os campos são de preenchimento obrigatório</li>
             <li>O arquivo de áudio (mp3) deve ser copiado para a pasta <code>\public\musicas</code></li>
+            <li>O arquivo de imagem (jpg) deve ser copiado para a pasta <code>\public\img\cd</code></li>
         </ul>
     </div>
     <div class="modal-footer">

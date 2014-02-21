@@ -14,7 +14,8 @@ exports.alterar = function (req, res) {
         radioAlterada = {
             id: idRadio,
             descricao: req.body.descricao,
-            arquivoMusica: req.body.arquivoMusica
+            arquivoMusica: req.body.arquivoMusica,
+            arquivoImagem: req.body.arquivoImagem
         };
         
         radioAlterada = radioGerente.alterar(radioAlterada);

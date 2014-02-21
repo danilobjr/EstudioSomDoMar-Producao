@@ -58,6 +58,7 @@ $(function () {
 
     var campoDescricao = $('[name=descricao]').focus();
     var campoArquivoMusica = $('[name=arquivoMusica]');
+    var campoArquivoImagem = $('[name=arquivoImagem]');
 
     // eventos
 
@@ -68,7 +69,7 @@ $(function () {
         return haErro;
     };
 
-    var verificarErrosDoCampoArquivoMusica = function (e) {
+    var verificarErrosDoCampoArquivo = function (e) {
         var haErro = false;
         haErro = gerarErroRequired(e);
 
@@ -84,7 +85,8 @@ $(function () {
     };
 
     campoDescricao.on('keyup', verificarErrosDoCampoDescricao);
-    campoArquivoMusica.on('keyup', verificarErrosDoCampoArquivoMusica);
+    campoArquivoMusica.on('keyup', verificarErrosDoCampoArquivo);
+    campoArquivoImagem.on('keyup', verificarErrosDoCampoArquivo);
 
     // disparar verificação de validação de campos no submit do form
 
@@ -92,7 +94,8 @@ $(function () {
         var haErros = false;
 
         haErros = verificarErrosDoCampoDescricao({ currentTarget: campoDescricao });
-        if (haErros) { verificarErrosDoCampoArquivoMusica({ currentTarget: campoArquivoMusica }); } else { haErros = verificarErrosDoCampoArquivoMusica({ currentTarget: campoArquivoMusica }); }
+        if (haErros) { verificarErrosDoCampoArquivo({ currentTarget: campoArquivoMusica }); } else { haErros = verificarErrosDoCampoArquivo({ currentTarget: campoArquivoMusica }); }
+        if (haErros) { verificarErrosDoCampoArquivo({ currentTarget: campoArquivoImagem }); } else { haErros = verificarErrosDoCampoArquivo({ currentTarget: campoArquivoImagem }); }
 
         var haAlgumaMensagemDeErroSendoExposta = $(e.currentTarget).find('.error:visible').length;
 

@@ -236,7 +236,8 @@ var contexto = (function () {
             radio: {
                 id: 1,
                 descricao: 'Programa Tal',
-                arquivoMusica: 'radio.mp3'
+                arquivoMusica: 'radio.mp3',
+                arquivoImagem: 'teste.jpg'
             },
             fotos: [
                 {

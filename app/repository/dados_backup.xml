@@ -24,7 +24,7 @@
             <descricao>O estúdio som do mar foi criado com o objetivo de realizar trabalhos sonoros para o cliente de uma forma individualizada, obedecendo as peculiaridades artísticas de cada trabalho. Especializamo-nos em gravações de ótima qualidade, o que implica em know-how e equipamentos necessários, pelo absoluto prazer em trabalhar com música. Marque seu horário e faça-nos uma visita. Sentimo-nos orgulhosos de participar de seus sonhos.</descricao>
           </paragrafo>
           <paragrafo>
-            <descricao>Situado na Praia de Iracema, o estúdio se localiza em uma das áreas mais culturais e turísticas de Fortaleza, além do corredor de hotéis e pousadas.</descricao>
+            <descricao>Situado na Praia de Iracema, o estúdio se localiza em uma das áreas mais culturais e turísticas de Fortaleza, próximo ao Centro Cultural Dragão do Mar, Bancos, Hotéis e Pousadas.</descricao>
           </paragrafo>
         </paragrafos>
       </texto>
@@ -652,6 +652,11 @@
       <id>19</id>
     </musica>
   </portfolio>
+  <radio>
+    <id>1</id>
+    <descricao>CD instrumental de Anfrisio Rocha apresentado por Nelson Bomilcar</descricao>
+    <arquivoMusica>PGM-ANFRIS.mp3</arquivoMusica>
+  </radio>
   <videos>
     <video>
       <id>1</id>

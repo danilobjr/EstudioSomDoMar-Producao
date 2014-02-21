@@ -654,8 +654,8 @@
   </portfolio>
   <radio>
     <id>1</id>
-    <descricao>Rádio do Daniel</descricao>
-    <arquivoMusica>cd_daniel_costa.mp3</arquivoMusica>
+    <descricao>CD instrumental de Anfrisio Rocha apresentado por Nelson Bomilcar</descricao>
+    <arquivoMusica>PGM-ANFRIS.mp3</arquivoMusica>
     <arquivoImagem>teste.jpg</arquivoImagem>
   </radio>
   <videos>
